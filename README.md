@@ -42,48 +42,62 @@ A proposta deste sistema é **centralizar e automatizar** todas as informações
 TheTowerProject/
 │
 ├── index.html                  # Tela de login
-├── dashboard.html              # Tela inicial com os 4 cards principais
+├── dashboard.html              # Tela inicial com cards de resumo
 ├── turmas.html                 # Gestão de turmas e alunos
 ├── biblioteca.html             # Biblioteca e empréstimos
 ├── financas.html               # Controle financeiro
+├── eventos.html                # Gestão e participação em eventos
+├── estoque.html                # Controle de materiais e livros
+├── aulas_demonstrativas.html   # Agendamento e controle de aulas demonstrativas
 │
 ├── assets/
 │   ├── css/
-│   │   ├── style.css           # Estilos gerais (cores, layout base)
-│   │   ├── dashboard.css       # Estilos do dashboard
-│   │   ├── turmas.css          # Estilos da tela de turmas
-│   │   ├── biblioteca.css      # Estilos da biblioteca
-│   │   └── financas.css        # Estilos financeiros
+│   │   ├── style.css           # Estilos gerais (layout, cores, tipografia)
+│   │   ├── dashboard.css
+│   │   ├── turmas.css
+│   │   ├── biblioteca.css
+│   │   ├── financas.css
+│   │   ├── eventos.css         # Estilos da página de eventos
+│   │   ├── estoque.css         # Estilos da página de estoque
+│   │   └── aulas_demonstrativas.css  # Estilos da página de aulas demonstrativas
 │   │
 │   ├── js/
-│   │   ├── main.js             # Login e navegação
-│   │   ├── dashboard.js        # Scripts do dashboard
+│   │   ├── main.js             # Login, navegação e autenticação
+│   │   ├── dashboard.js        # Scripts do painel principal
 │   │   ├── turmas.js           # CRUD de turmas e alunos
-│   │   ├── biblioteca.js       # CRUD de livros
-│   │   ├── financas.js         # Relatórios financeiros
-│   │   └── api.js              # Arquivo que centraliza as requisições à API
+│   │   ├── biblioteca.js       # CRUD de livros e empréstimos
+│   │   ├── financas.js         # Controle de pagamentos e relatórios
+│   │   ├── eventos.js          # CRUD de eventos e controle de participantes
+│   │   ├── estoque.js          # CRUD de materiais (ex: livros fornecidos)
+│   │   ├── aulas_demonstrativas.js  # Agendamento e controle de aulas demonstrativas
+│   │   ├── api.js              # Centralização das requisições à API
+│   │   └── validation.js       # Validações de formulários (reaproveitável)
 │   │
 │   └── img/
 │       ├── icons/
 │       └── logos/
 │
-├── backend/                    # Mini servidor Node.js + Express + MySQL
-│   ├── index.js                # Arquivo principal do servidor
-│   ├── db_config.js            # Conexão com o banco
+├── backend/
+│   ├── index.js                # Servidor Node.js (Express)
+│   ├── db_config.js            # Conexão MySQL
 │   ├── routes/
 │   │   ├── alunos.js
 │   │   ├── turmas.js
 │   │   ├── biblioteca.js
-│   │   └── financas.js
-│   └── package.json            # Dependências do Node (Express, MySQL2, etc.)
+│   │   ├── financas.js
+│   │   ├── eventos.js          # Rotas de CRUD de eventos
+│   │   ├── estoque.js          # Rotas de CRUD de materiais
+│   │   └── aulas_demonstrativas.js  # Rotas de CRUD de aulas demonstrativas
+│   └── package.json
 │
 ├── database/
-│   └── thetower_db.sql         # Script de criação do banco e tabelas
+│   └── thetower_db.sql         # Script SQL (inclui novas tabelas: eventos, estoque e aulas)
 │
 └── docs/
     ├── README.md
     ├── requisitos.md
     └── wireframes/
+
 
 ```
 ---
