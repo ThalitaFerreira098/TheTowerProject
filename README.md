@@ -83,6 +83,7 @@ TheTowerProject/
 │   ├── routes/
 │   │   ├── alunos.js
 │   │   ├── turmas.js
+│   │   ├── auth.js
 │   │   ├── biblioteca.js
 │   │   ├── financas.js
 │   │   ├── eventos.js          # Rotas de CRUD de eventos

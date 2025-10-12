@@ -1,0 +1,118 @@
+/* parte geral da tela*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body.login-body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #002b80, #b30000);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%; }
+    100% {background-position: 0% 50%; }
+}
+
+/* card do login*/
+.login-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-card{
+  background-color: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius:16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  max-width: 380px;
+  width: 90%;
+  text-align:center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+    from{ opacity: 0; transForm: translateY(20px); }
+    to{ opacity: 1; transForm: translateY(0); }
+}
+
+.login-title{
+    font-size: 2.2rem;
+    color: #b30000;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.login-subtitle{
+    color: #002b80;
+    font-size: 1rem;
+    margin-bottom:2rem;
+}
+
+/*parte do formulario do login*/
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label{
+    color:#002b80;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+
+}
+
+.form-group input{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline:none;
+    border-color:#b30000;
+}
+
+.btn-login {
+    background: linear-gradient(90deg, #b30000, #002b80);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight:600;
+    border: none;
+    padding: 0.9rem;
+    border-radius:8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3;
+}
+
+.btn-login:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 43, 128, 0.4);
+}
+
+.login-error{
+    color: #b30000;
+    font-weight: 600;
+    margin-top: 1rem;
+    height: 1rem;
+}
