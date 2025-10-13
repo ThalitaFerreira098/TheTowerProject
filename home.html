@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower - Home</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+    <body class="home-body">
+        <header class="cabecalho">
+            <div class="barra-topo">
+                <h1>Home</h1>
+            </div>
+        </header>
+
+        <main class="container-home">
+            <section class="boas-vindas">
+                <div class="texto-boas-vindas" id="saudacao"></div>
+                <img src="assets/img/imgsHOME/" alt="ilustração de personagem" class="img-personagem">
+            </section>
+
+            <section class="grade-cards">
+                <div class="coluna-esquerda">
+                    <div class="card card-financas" onclick="irPara('financas.html')">
+                        <p>Finanças</p>
+                        <img src="assets/img/imgsHOME/" alt="Ilustração finanças">
+                    </div>
+
+                    <div class="card card-turmas" onclick="irPara('turmas.html')">
+                        <p>Turmas</p>
+                        <img src="assets/img/imgsHOME/" alt="Ilustração Turmas">
+                    </div>
+                </div>
+
+                <div class="coluna-central">
+                    <div class="card card-analises" onclick="irPara('dashboard.html')">
+                        <p>Análises Gerais</p>
+                        <img src="assets/img/imgsHOME/" alt="ilustração analises gerais ">
+                    </div>
+
+                    <div class="card card-aulas" onclick="irPara('aulas_demonstrativas.html')">
+                        <p>Aulas Aulas Demonstrativas</p>
+                        <img src="assets/img/imgsHOME/" alt="ilustração de aulas demonstrativas">
+                    </div>
+                </div>
+
+                <div class="coluna-direita">
+                    <div class="card card-biblioteca"  onclick="irPara('biblioteca.html')">
+                        <p>Biblioteca</p>
+                        <img src="assets/img/imgsHOME/" alt="Ilustração biblioteca">
+                    </div>
+
+                    <div class="card card-estoque" onclick="irPara('estoque.html')">
+                        <p>Estoque</p>
+                        <img src="assets/img/imgsHOME/" alt="Ilustração estoque">
+                    </div>
+
+                    <div class="card card-eventos" onclick="irPara('eventos.html')">
+                        <p>Eventos</p>
+                        <img src="assets/img/imgsHOME/" alt="Ilustração eventos">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="assets/js/home.js"></script>
+    </body>
+</html>

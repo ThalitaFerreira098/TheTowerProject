@@ -42,6 +42,7 @@ A proposta deste sistema é **centralizar e automatizar** todas as informações
 TheTowerProject/
 │
 ├── index.html                  # Tela de login
+├── home.html                   # Tela de principal
 ├── dashboard.html              # Tela inicial com cards de resumo
 ├── turmas.html                 # Gestão de turmas e alunos
 ├── biblioteca.html             # Biblioteca e empréstimos
@@ -55,6 +56,7 @@ TheTowerProject/
 │   │   ├── style.css           # Estilos gerais (layout, cores, tipografia)
 │   │   ├── dashboard.css
 │   │   ├── turmas.css
+│   │   ├── home.css  
 │   │   ├── biblioteca.css
 │   │   ├── financas.css
 │   │   ├── eventos.css         # Estilos da página de eventos
@@ -63,13 +65,14 @@ TheTowerProject/
 │   │
 │   ├── js/
 │   │   ├── main.js             # Login, navegação e autenticação
+│   │   ├── home.js             # saudação personalizada ao usuário
 │   │   ├── dashboard.js        # Scripts do painel principal
 │   │   ├── turmas.js           # CRUD de turmas e alunos
 │   │   ├── biblioteca.js       # CRUD de livros e empréstimos
 │   │   ├── financas.js         # Controle de pagamentos e relatórios
 │   │   ├── eventos.js          # CRUD de eventos e controle de participantes
 │   │   ├── estoque.js          # CRUD de materiais (ex: livros fornecidos)
-│   │   ├── aulas_demonstrativas.js  # Agendamento e controle de aulas demonstrativas
+│   │   ├── aulas_demonstrativas.js  # Agendamento e controle de aulas 
 │   │   ├── api.js              # Centralização das requisições à API
 │   │   └── validation.js       # Validações de formulários (reaproveitável)
 │   │

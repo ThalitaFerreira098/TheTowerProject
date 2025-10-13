@@ -1,0 +1,105 @@
+body.home-body{
+    background-color: #07007a;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+    position: relative;
+    margin-top: 0;
+    position: relative;
+}
+
+.barra-topo{
+    background: linear-gradient(90deg, #ff7f50, #b84bff );
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.4rem;
+    padding: 1px 0;
+    width: 55%;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px; 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+    top: 0;
+ }
+
+.container-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.boas-vindas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #ff5db1, #7a00ff);
+    border-radius: 15px;
+    padding: 15px 25px;
+    width: 80%;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.texto-boas-vindas{
+    font-weight: 600;
+}
+.img-personagem{
+    width: 100px;
+    position: absolute;
+    right: 15px;
+    top: -30px;
+}
+
+.grade-cards{
+    display: flex;
+    gap: 25px;
+}
+
+.coluna-esquerda, .coluna-central, .coluna-direita{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.card{
+    background-color: #372bda;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    height: 140px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.card p{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-financas {background-color: #ff7f50}
+.card-analises {background-color: #5b6fff;}
+.card-turmas {background-color: #5b6fff;}
+.card-aulas {background-color: #5b6fff;}
+.card-biblioteca, .card-estoque , .card-eventos {background-color: #3e3eff;}
+
+.card img {
+    width: 80px;
+    margin-top: 10px;
+}
