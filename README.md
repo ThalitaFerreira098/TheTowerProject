@@ -45,6 +45,8 @@ TheTowerProject/
 ├── home.html                   # Tela de principal
 ├── dashboard.html              # Tela inicial com cards de resumo
 ├── turmas.html                 # Gestão de turmas e alunos
+├── criar_turma.html            # Tela para criar turmas
+├── turma_info.html             # Tela para apresentar informações de uma turma
 ├── biblioteca.html             # Biblioteca e empréstimos
 ├── financas.html               # Controle financeiro
 ├── eventos.html                # Gestão e participação em eventos
@@ -75,6 +77,12 @@ TheTowerProject/
 │   │   ├── aulas_demonstrativas.js  # Agendamento e controle de aulas 
 │   │   ├── api.js              # Centralização das requisições à API
 │   │   └── validation.js       # Validações de formulários (reaproveitável)
+│   │
+│   │
+│   └── materias/
+│   │    ├── books/
+│   │    ├── logos/
+│   │    └── logos/
 │   │
 │   └── img/
 │       ├── icons/

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/turmas.css">
+    <title>The Tower - Turmas</title>
+</head>
+    <body>
+        <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+                <h1 id="titulo-pagina">Turmas</h1>
+            </div>
+        </header>
+
+        <main class="conteudo">
+            <div class="barra-pesquisa">
+                <input type="text" id="pesquisaAluno" placeholder="Pesquisar aluno...">
+            </div>
+
+            <section class="lista-turmas" id="cardsTurmas">
+                <!-- aq serão carregas as turmas-->
+            </section>
+
+            <div class="area-botao">
+                <button id="btnCriarTurma">+ Criar Nova Turma</button>
+            </div>
+        </main>
+
+        <script src="assets/js/turmas.js"></script>
+    </body>
+</html>
