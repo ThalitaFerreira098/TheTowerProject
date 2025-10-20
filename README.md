@@ -79,10 +79,10 @@ TheTowerProject/
 │   │   └── validation.js       # Validações de formulários (reaproveitável)
 │   │
 │   │
-│   └── materias/
+│   └── materiais/
 │   │    ├── books/
-│   │    ├── logos/
-│   │    └── logos/
+│   │    ├── farytales/
+│   │    └── debates/
 │   │
 │   └── img/
 │       ├── icons/

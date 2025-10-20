@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/criar_turma.css">
+    <title>The Tower - Criar Turma</title>
+</head>
+    <body>
+        <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('turmas.html')">⟵</button>
+                <h1 id="titulo-pagina">Criar Nova Turma</h1>
+            </div>
+        </header>
+
+        <main class="conteudo">
+            <form id="formCriarTurma" class="form-turma">
+                <label for="nome_turma">Nome da Turma:</label>
+                <input type="text" id="nome_turma" name="nome_turma" required>
+
+                <label for="dia_semana">Dia da semana:</label>
+                <select name="dia_semana" id="dia_semana">
+                    <option value="">Selecione</option>
+                    <option value="Segunda-feira">Segunda-feira</option>
+                    <option value="Terça-feira">Terça-feira</option>
+                    <option value="Quarta-feira">Quarta-feira</option>
+                    <option value="Quinta-feira">Quinta-feira</option>
+                    <option value="Sexta-feira">Sexta-feira</option>
+                    <option value="Sabado">Sábado</option>
+                </select>
+
+                <label for="hora_inicio">Horário de Inicio da aula:</label>
+                <input type="time" id="hora_inicio" name="hora_inicio" required>
+
+                <label for="hora_fim">Horário de encerramento da aula:</label>
+                <input type="time" id="hora_fim" name="hora_fim" required>
+
+                <button type="submit" class="btn-criar">Criar turma</button>
+            </form>
+            <p id="mensagem"></p>
+        </main>
+        <script src="assets/js/criar_turma.js"></script>
+    </body>
+</html>

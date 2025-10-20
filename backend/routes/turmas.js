@@ -29,9 +29,16 @@ router.post("/", (req, res) => {
                 return res.status(500).json({ erro: "Erro ao criar turma"});
             }
 
-            const id_turma = resultados[0][0]?.id_turma;
-            res.status(201).json({ message: `Turma", ${nome_turma}," criada com sucesso! ` });
-        }
+            const resultado = resultados?.[0]?.[0]?.resultado;
+
+            if(resultado === 1){
+                res.status(201).json({ resultado: 1, mensagem: "Turma criada com sucesso!"});
+            } else if (resultado === 2){
+                return res.status(200).json({ resultado: 2, mensagem: "Conflito de horário detectado!"});
+            } else{
+                return res.status(500).json({resultado : 0, mensagem: "Erro ao criar turma"})
+            }
+         }
     );
 });
 
