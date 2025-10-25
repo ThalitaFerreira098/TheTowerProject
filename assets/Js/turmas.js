@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "http://localhost:3000/api";
 
 async function carregarTurmas(){
     try{
@@ -15,7 +15,7 @@ async function carregarTurmas(){
             card.classList.add("card-turma");
             card.innerHTML = `<h3>${turma.nome_turma}</h3>`;
             card.addEventListener("click", () => {
-                window.location.href = `turma-info.html?id={turma.id_turma}`;
+                window.location.href = `turma_info.html?id=${turma.id_turma}`;
             });
             container.appendChild(card);
         });
@@ -33,3 +33,5 @@ function irPara(pagina){
 }
 
 carregarTurmas();
+
+ 

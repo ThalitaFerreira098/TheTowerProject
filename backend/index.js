@@ -11,6 +11,6 @@ app.use(express.json());
 
 //rota principal
 app.use('/api', authRoutes);
-app.use("/turmas", turmasRoutes);
+app.use("/api/turmas", turmasRoutes);
 
 app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`)); 

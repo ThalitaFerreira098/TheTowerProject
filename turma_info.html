@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower - Informações da turma</title>
+    <link rel="stylesheet" href="assets/css/turma_info.css">
+</head>
+    <body>
+        <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('turmas.html')">⟵</button>
+                <h1 id="titulo-pagina">Informações - Turma</h1>
+            </div>
+        </header>
+        
+        <main class="container-info"> 
+            <h1 id="nomeTurma"></h1>
+
+            <section class="info-geral">
+                <div class="info-card">Quantidade de Alunos <br><span id="qtdAlunos">--</span></div>
+                <div class="info-card">Dia de aula <br><span id="diaAula">--</span></div>
+                <div class="info-card">Horario <br><span id="horario">--</span></div>
+                <div class="info-card">Aulas programadas<br><span id="aulasProg">--</span></div>
+                <div class="info-card">Aulas concluidas<br><span id="aulasConcluidas">--</span></div>
+            </section>
+
+            <section class="alunos-progresso">
+                <div class="alunos-lista">
+                    <h2>Alunos matriculados</h2>
+                    <ul id="listaAlunos"></ul>
+                </div>
+
+                <div class="progresso">
+                    <h2>Progresso da Turma</h2>
+                    <div class="progess-bar">
+                        <div id="progress"></div>
+                    </div>
+                    <p id="Percentual">0%</p>
+                </div>
+            </section>
+
+            <section class="aulas-section">
+                <h2>Aulas</h2>
+                <p id="ultimaAula">Última aula: --</p>
+
+                <div class="aulas-cards">
+                    <div class="aula-card"  data-tipo="FaryTale">Fary tales</div>
+                    <div class="aula-card"  data-tipo="Dabate">Debate</div>
+                    <div class="aula-card"  data-tipo="Lesson">Lessons</div>
+                    <div class="aula-card"  data-tipo="Conversação">Conversação</div>
+                </div>
+            </section>
+        </main>
+
+        <script src="assets/js/turma_info.js"></script>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/turmas";
+const API_URL = "http://localhost:3000/api/turmas";
 
 document.getElementById("formCriarTurma").addEventListener("submit", async (event) => {
     event.preventDefault();

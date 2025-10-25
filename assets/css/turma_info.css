@@ -1,0 +1,150 @@
+body {
+    background-color: #1400a0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1100bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.barra-topo {
+    position: relative;
+    background: linear-gradient(90deg, #a020f0, #ff4b2b);
+    width: 200px;
+    height: 40px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-topo h1 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.btn-voltar {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #ff4b2b;
+}
+
+.container-info{
+    text-align: center;
+    margin: 20px auto 20px auto;
+    max-width: 1000px;
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px auto;
+}
+
+.info-geral{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.info-card{
+    background-color: #00bcd4;
+    color: back;
+    border-radius: 15px;
+    padding: 15px;
+    min-width: 140px;
+    font-weight: bold;
+}
+.alunos-progresso{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.alunos-lista, .progresso{
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 40%;
+    min-width: 300px;
+}
+
+.progress-bar{
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 0.6s ease;
+}
+
+.aulas-section {
+    background-color: #00bcd4;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    color: white;
+    max-width: 900px;
+}
+
+.aulas-section h2{
+    color: white;
+}
+
+.aulas-cards  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.aula-card{
+    background-color: #f97c6f;
+    border-radius: 20px;
+    padding: 20px 30px;
+    width: 150px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.aula-card:hover{
+    transform: scale(1.05);
+}
