@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower - Aulas</title>
+    <link rel="stylesheet" href="assets/css/aula.css">
+
+</head>
+    <body>
+         <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('turma_info.html')">⟵</button>
+                <h1 id="titulo-pagina">Aulas</h1>
+            </div>
+        </header>
+
+        <main class="aula-container">
+            <aside class="aulas-lista">
+                <h3>Aulas Programadas</h3>
+                <ul id="listaAulas"></ul>
+            </aside>
+
+            <section class="aula-material">
+                <h3>Material da Aula</h3>
+                <iframe src="" frameborder="0" id="frameMaterial"></iframe>
+            </section>
+
+            <aside class="aula-presensa">
+                <h3>Lista de Presença</h3>
+                <ul id="listaPresenca"></ul>
+                <button class="btn-concluir" id="btnConcluir">Concluir aula</button>
+            </aside>
+        </main>
+        <script src="assets/js/aula.js"></script>
+    </body>
+</html>

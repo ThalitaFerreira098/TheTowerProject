@@ -129,3 +129,55 @@ body {
     opacity: 0.85;
 }
 
+
+/*parte de painel do aluno*/
+/* Painel de resultados */
+.painel-resultado {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card moderno azul/vermelho */
+.card-aluno-info {
+    background: linear-gradient(135deg, #003b79 0%, #0059b3 60%, #b30000 100%);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 10px #00000033;
+    backdrop-filter: blur(5px);
+}
+
+.card-aluno-info h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 2px solid #ffffff66;
+    padding-bottom: 8px;
+}
+
+.card-aluno-info h3 {
+    margin-top: 15px;
+    border-left: 4px solid #fff;
+    padding-left: 10px;
+}
+
+.card-aluno-info .linha {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.card-aluno-info hr {
+    border: 0;
+    border-top: 1px solid #ffffff44;
+    margin: 15px 0;
+}
+
+.hist-item {
+    background: #ffffff22;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+

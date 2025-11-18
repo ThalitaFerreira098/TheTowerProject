@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById("aulasConcluidas").textContent = t.qtd_aulas_realizadas;
 
             const progresso = Math.round(t.progresso_turma || 0);
-            console.log(progresso);
             document.getElementById("progress").style.width = `${progresso}%`;
             document.getElementById("Percentual").textContent = `${progresso}%`;
 
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if(ultimaData.success && ultimaData.data.length > 0){
             const aula = ultimaData.data[0];
             document.getElementById("ultimaAula").textContent = 
-            `Útima aula : ${aula.tipo_aula} (${aula.data_aula})`;
+            `Última aula : ${aula.tipo_aula} (${aula.data_aula})`;
         }
 
         document.querySelectorAll(".aula-card").forEach(card => {
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     window.location.href = `chamada.html?id=${idTurma}&tipo=${tipo}`;
                 }
                 else{
-                    window.location.heaf = `aula.html?id=${idTurma}&tipo=${tipo}`;
+                    window.location.href = `aula.html?id=${idTurma}&tipo=${tipo}`;
                 }
             });
         });
