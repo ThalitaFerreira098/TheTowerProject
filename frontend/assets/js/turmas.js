@@ -48,7 +48,6 @@ inputPesquisa.addEventListener("input", async () => {
     try{
         const resp = await fetch(`${API_URL}/alunos/buscar?nome=${valor}`);
         const dados =await resp.json();
-
         if(!dados.success) return;
 
 
@@ -78,8 +77,8 @@ inputPesquisa.addEventListener("input", async () => {
 
             const histResp = await fetch(`${API_URL}/alunos/historico/${aluno.id_aluno}`);
             const histDados = await histResp.json();
- 
-            let historico = histDados.data || [];
+             
+            let historico = histDados.data[0] || [];
 
             if(!Array.isArray(historico)){
                 historico = [historico];
