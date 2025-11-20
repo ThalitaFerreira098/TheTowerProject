@@ -1,0 +1,287 @@
+/*  BLOCO 1: BANNER SUPERIOR */
+.metodo-banner-wrapper {
+  background: linear-gradient(135deg, #4c00ff 0%, #ff007f 100%);
+  color: white;
+  padding: 120px 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 20;
+}
+
+/* Elementos de Texto do Banner */
+.banner-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.banner-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Botões do Banner */
+.banner-cta-group {
+  margin-top: 30px;
+}
+
+.btn-banner {
+  position: relative;
+  z-index: 30;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 2px solid white;
+  font-weight: 600;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: white;
+  color: #4c00ff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #E0E0E0;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.banner-wave-bottom {
+  position: absolute;
+  bottom: -2px; 
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 10;
+  background-color: white;
+}
+
+.banner-wave-bottom svg path {
+  fill: white;
+}
+
+
+/* BLOCO 2: FEATURES (GRID 2x2) */
+.metodo-feature-section {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2F2F2F;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Ícones das Features */
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.icon-pink { background: #FF4081; }
+.icon-blue { background: #448AFF; }
+.icon-orange { background: #FF9800; }
+.icon-purple { background: #9C27B0; }
+
+
+/* BLOCO 3: LIVROS (GRID RESPONSIVO) */
+
+.metodo-livros-section {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background: #fff;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Cabeçalho do Card (Ícone e Número) */
+.book-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.book-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.book-number-box {
+  text-align: right;
+  line-height: 1;
+}
+
+.label-livro {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.num-livro {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* Título e Conteúdo */
+.book-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+/* Tags */
+.book-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag-duration {
+  background: #f4f4f4;
+  color: #666;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag-badge {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Barra de Progresso */
+.book-progress-bg {
+  width: 100%;
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.book-progress-fill {
+  height: 100%;
+  width: 40%;
+  border-radius: 10px;
+}

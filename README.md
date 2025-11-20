@@ -1,8 +1,8 @@
 <img width="1100" height="862" alt="capareadmeTT" src="https://github.com/user-attachments/assets/34ee0682-d629-4d66-987c-7c47d6f607ea" />
 
 
-> 🚧 **Status do Projeto:** Em desenvolvimento (fase inicial)  
-> 🗓️ Última atualização: Outubro de 2025  
+> 🚧 **Status do Projeto:** Em desenvolvimento (fase Final)  
+> 🗓️ Última atualização: Novembro de 2025  
 
 ---
 
@@ -129,11 +129,11 @@ TheTowerProject/
 
 ## 📈 Próximos Passos
 
-- [ ] Criar o banco de dados inicial no MySQL  
-- [ ] Implementar a conexão via JavaScript (Node ou direto no cliente)  
+- [OK] Criar o banco de dados inicial no MySQL  
+- [OK] Implementar a conexão via JavaScript (Node ou direto no cliente)  
 - [ ] Construir o layout base do dashboard  
 - [ ] Adicionar os primeiros gráficos de análise  
-- [ ] Desenvolver o sistema de login e autenticação  
+- [OK] Desenvolver o sistema de login e autenticação  
 
 ---
 
@@ -145,7 +145,7 @@ TheTowerProject/
 
 ## 👨‍💻 Autor
 
-**Alexander (Clayver)**  
+**Alexssander (Clayver)**  
 📍 Desenvolvedor em formação | Amante de tecnologia e educação  
 📧 *Em breve: contato profissional e site do projeto*
 

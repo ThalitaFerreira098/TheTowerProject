@@ -1,0 +1,230 @@
+{
+  "site": {
+    "title": "The Tower Idiomas",
+    "description": "Aulas presenciais, online e híbridas"
+  },
+  "hero": {
+    "title": "Aprenda Inglês de verdade do zero à fluência",
+    "description": "Desenvolva conversação real, participe de eventos, aprenda com livros exclusivos e evolua do básico à fluência com um método criado para garantir resultados.",
+    "cta": "Agende sua Aula Experimental Gratuita",
+    "whatsapp": "5519999999999",
+    "whatsappMessage": "Olá! Gostaria de agendar uma aula experimental gratuita."
+  },
+  "modalidades": {
+    "title": "Modalidades de Ensino",
+    "items": [
+      {
+        "icon": "monitor",
+        "title": "Presencial",
+        "description": "Aulas presenciais em sala equipada, ideal para quem gosta de interação direta e prática real."
+      },
+      {
+        "icon": "wifi",
+        "title": "Online",
+        "description": "Aulas online com a mesma qualidade do presencial. Conforto, praticidade e acompanhamento completo."
+      },
+      {
+        "icon": "repeat",
+        "title": "Híbrido",
+        "description": "Flexibilidade total para alternar entre presencial e online sempre que precisar."
+      }
+    ]
+  },
+  "tiposDeAulas": {
+    "title": "Formatos Disponíveis de Aula",
+    "particular": {
+      "title": "Aula Particular",
+      "description": "Aulas individuais com foco total no seu ritmo e objetivo."
+    },
+    "grupo": {
+      "title": "Aula em Grupo",
+      "description": "Turmas pequenas para garantir interação, conversação e acompanhamento próximo."
+    },
+    "horarios": {
+      "title": "Horários",
+      "subtitle": "Segunda a sexta-feira",
+      "turmas": [
+        { "nome": "Turma 1", "horario": "19h às 20h20" },
+        { "nome": "Turma 2", "horario": "20h30 às 21h50" }
+      ],
+      "duracao": "80 minutos por semana"
+    },
+    "vantagens": [
+      "Aulas online ou presenciais",
+      "Livros da metodologia gratuitamente",
+      "+700 livros físicos para empréstimo",
+      "Eventos mensais de conversação",
+      "Passeios interativos na vida real"
+    ]
+  },
+  "metodologia": {
+  "metodoBanner": {
+    "tag": "✨ Aprenda de forma natural e progressiva",
+    "title": "Metodologia Baseada em Evolução Constante",
+    "subtitle": "A fusão perfeita entre prática, conversação e desenvolvimento progressivo — guiando você até a fluência",
+    "ctaPrimary": "Ver Metodologia >",
+    "ctaSecondary": "Módulos"
+  },
+  "metodoFeatures": {
+    "title": "Nossa Metodologia",
+    "subtitle": "Uma experiência completa baseada em prática, estrutura e imersão real.",
+    "items": [
+      {
+        "iconClass": "icon-pink",
+        "title": "Estrutura Progressiva",
+        "description": "Do iniciante ao avançado. 7 livros planejados para entregar evolução real, desde o nivelamento até debates complexos."
+      },
+      {
+        "iconClass": "icon-blue",
+        "title": "Imersão Gradual",
+        "description": "Conversação desde o início, com aumento gradual de 50% até aulas praticamente 100% em inglês."
+      },
+      {
+        "iconClass": "icon-orange",
+        "title": "Recursos Complementares",
+        "description": "Histórias, músicas e estruturas gramaticais focadas em conversação real do dia a dia."
+      },
+      {
+        "iconClass": "icon-purple",
+        "title": "Debates e Fluência",
+        "description": "Discussões sobre temas complexos e atuais, desenvolvendo argumentação e vocabulário avançado."
+      }
+    ]
+  },
+  "title": "Os 7 Livros da Jornada",
+  "subtitle": "Do zero absoluto até a fluência completa. Estrutura progressiva que realmente funciona.",
+  "livros": [
+    {
+      "bookNum": "0",
+      "title": "Nivelamento",
+      "duration": "2,5 - 3 meses",
+      "badge": "100% Português",
+      "description": "Garantir que todos tenham o mesmo nível inicial. Verbos mais usados, comandos simples e preparação para aulas em inglês.",
+      "color": "#6A00FF",
+      "icon": "stack"
+    },
+    {
+      "bookNum": "1",
+      "title": "Primeira Imersão",
+      "duration": "3 - 4 meses",
+      "badge": "50% → 85% Inglês",
+      "description": "Introdução ao listening e conversação. Frases do dia a dia e comunicação básica natural.",
+      "color": "#2D5BFF",
+      "icon": "chat"
+    },
+    {
+      "bookNum": "2",
+      "title": "Leitura e Pronúncia",
+      "duration": "3 - 4 meses",
+      "badge": "70% - 80% Inglês",
+      "description": "Histórias infantis e músicas. 60 min conversação + 20 min gramática. Pronúncia correta e sistemática.",
+      "color": "#00C9A7",
+      "icon": "book"
+    },
+    {
+      "bookNum": "3",
+      "title": "Conversação Avançada",
+      "duration": "4 - 5 meses",
+      "badge": "100% Inglês",
+      "description": "Free conversation. Vocabulário complexo, 65-70 min conversação + 10 min gramática. Preparação para debates.",
+      "color": "#00D26A",
+      "icon": "volume"
+    },
+    {
+      "bookNum": "4",
+      "title": "Início dos Debates",
+      "duration": "4 - 5 meses",
+      "badge": "100% Inglês",
+      "description": "Debates sobre temas complexos: aborto, maioridade penal, capitalismo vs socialismo, eutanásia.",
+      "color": "#FF7A00",
+      "icon": "bubble"
+    },
+    {
+      "bookNum": "5",
+      "title": "Debates Avançados",
+      "duration": "4 - 5 meses",
+      "badge": "100% Inglês",
+      "description": "Aprofundamento em debates. Sustentação de opiniões complexas e vocabulário avançado.",
+      "color": "#FF2E63",
+      "icon": "pulse"
+    }
+  ]
+},
+  "eventos": {
+    "title": "Eventos para Praticar Inglês na Vida Real",
+    "items": [
+      {
+        "title": "Conversação Mensal",
+        "description": "Todo último domingo do mês, encontro exclusivo para prática intensiva de conversação em inglês. Um espaço seguro e divertido para usar tudo que você aprendeu.",
+        "tag": "Último domingo",
+        "image": "https://images.unsplash.com/photo-1633457896836-f8d6025c85d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBzcGVha2luZyUyMGNvbnZlcnNhdGlvbnxlbnwxfHx8fDE3NjMyNDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "title": "Passeios Interativos",
+        "description": "Hopi Hari, Taquaral, museus, eventos culturais e muito mais. Vivemos experiências reais onde o inglês é o único idioma permitido. Imersão total na prática.",
+        "tag": "100% English",
+        "image": "https://images.unsplash.com/photo-1638450096618-7774f1cdb5d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbXVzZW1lbnQlMjBwYXJrJTIwZnVufGVufDF8fHx8MTc2MzI0NDU4Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+      }
+    ]
+  },
+  "planos": {
+    "title": "Planos e Valores",
+    "grupo": {
+      "title": "Aulas em Grupo",
+      "price": "149,90",
+      "features": [
+        "1 aula por semana",
+        "80 minutos por aula",
+        "Online ou presencial",
+        "Material gratuito",
+        "+700 livros para empréstimo",
+        "Eventos mensais inclusos",
+        "Passeios interativos"
+      ]
+    },
+    "particulares": {
+      "title": "Aulas Particulares",
+      "observacao": "Observação: Mesmo valor para pacote de conversação",
+      "items": [
+        { "frequency": "1x por semana", "price": "399,90", "popular": false },
+        { "frequency": "2x por semana", "price": "779,90", "popular": true },
+        { "frequency": "3x por semana", "price": "1.059,90", "popular": false }
+      ]
+    }
+  },
+  "sobre": {
+    "title": "Sobre o Professor",
+    "placeholder": "Informações do professor serão adicionadas aqui...",
+    "sections": [
+      { "title": "Formação", "content": "A ser preenchido" },
+      { "title": "Especializações", "content": "A ser preenchido" },
+      { "title": "Experiências", "content": "A ser preenchido" },
+      { "title": "Método Criado", "content": "A ser preenchido" }
+    ]
+  },
+  "footer": {
+    "description": "Aulas presenciais, online e híbridas.",
+    "links": [
+      { "label": "Home", "href": "#home" },
+      { "label": "Modalidades", "href": "#modalidades" },
+      { "label": "Tipos de Aula", "href": "#tipos" },
+      { "label": "Metodologia", "href": "#metodologia" },
+      { "label": "Eventos", "href": "#eventos" },
+      { "label": "Planos", "href": "#planos" },
+      { "label": "Sobre", "href": "#sobre" }
+    ],
+    "contact": {
+      "phone": "(19) 99999-9999",
+      "email": "contato@thetoweridiomas.com.br",
+      "address": "Endereço da escola",
+      "city": "Cidade, Estado - CEP"
+    },
+    "socials": [
+      { "name": "Facebook", "url": "#" },
+      { "name": "Instagram", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Twitter", "url": "#" }
+    ],
+    "copyright": "© 2025 The Tower Idiomas – Todos os direitos reservados."
+  }
+}
