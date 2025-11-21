@@ -147,6 +147,15 @@
       "description": "Aprofundamento em debates. Sustentação de opiniões complexas e vocabulário avançado.",
       "color": "#FF2E63",
       "icon": "pulse"
+    },
+    {
+      "bookNum": "6",
+      "title": "Fluência & Negócios",
+      "duration": "4 - 5 meses",
+      "badge": "100% Inglês",
+      "description": "Fluência consolidada. Projetos práticos: empresas, ONGs, campanhas e apresentações profissionais.",
+      "color": "#F50057",
+      "icon": "case"
     }
   ]
 },

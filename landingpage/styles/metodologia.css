@@ -1,8 +1,8 @@
 /*  BLOCO 1: BANNER SUPERIOR */
 .metodo-banner-wrapper {
-  background: linear-gradient(135deg, #4c00ff 0%, #ff007f 100%);
+  background: linear-gradient(105deg, #1a237e 0%, #7b1fa2 50%, #ff1744 100%);
   color: white;
-  padding: 120px 0 0;
+  padding: 120px 0 100px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -19,82 +19,123 @@
 /* Elementos de Texto do Banner */
 .banner-tag {
   background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
   color: white;
-  padding: 6px 12px;
+  padding: 8px 20px;
   border-radius: 50px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
 
 .banner-title {
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .banner-subtitle {
   font-size: 18px;
-  font-weight: 300;
-  opacity: 0.9;
-  margin-bottom: 30px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Botões do Banner */
 .banner-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   margin-top: 30px;
 }
 
 .btn-banner {
-  position: relative;
-  z-index: 30;
-  padding: 12px 24px;
+  padding: 14px 32px;
   border-radius: 50px;
-  border: 2px solid white;
-  font-weight: 600;
-  margin: 0 10px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 15px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.btn-primary {
-  background: white;
-  color: #4c00ff;
+#metodoBannerWrapper .btn-primary {
+  background: white !important ;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#metodoBannerWrapper .btn-primary .text-gradiente{
+  background-image: linear-gradient(105deg, #1a237e 0%, #7b1fa2 50%, #ff1744 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .btn-secondary {
   background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
   color: white;
 }
 
-.btn-primary:hover {
-  background: #E0E0E0;
+#metodoBannerWrapper .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  background-color: #f8f8f8 !important;
 }
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
+  border-color: white;
 }
 
 .banner-wave-bottom {
   position: absolute;
-  bottom: -2px; 
+  bottom: -1px; 
   left: 0;
   width: 100%;
   line-height: 0;
   z-index: 10;
-  background-color: white;
+}
+
+.banner-wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+    min-height: 100px;
 }
 
 .banner-wave-bottom svg path {
   fill: white;
 }
 
-
+#target-nossa-metodologia{
+  padding-top: 40px;
+  background-color: #fff;
+}
 /* BLOCO 2: FEATURES (GRID 2x2) */
-.metodo-feature-section {
-  padding-top: 50px;
-  padding-bottom: 80px;
+.metodo-feature-section .section-title{
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.metodo-feature-section .section-subtitle{
+  margin-top: 0px;
 }
 
 .section-title {
@@ -163,6 +204,14 @@
 
 
 /* BLOCO 3: LIVROS (GRID RESPONSIVO) */
+.metodo-livros-section .section-title{
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.metodo-livros-section .section-subtitle {
+    margin-top: 0px ;
+}
 
 .metodo-livros-section {
   padding-top: 80px;
@@ -282,6 +331,7 @@
 
 .book-progress-fill {
   height: 100%;
-  width: 40%;
+  width: 0;
   border-radius: 10px;
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
