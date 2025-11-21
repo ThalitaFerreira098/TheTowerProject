@@ -1,6 +1,3 @@
-// Arquivo: sections/metodologia/metodologia.js
-
-// --- 1. Renderiza o Banner ---
 function renderBanner(data) {
     const wrapper = document.getElementById('metodoBannerWrapper');
     if (!wrapper) return;
@@ -138,7 +135,51 @@ function render7BooksCards(livros, title, subtitle) {
         bars.forEach(bar => observer.observe(bar));
     }, 200);
 }
+function renderEvolucao(data) {
+    const target = document.getElementById('target-evolucao');
+    if (!target || !data) return;
 
+    const icons = {
+        medal: '<svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>',
+        target: '<svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
+    };
+
+    const cardsHTML = data.cards.map(card => `
+        <div class="glass-card">
+            <div class="glass-icon ${card.colorClass}">
+                ${icons[card.icon]}
+            </div>
+            <h3>${card.title}</h3>
+            <ul class="check-list">
+                ${card.list.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        </div>
+    `).join('');
+    target.innerHTML = `
+        <section class="evolucao-section">
+            <div class="container">
+                <div class="evolucao-header">
+                    <span class="badge-results">${data.badge}</span>
+                    <h2 class="evolucao-title">${data.title}</h2>
+                    <p class="evolucao-subtitle">${data.subtitle}</p>
+                </div>
+
+                <div class="evolucao-grid">
+                    ${cardsHTML}
+                </div>
+
+                <div class="cta-box-glass">
+                    <h3>${data.cta.title}</h3>
+                    <p>${data.cta.description}</p>
+                    <div class="cta-buttons-group">
+                        <a href="#" class="btn-glow-white">${data.cta.btnPrimary}</a>
+                        <a href="#" class="btn-outline-white">${data.cta.btnSecondary}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
 
 export function init(data) {
     if (!data) return console.error("Dados de 'metodologia' não encontrados.");
@@ -146,4 +187,5 @@ export function init(data) {
     renderBanner(data.metodoBanner);
     renderFeatureCards(data.metodoFeatures);
     render7BooksCards(data.livros, data.title, data.subtitle);
+    renderEvolucao(data.evolucao);
 }

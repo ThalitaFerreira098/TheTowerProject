@@ -157,7 +157,41 @@
       "color": "#F50057",
       "icon": "case"
     }
-  ]
+  ],
+"evolucao": {
+      "badge": "✨ Resultados Comprovados",
+      "title": "Sua Evolução Garantida",
+      "subtitle": "Veja o que você será capaz de fazer ao concluir nossa metodologia completa",
+      "cards": [
+        {
+          "icon": "medal",
+          "colorClass": "icon-blue",
+          "title": "Ao Final do Livro 5",
+          "list": [
+            "Conhecimento avançado consolidado",
+            "Vocabulário amplo e diversificado",
+            "Conversação natural e fluida",
+            "Capacidade de debater temas complexos"
+          ]
+        },
+        {
+          "icon": "target",
+          "colorClass": "icon-pink",
+          "title": "Ao Concluir o Livro 6",
+          "list": [
+            "Fluência completa atingida",
+            "Expressão natural em qualquer contexto",
+            "Interação profissional avançada",
+            "Apresentações e projetos em inglês"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Pronto para Transformar seu Inglês?",
+        "description": "Junte-se a milhares de alunos que já conquistaram a fluência com nossa metodologia comprovada",
+        "btnPrimary": "Começar Agora >",
+        "btnSecondary": "Falar com Consultor"
+      }
 },
   "eventos": {
     "title": "Eventos para Praticar Inglês na Vida Real",
@@ -236,4 +270,5 @@
     ],
     "copyright": "© 2025 The Tower Idiomas – Todos os direitos reservados."
   }
+}
 }
