@@ -1,12 +1,13 @@
-
 export function init(data) {
     if (!data) return console.error("Dados de 'tipodeaula' não encontrados para inicialização.");
 
     const titleElement = document.getElementById('tiposTitle');
     if(titleElement) titleElement.textContent = data.title;
 
+    // Cards de Tipos de aula
     const grid = document.getElementById('tiposGrid');
     if (grid) {
+            // Card Aula Particular
         grid.innerHTML = `
             <div class="tipo-card blue animate-on-scroll">
                 <div class="card-icon">
@@ -16,22 +17,20 @@ export function init(data) {
                 <p>${data.particular.description}</p>
                 <div style="flex-grow: 1; min-height: 10px;"></div> 
             </div>
-
-
+            
+            
             <div class="tipo-card red animate-on-scroll">
-                <div class="card-icon">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                </div>
-                <h3>${data.grupo.title}</h3> 
-                
-                <div class="card-split-columns">
-                    
-                    <div class="split-left-content">
+                <div class="card-content-split"> 
+                    <div class="split-left">
+                        <div class="card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>${data.grupo.title}</h3> 
                         <p class="description-text">${data.grupo.description}</p>
                     </div>
 
-                    <div class="split-right-schedule">
-                        <div class="schedule-header-align">${data.horarios.subtitle}</div> 
+                    <div class="split-right">
+                        <h4 class="schedule-title">${data.horarios.subtitle}</h4>
                         
                         ${data.horarios.turmas.map(t => `
                             <div class="schedule-item-split">
@@ -45,7 +44,7 @@ export function init(data) {
                 </div>
         `;
     }
-    
+    // Card Vantagens
     const vantagensGrid = document.getElementById('vantagensGrid');
     if (vantagensGrid) {
         const iconList = [

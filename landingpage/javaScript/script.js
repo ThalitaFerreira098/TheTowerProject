@@ -11,11 +11,9 @@ const COMPONENT_MAP = {
 
 let siteData = {};
 
-const BASE_PATH = './landingpage'; 
-
 async function loadComponent(name, placeholderId, data) {
     try {
-        const response = await fetch(`${BASE_PATH}/${name}.html`);
+        const response = await fetch(`./${name}.html`);
         
         if (!response.ok) throw new Error(`Erro ao carregar ${name} (404)`);
         const html = await response.text();
@@ -24,10 +22,10 @@ async function loadComponent(name, placeholderId, data) {
         if (container) {
             container.innerHTML = html;
 
-            if (!document.querySelector(`link[href="${BASE_PATH}/styles/${name}.css"]`)) {
+            if (!document.querySelector(`link[href="./styles/${name}.css"]`)) {
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';
-                link.href = `${BASE_PATH}/styles/${name}.css`;
+                link.href = `./styles/${name}.css`;
                 document.head.appendChild(link);
             }
 
@@ -48,7 +46,7 @@ async function loadComponent(name, placeholderId, data) {
 
 async function startApp() {
     try {
-        const resp = await fetch(`${BASE_PATH}/data.json`);
+        const resp = await fetch(`./data.json`);
         siteData = await resp.json();
 
         for (const [componentName, map] of Object.entries(COMPONENT_MAP)) {
