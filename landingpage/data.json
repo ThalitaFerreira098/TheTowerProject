@@ -255,7 +255,8 @@
       { "label": "Metodologia", "href": "#metodologia" },
       { "label": "Eventos", "href": "#eventos" },
       { "label": "Planos", "href": "#planos" },
-      { "label": "Sobre", "href": "#sobre" }
+      { "label": "Sobre", "href": "#sobre" },
+      { "label": "Sistema (Acesso Professor)", "href": "./landingpage/sistema.html" }
     ],
     "contact": {
       "phone": "(19) 99999-9999",
@@ -312,5 +313,11 @@
         "image": "assets/img/depo_cristina.jpg"
       }
     ]
+}, 
+  "sistema": {
+    "title": "GESTÃO DO SISTEMA",
+    "subtitle": "Área exclusiva para o Professor",
+    "buttonText": "Acessar Painel de Controle",
+    "linkHref": "../frontend/login.html" 
 }
 }

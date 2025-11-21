@@ -7,7 +7,7 @@ const COMPONENT_MAP = {
     planos: { jsonKey: 'planos', htmlId: 'planos' },
     sobre: { jsonKey: 'sobre', htmlId: 'sobre' },
     contato: { jsonKey: 'footer', htmlId: 'contato' },
-    depoimentos: {jsonKey: 'depoimentos', htmlId: 'depoimentos'}
+    depoimentos: {jsonKey: 'depoimentos', htmlId: 'depoimentos'},
 };
 
 let siteData = {};
@@ -101,5 +101,6 @@ window.addEventListener('scroll', () => {
         else nav.classList.remove('scrolled');
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', startApp);
