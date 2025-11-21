@@ -9,12 +9,8 @@ router.get("/buscar", async (req, res) => {
     if(!nome){return res.status(400).json({ success: false, message: "Nome do aluno é obrigatório." });}
 
     try{
-        const [alunos] = await db.query(
-            "SELECT * FROM tb_aluno where nome_aluno like ?;", [`%${nome}%`]
-        );
-
-
-        res.json({success: true, data: alunos});
+        const [alunos] = await db.query("CALL sp_pesquisa_aluno(?);", [nome] );
+        res.json({success: true, data: alunos[0]});
     }catch( error){
         res.status(500).json({success: false, message: error.message});
     }
