@@ -1,0 +1,145 @@
+
+.depoimentos-section {
+    padding: 80px 0;
+    background-color: #f8f8f8; 
+}
+
+.carousel-wrapper {
+    position: relative; 
+    margin-top: 40px;
+    padding: 0 50px; 
+}
+
+#depoimentos .section-subtitle{
+    margin-top: -30px;
+}
+
+.depoimentos-grid {
+    display: flex; 
+    gap: 30px;
+    padding: 20px 0;
+    overflow-x: auto; 
+    scroll-snap-type: mandatory; 
+    scroll-snap-type: x mandatory; 
+}
+
+.depoimentos-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.depoimentos-grid { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.depoimento-card {
+    min-width: 300px; 
+    max-width: 350px; 
+    flex-shrink: 0; 
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    scroll-snap-align: start; 
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Estrelas */
+.depoimento-rating {
+    color: #FFC107; 
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.star-icon {
+    margin-right: 2px;
+}
+
+.depoimento-text {
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    font-style: italic; 
+    margin-bottom: 35px;
+}
+
+.depoimento-author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-image-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #2D5BFF; 
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.depoimento-author {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.depoimento-role {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .depoimentos-grid {
+        padding: 0 20px;
+    }
+}
+
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #2D5BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, opacity 0.3s;
+    z-index: 10;
+}
+
+.carousel-nav-btn:hover {
+    background: #1a42cc;
+}
+
+.carousel-nav-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-prev {
+    left: 0; 
+}
+
+.btn-next {
+    right: 0; 
+}
+
+
+@media (max-width: 768px) {
+    .carousel-nav-btn {
+        opacity: 0; 
+        pointer-events: none;
+    }
+    .carousel-wrapper {
+        padding: 0; 
+    }
+}
