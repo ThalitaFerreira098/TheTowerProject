@@ -11,7 +11,7 @@ function renderBanner(data) {
                 <button class="btn-banner btn-primary" id="btnVerMetodo">
                     <span class="text-gradiente">${data.ctaPrimary}</span>
                 </button>
-                <button class="btn-banner btn-secondary">${data.ctaSecondary}</button>
+                <button class="btn-banner btn-secondary" id="btnModulos">${data.ctaSecondary}</button>
             </div>
         </div>
         <div class="banner-wave-bottom">

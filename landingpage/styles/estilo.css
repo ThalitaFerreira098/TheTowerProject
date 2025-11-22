@@ -3,6 +3,7 @@
     --blue: #2D5BFF; --purple: #6A00FF; --red: #FF2E63; --orange: #FF7A00;
     --white: #FFFFFF; --dark: #2F2F2F; --bg-dark: #0F1440;
 }
+
 body { font-family: 'Poppins', sans-serif; color: var(--dark); overflow-x: hidden; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 80px 0; }

@@ -8,7 +8,9 @@ function renderDepoimentos(data) {
     const target = document.getElementById('depoimentos');
     if (!target || !data) return;
 
-    const cardsHTML = data.items.map(depoimento => `
+    const loopItems = [...data.items, ...data.items.slice(0, 3)];
+
+    const cardsHTML = loopItems.map(depoimento => `
         <div class="depoimento-card">
             <div class="depoimento-rating">
                 ${generateStars(5)} 

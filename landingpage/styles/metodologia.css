@@ -135,7 +135,11 @@
 }
 
 .metodo-feature-section .section-subtitle{
-  margin-top: 0px;
+  margin-top: 10px;
+}
+
+#metodoSubtitle .section-subtitle{
+  margin-top: 10px;
 }
 
 .section-title {
@@ -144,6 +148,7 @@
   font-weight: 700;
   color: #2F2F2F;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .section-subtitle {
