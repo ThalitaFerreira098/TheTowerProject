@@ -1,8 +1,8 @@
 /*  BLOCO 1: BANNER SUPERIOR */
 .metodo-banner-wrapper {
-  background: linear-gradient(135deg, #4c00ff 0%, #ff007f 100%);
+  background: linear-gradient(105deg, #1a237e 0%, #7b1fa2 50%, #ff1744 100%);
   color: white;
-  padding: 120px 0 0;
+  padding: 120px 0 100px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -19,82 +19,127 @@
 /* Elementos de Texto do Banner */
 .banner-tag {
   background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
   color: white;
-  padding: 6px 12px;
+  padding: 8px 20px;
   border-radius: 50px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
 
 .banner-title {
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .banner-subtitle {
   font-size: 18px;
-  font-weight: 300;
-  opacity: 0.9;
-  margin-bottom: 30px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Botões do Banner */
 .banner-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   margin-top: 30px;
 }
 
 .btn-banner {
-  position: relative;
-  z-index: 30;
-  padding: 12px 24px;
+  padding: 14px 32px;
   border-radius: 50px;
-  border: 2px solid white;
-  font-weight: 600;
-  margin: 0 10px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 15px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.btn-primary {
-  background: white;
-  color: #4c00ff;
+#metodoBannerWrapper .btn-primary {
+  background: white !important ;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#metodoBannerWrapper .btn-primary .text-gradiente{
+  background-image: linear-gradient(105deg, #1a237e 0%, #7b1fa2 50%, #ff1744 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .btn-secondary {
   background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
   color: white;
 }
 
-.btn-primary:hover {
-  background: #E0E0E0;
+#metodoBannerWrapper .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  background-color: #f8f8f8 !important;
 }
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
+  border-color: white;
 }
 
 .banner-wave-bottom {
   position: absolute;
-  bottom: -2px; 
+  bottom: -1px; 
   left: 0;
   width: 100%;
   line-height: 0;
   z-index: 10;
-  background-color: white;
+}
+
+.banner-wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+    min-height: 100px;
 }
 
 .banner-wave-bottom svg path {
   fill: white;
 }
 
-
+#target-nossa-metodologia{
+  padding-top: 40px;
+  background-color: #fff;
+}
 /* BLOCO 2: FEATURES (GRID 2x2) */
-.metodo-feature-section {
-  padding-top: 50px;
-  padding-bottom: 80px;
+.metodo-feature-section .section-title{
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.metodo-feature-section .section-subtitle{
+  margin-top: 10px;
+}
+
+#metodoSubtitle .section-subtitle{
+  margin-top: 10px;
 }
 
 .section-title {
@@ -103,6 +148,7 @@
   font-weight: 700;
   color: #2F2F2F;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .section-subtitle {
@@ -163,6 +209,14 @@
 
 
 /* BLOCO 3: LIVROS (GRID RESPONSIVO) */
+.metodo-livros-section .section-title{
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.metodo-livros-section .section-subtitle {
+    margin-top: 0px ;
+}
 
 .metodo-livros-section {
   padding-top: 80px;
@@ -282,6 +336,189 @@
 
 .book-progress-fill {
   height: 100%;
-  width: 40%;
+  width: 0;
   border-radius: 10px;
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* EVOLUÇÃO */
+
+.evolucao-section{
+  background: radial-gradient(circle at top left, #1a237e 0%, #311b92 40%,#7b1fa2 100%);
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-results {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
+}
+
+.evolucao-title {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+.evolucao-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+.evolucao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.glass-card{
+  background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px); 
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.glass-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.glass-icon.icon-blue { 
+  background: #03A9F4; 
+  box-shadow: 0 5px 15px rgba(3, 169, 244, 0.3); 
+}
+
+.glass-icon.icon-pink { 
+  background: #FF4081; 
+  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3); 
+}
+
+.glass-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    margin-bottom: 14px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.5;
+    color: #f0f0f0;
+}
+
+.check-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-box-glass {
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+.cta-box-glass h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.cta-buttons-group {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botão "Começar Agora" */
+.btn-glow-white {
+    background: #536DFE;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(83, 109, 254, 0.4);
+    display: inline-block;
+}
+
+.btn-glow-white:hover {
+    background: #4c63e6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(83, 109, 254, 0.6);
+}
+
+/* Botão "Falar com Consultor"*/
+.btn-outline-white {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    .evolucao-header { padding: 0 20px; }
+    .cta-box-glass { padding: 40px 20px; margin: 0 20px; }
+    .evolucao-grid { padding: 0 20px; }
 }

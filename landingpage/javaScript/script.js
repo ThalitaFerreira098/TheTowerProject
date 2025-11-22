@@ -6,12 +6,13 @@ const COMPONENT_MAP = {
     eventos: { jsonKey: 'eventos', htmlId: 'eventos' },
     planos: { jsonKey: 'planos', htmlId: 'planos' },
     sobre: { jsonKey: 'sobre', htmlId: 'sobre' },
-    contato: { jsonKey: 'footer', htmlId: 'contato' }
+    contato: { jsonKey: 'footer', htmlId: 'contato' },
+    depoimentos: {jsonKey: 'depoimentos', htmlId: 'depoimentos'},
 };
 
 let siteData = {};
 
-const BASE_PATH = './landingpage'; 
+const BASE_PATH = './landingpage';
 
 async function loadComponent(name, placeholderId, data) {
     try {
@@ -100,5 +101,6 @@ window.addEventListener('scroll', () => {
         else nav.classList.remove('scrolled');
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', startApp);
