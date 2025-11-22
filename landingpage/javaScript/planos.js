@@ -26,14 +26,14 @@ export function init(planos) {
                 <ul class="feature-list">
                     ${planos.grupo.features.map(f => `
                         <li>
-                            <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="check-icon" fill="none" stroke="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                             ${f}
                         </li>
                     `).join('')}
                 </ul>
             </div>
             
-            <a href="${groupPlanHref}" class="btn-plan-action" target="_blank">Entrar na Turma</a>
+            <a href="${groupPlanHref}" class="btn-plan-action" target="_blank" rel="noopener noreferrer" aria-label="Contratar Plano Grupo via WhatsApp">Entrar na Turma</a>
         </div>
     `;
 
@@ -58,7 +58,7 @@ export function init(planos) {
                 <p class="plan-subtitle">${planos.particulares.observacao}</p> 
             </div>
 
-            <a href="${privatePlanHref}" class="btn-plan-action btn-highlight" target="_blank">Contratar Agora</a>
+            <a href="${privatePlanHref}" class="btn-plan-action btn-highlight" target="_blank" rel="noopener noreferrer" aria-label="Contratar Aulas Particulares via WhatsApp">Contratar Agora</a>
         </div>
     `;
 }

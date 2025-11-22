@@ -8,10 +8,10 @@ function renderBanner(data) {
             <h1 class="banner-title animate-fade-in-up" style="animation-delay: 0.1s">${data.title}</h1>
             <p class="banner-subtitle animate-fade-in-up" style="animation-delay: 0.2s">${data.subtitle}</p>
             <div class="banner-cta-group animate-fade-in-up" style="animation-delay: 0.3s">
-                <button class="btn-banner btn-primary" id="btnVerMetodo">
+                <button class="btn-banner btn-primary" id="btnVerMetodo" role="button" aria-label="Ver detalhes da Metodologia">
                     <span class="text-gradiente">${data.ctaPrimary}</span>
                 </button>
-                <button class="btn-banner btn-secondary" id="btnModulos">${data.ctaSecondary}</button>
+                <button class="btn-banner btn-secondary" id="btnModulos role="button" aria-label="Navegar para Módulos e Livros"">${data.ctaSecondary}</button>
             </div>
         </div>
         <div class="banner-wave-bottom">
@@ -47,10 +47,10 @@ function renderFeatureCards(data) {
     document.getElementById('featuresSubtitle').textContent = data.subtitle;
     
     const icons = {
-        book: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
-        headset: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18V6h18v12M3 18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2M3 10h18M3 14h18"/></svg>',
-        music: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13M9 18a2 2 0 0 1-2 2H5a2 2 0 0 1 2-2M21 16v-3l-12-2v12l12-2M21 16a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2"/></svg>',
-        chat: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
+        book: '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+        headset: '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18V6h18v12M3 18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2M3 10h18M3 14h18"/></svg>',
+        music: '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13M9 18a2 2 0 0 1-2 2H5a2 2 0 0 1 2-2M21 16v-3l-12-2v12l12-2M21 16a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2"/></svg>',
+        chat: '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
     };
 
     document.getElementById('featuresGrid').innerHTML = data.items.map(item => `
@@ -61,7 +61,7 @@ function renderFeatureCards(data) {
                 </div>
                 <h4>${item.title}</h4>
             </div>
-            
+
             <p>${item.description}</p>
         </div>
     `).join('');
@@ -73,13 +73,13 @@ function render7BooksCards(livros, title, subtitle) {
     document.getElementById('metodoSubtitle').textContent = subtitle;
     
     const bookIcons = {
-        stack: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
-        chat: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
-        book: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
-        volume: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>',
-        bubble: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
-        pulse: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
-        case: '<svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>'
+        stack: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
+        chat: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+        book: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+        volume: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>',
+        bubble: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
+        pulse: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+        case: '<svg aria-hidden="true" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>'
     };
 
     const gridContainer = document.getElementById('metodologiaGrid');

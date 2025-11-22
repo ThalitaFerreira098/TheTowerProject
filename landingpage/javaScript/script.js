@@ -87,10 +87,25 @@ function initializeMenu() {
     if(toggle && menu) {
         const newToggle = toggle.cloneNode(true);
         toggle.parentNode.replaceChild(newToggle, toggle);
-        newToggle.addEventListener('click', () => menu.classList.toggle('active'));
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => menu.classList.remove('active'));
+
+        newToggle.addEventListener('click', () => {
+            const isExpanded = menu.classList.toggle('active'); 
+            
+            newToggle.setAttribute('aria-expanded', isExpanded);
+            if (isExpanded) {
+                menu.querySelector('a')?.focus();
+            }
         });
+        
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                newToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        newToggle.setAttribute('aria-expanded', 'false');
+
     }
 }
 
