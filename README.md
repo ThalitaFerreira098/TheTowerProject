@@ -1,6 +1,5 @@
 ## Link do site: https://clayalexssander.github.io/TheTowerProject/
-<img width="1100" height="862" alt="capareadmeTT" src="https://github.com/user-attachments/assets/34ee0682-d629-4d66-987c-7c47d6f607ea" />
-
+![capareadmeTT](https://github.com/user-attachments/assets/91cbaec4-9f0a-4794-bc42-9ae7674b3195)
 
 > 🚧 **Status do Projeto:** Em desenvolvimento (fase Final)  
 > 🗓️ Última atualização: Novembro de 2025  
