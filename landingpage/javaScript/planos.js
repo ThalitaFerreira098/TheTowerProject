@@ -41,8 +41,6 @@ export function init(planos) {
         <div class="plano-card">
             <div class="card-content">
                 <h3 class="plan-title">${planos.particulares.title}</h3>
-                
-                <p class="plan-subtitle">${planos.particulares.observacao}</p> 
 
                 <div class="clean-options-list">
                     ${planos.particulares.items.map(item => `
@@ -57,6 +55,7 @@ export function init(planos) {
                         </div>
                     `).join('')}
                 </div>
+                <p class="plan-subtitle">${planos.particulares.observacao}</p> 
             </div>
 
             <a href="${privatePlanHref}" class="btn-plan-action btn-highlight" target="_blank">Contratar Agora</a>
