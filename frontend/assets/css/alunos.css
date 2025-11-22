@@ -1,0 +1,197 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #ffff;
+}
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1100bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.barra-topo {
+    position: relative;
+    background: linear-gradient(90deg, #a020f0, #ff4b2b);
+    width: 200px;
+    height: 40px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-topo h1 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.btn-voltar {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #ff4b2b;
+}
+
+.search-area {
+    text-align: center;
+    margin: 25px 0;
+    padding-top: 80px;
+}
+
+.search-area input {
+    width: 60%;
+    height: 45px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-area button {
+    margin-top: 15px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: #8b2de2;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.painel {
+    width: 85%;
+    margin: 0 auto;
+    border: 3px solid #333;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.col-esquerda p,
+.col-direita p {
+    font-size: 20px;
+}
+
+.box-frequencia,
+.box-historico {
+    background: #b387ff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.box-historico ul {
+    padding-left: 20px;
+}
+
+.btn-editar {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 60px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #8b2de2, #ff2d55);
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* parte da edicao */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    max-height: 85vH;
+    overflow-y: auto;
+ }
+
+.modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.modal-content label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#btnCancelarModal {
+    background: #ccc;
+}
+
+#btnSalvarModal {
+    background: #28a745;
+    color: #fff;
+}

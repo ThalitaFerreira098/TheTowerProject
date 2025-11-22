@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Tower - Pesquisa Alunos</title>
+    <link rel="stylesheet" href="assets/css/alunos.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="barra-topo">
+            <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+            <h1 id="titulo-pagina">Pesquisa Alunos</h1>
+        </div>
+    </header>
+
+    <div class="search-area">
+        <input type="text" id="inputPesquisa" placeholder="pesquisar aluno por nome">
+        <button id="btnMatricular">+ Matricular aluno</button>
+    </div>
+
+    <section id="painelAluno" class="painel hidden">
+        <div class="col-esquerda">
+            <p><strong>nome:</strong> <span id="nomeAluno"></span></p>
+            <p><strong>cidade:</strong> <span id="cidadeAluno"></span></p>
+            <p><strong>data matricula:</strong> <span id="dataMatriculaAluno"></span></p
+            <p><strong>Nível:</strong> <span id="nivelAluno"></span></p>
+            <p><strong>ativo:</strong> <span id="ativoAluno"></span></p>
+            <p><strong>bolsista:</strong> <span id="bolsistaAluno"></span></p>
+            <p><strong>Email:</strong> <span id="emailAluno"></span></p>
+            <p><strong>Conta Bancária: </strong> <span id="tipo_conta"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefoneAluno"></span></p>
+
+        </div>
+
+        <div class="col-direita">
+            <div class="box-frequencia">
+                 
+                <p><strong>Total de aulas:</strong> <span id="freqTotal"></span></p>
+                <p><strong>Presentes:</strong> <span id="freqPres"></span></p>
+                <p><strong>Faltas:</strong> <span id="freqFaltas"></span></p>
+                <p><strong>frequencia</strong> <span id="freqAluno">0%</span></p>
+
+            </div>
+
+            <div class="box-historico">
+                <p><strong>Historico:</strong></p>
+                <ul id="historicoLista"></ul>
+            </div>
+        </div>
+    </section>
+
+    <button id="btnEditar" class="btn-editar hidden">Editar</button>
+
+
+        <!-- painel dE edicao -->
+    <div id="modalEditar" class="modal hidden">
+        <div class="modal-content">
+            <h2>Editar Aluno</h2>
+
+            <form id="formEditarAluno">
+
+                <label>*Nome:</label>
+                <input type="text" id="editNome" required>
+
+                <label>*Cidade:</label>
+                <input type="text" id="editCidade" required>
+
+                <label>*Tipo bancária:</label>
+                <input type="text" id="editTipoBancaria" required>
+
+                <label>*Telefone:</label>
+                <input type="text" id="editTelefone" required>
+
+                <label>*Email:</label>
+                <input type="email" id="editEmail" required>
+
+                <label>*Nível:</label>
+                <select id="editNivel" required>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermediário">Intermediário</option>
+                    <option value="Avançado">Avançado</option>
+                </select>
+
+                <label>*Bolsista:</label>
+                <select id="editBolsista" required>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+
+                <label>*Ativo:</label>
+                <select id="editAtivo" required>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select >
+
+                <label>*Turma:</label>
+                <select id="editTurma" required></select>
+
+                <div class="modal-buttons">
+                    <button type="button" id="btnCancelarModal">Cancelar</button>
+                    <button type="submit" id="btnSalvarModal">Salvar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/alunos.js"></script>
+</body>
+</html>
