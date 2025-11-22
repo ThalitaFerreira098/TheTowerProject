@@ -192,5 +192,64 @@
 }
 
 @media (max-width: 900px) { 
-    .planos-layout { grid-template-columns: 1fr; } 
+    .planos-layout { 
+        grid-template-columns: 1fr;
+    } 
 }
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 25px;
+        margin-bottom: 30px; 
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    .plan-title{
+        font-size: 20px;
+    }
+
+    .plano-card {
+        padding: 30px 20px; 
+        border-radius: 20px;
+        margin: 0 15px; 
+    }
+
+    .price-wrapper {
+        margin: 15px 0 30px; 
+    }
+
+    .price-value {
+        font-size: 60px; 
+    }
+    
+    .currency, .cents {
+        font-size: 20px; 
+    }
+
+    .feature-list li {
+        font-size: 14px; 
+        margin-bottom: 12px;
+    }
+    
+    .check-icon {
+        width: 20px; 
+        height: 20px;
+    }
+
+    .clean-option-row {
+        padding: 15px 0; 
+    }
+    
+    .clean-price {
+        font-size: 24px; 
+    }
+
+    .btn-plan-action {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+}
+

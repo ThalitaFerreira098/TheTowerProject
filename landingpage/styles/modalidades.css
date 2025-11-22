@@ -37,5 +37,35 @@
     color: var(--blue);
 }
 
-.mod-card h3 { margin-bottom: 15px; color: var(--dark); font-size: 22px; }
-.mod-card p { color: #666; line-height: 1.6; font-size: 15px; }
+.mod-card h3 { 
+    margin-bottom: 15px; 
+    color: var(--dark); 
+    font-size: 22px; 
+}
+
+.mod-card p { 
+    color: #666; 
+    line-height: 1.6; 
+    font-size: 15px; 
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+        gap: 20px; 
+    }
+    
+    .mod-card {
+        padding: 25px 20px; 
+        border-radius: 16px; 
+    }
+
+    .mod-icon {
+        width: 50px; 
+        height: 50px;
+    }
+    
+    .mod-card h3 {
+        font-size: 20px;
+    }
+}

@@ -55,10 +55,13 @@ function renderFeatureCards(data) {
 
     document.getElementById('featuresGrid').innerHTML = data.items.map(item => `
         <div class="feature-card animate-on-scroll">
-            <div class="feature-icon ${item.iconClass}">
-                ${icons[item.iconClass.replace('icon-', '')] || icons.book}
+            <div class="feature-header-group">
+                <div class="feature-icon ${item.iconClass}">
+                    ${icons[item.iconClass.replace('icon-', '')] || icons.book}
+                </div>
+                <h4>${item.title}</h4>
             </div>
-            <h4>${item.title}</h4>
+            
             <p>${item.description}</p>
         </div>
     `).join('');
