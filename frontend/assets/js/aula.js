@@ -95,5 +95,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function irPara(pagina){
+    const params = new URLSearchParams(window.location.search);
+    const idTurma = params.get("id");
+    pagina += `?id=${idTurma}`; 
     window.location.href = pagina;
 }
