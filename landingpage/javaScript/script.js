@@ -8,6 +8,7 @@ const COMPONENT_MAP = {
     sobre: { jsonKey: 'sobre', htmlId: 'sobre' },
     contato: { jsonKey: 'footer', htmlId: 'contato' },
     depoimentos: {jsonKey: 'depoimentos', htmlId: 'depoimentos'},
+    sistema: {jsonKey: 'sistema', htmlId: 'sistema'}
 };
 
 let siteData = {};

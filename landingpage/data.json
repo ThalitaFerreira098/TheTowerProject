@@ -313,9 +313,9 @@
     ]
 }, 
   "sistema": {
-    "title": "GESTÃO DO SISTEMA",
-    "subtitle": "Área exclusiva para o Professor",
-    "buttonText": "Acessar Painel de Controle",
+    "title": "The Tower Project",
+    "subtitle": "Plataforma Web de Gestão de<br>Alunos e Finanças", 
+    "buttonText": "Acessar Plataforma",
     "linkHref": "../frontend/login.html" 
 }
 }
