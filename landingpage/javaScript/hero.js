@@ -6,6 +6,7 @@ export function init(data) {
     
     const btn = document.getElementById('ctaButton');
     btn.textContent = data.cta;
+    btn.setAttribute('rel', 'noopener noreferrer');
     btn.addEventListener('click', () => {
         window.open(`https://wa.me/${data.whatsapp}`, '_blank');
     });

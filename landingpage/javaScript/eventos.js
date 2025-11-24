@@ -11,13 +11,13 @@ export function init(data) {
         return `
         <div class="evento-card">
             <div class="evento-img">
-                <img src="${item.image}" alt="${item.title}">
+                <img src="${item.image}" alt="Imagem ${item.title}">
                 <div class="evento-tag" style="background: ${theme.bg}">${item.tag}</div>
             </div>
             <div class="evento-content">
                 <div class="evento-header">
                     <div class="evento-icon" style="background: ${theme.bg}">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">${theme.icon}</svg>
+                        <svg aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">${theme.icon}</svg>
                     </div>
                     <h3>${item.title}</h3>
                 </div>

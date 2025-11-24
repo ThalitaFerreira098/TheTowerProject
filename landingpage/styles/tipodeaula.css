@@ -213,3 +213,52 @@
     box-shadow: 0 10px 25px rgba(45, 91, 255, 0.5);
 }
 
+@media (max-width: 600px) {
+    .tipo-card {
+        padding: 30px 20px;
+        border-radius: 16px; 
+    }
+    
+    .tipos-grid {
+        gap: 20px; 
+    }
+
+    .tipo-card .card-icon {
+        width: 40px; 
+        height: 40px; 
+        font-size: 18px; 
+    }
+
+    .tipo-card h3 {
+        font-size: 20px; 
+        margin: 15px 0 10px 0;
+    }
+    
+    .card-content-split {
+        gap: 20px;
+    }
+    
+    .split-left {
+        padding-bottom: 20px; 
+    }
+
+    /*  VANTAGENS  */
+
+    .vantagens-section {
+        margin-top: 60px;
+        margin-bottom: 40px; 
+    }
+
+    .vantagem-item {
+        padding: 8px; 
+    }
+    
+    .vantagem-icon {
+        width: 32px; 
+        height: 32px; 
+    }
+    
+    .vantagem-item span {
+        font-size: 13px; 
+    }
+}

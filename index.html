@@ -14,7 +14,7 @@
     <link rel="icon" href="./landingpage/imagens/icone.png" type="image/png">
 <body>
     
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Menu Principal do Site">
         <div class="container nav-content">
             <div class="logo">
                 <div class="logo-icon">T</div>
@@ -32,8 +32,10 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
 
-            <button class="mobile-toggle" id="mobileToggle">
-                <span></span><span></span><span></span>
+            <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir Menu de Navegação">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
         </div>
     </nav>
@@ -41,12 +43,13 @@
     <section id="home"></section>
     <section id="modalidades" class="section bg-white"></section>
     <section id="tipos" class="section bg-white"></section>
-    <section id="metodologia" class="section"></section>
+    <section id="metodologia" class="section" aria-labelledby="metodoTitle"></section>
     <section id="eventos" class="section bg-white"></section>
     <section id="planos" class="section planos-bg"></section>
     <section id="sobre" class="section bg-white"></section>
     <section id="depoimentos"></section>
     <footer id="contato"></footer>
+    <section id="sistema"></section>
     
 
     <div class="modal" id="modal">
