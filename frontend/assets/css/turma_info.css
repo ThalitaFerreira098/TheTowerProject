@@ -148,3 +148,99 @@ h1 {
 .aula-card:hover{
     transform: scale(1.05);
 }
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    width: 95%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    color: black;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+
+.lista-presenca {
+    margin-top: 15px;
+}
+
+.linha-presenca {
+    background: #f6f6f6;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botoes-presenca button {
+    margin-left: 8px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btnPresente {
+    background: #28a745;
+    color: #fff;
+}
+
+.btnFalta {
+    background: #dc3545;
+    color: white;
+}
+
+/* Botões inferiores */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.modal-buttons button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnCancelar {
+    background: #b5b5b5;
+    color: black;
+}
+
+.btnSalvar {
+    background: #007bff;
+    color: #fff;
+}
