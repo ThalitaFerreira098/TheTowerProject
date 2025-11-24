@@ -97,14 +97,18 @@ async function abrirModalConversacao(idTurma) {
                 </div>
             `;
 
-            div.querySelector(".btnPresente").onclick = (e) => {
-                e.target.classList.add("selecionado");
-                e.target.nextElementSibling.classList.remove("selecionado");
-            }
-            div.querySelector(".btnFalta").onclick =(e) => {
-                e.target.classList.add("selecionado");
-                e.target.nextElementSibling.classList.remove("selecionado");
-            }
+            const btnPresente = div.querySelector(".btnPresente");
+            const btnFalta = div.querySelector(".btnFalta");
+
+            btnPresente.onclick = (e) => {
+                btnPresente.classList.add("selecionado");
+                btnFalta.classList.remove("selecionado");
+            };
+
+            btnFalta.onclick = (e) => {
+                btnFalta.classList.add("selecionado");
+                btnPresente.classList.remove("selecionado");
+            };
 
 
             listaContainer.appendChild(div);
