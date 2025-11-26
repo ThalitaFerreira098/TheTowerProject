@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const tipo = card.dataset.tipo;
 
                 if(tipo === "Conversação"){
-                    window.location.href = `chamada.html?id=${idTurma}&tipo=${tipo}`;
+                   abrirModalConversacao(idTurma);
                 }
                 else{
                     window.location.href = `aula.html?id=${idTurma}&tipo=${tipo}`;
@@ -66,6 +66,116 @@ document.addEventListener("DOMContentLoaded", async () => {
         alert("Erro ao carregar informações da turma.");
     }
 });
+
+async function abrirModalConversacao(idTurma) {
+    const modal = document.getElementById("modalConversacao");
+    const listaContainer = document.getElementById("listaPresencaContainer");
+
+    modal.classList.remove("hidden");
+    listaContainer.innerHTML = "<p>Carregando alunos...</p>";
+
+    try {
+        const res = await fetch(`${API_URL}/turmas/alunos/${idTurma}`);
+        const data = await res.json();
+
+        if (!data.success) {
+            listaContainer.innerHTML = "<p>Erro ao carregar alunos.</p>";
+            return;
+        }
+
+        listaContainer.innerHTML = "";
+
+        data.data.forEach(al => {
+            const div = document.createElement("div");
+           div.classList.add("linha-presenca");
+
+            div.innerHTML = `
+            <span>${al.nome_aluno}</span>
+                <div class="botoes-presenca">
+                    <button class="btnPresente" data-id=${al.id_aluno}>presente</button>
+                    <button class="btnFalta" data-id=${al.id_aluno}>Falta</button>
+                </div>
+            `;
+
+            const btnPresente = div.querySelector(".btnPresente");
+            const btnFalta = div.querySelector(".btnFalta");
+
+            btnPresente.onclick = (e) => {
+                btnPresente.classList.add("selecionado");
+                btnFalta.classList.remove("selecionado");
+            };
+
+            btnFalta.onclick = (e) => {
+                btnFalta.classList.add("selecionado");
+                btnPresente.classList.remove("selecionado");
+            };
+
+
+            listaContainer.appendChild(div);
+        });
+
+    } catch (err) {
+        console.error(err);
+        listaContainer.innerHTML = "<p>Erro ao carregar alunos.</p>";
+    }
+
+    document.getElementById("btnFecharModal").onclick = () => {
+        modal.classList.add("hidden");
+    };
+
+    document.getElementById("btnConcluirAula").addEventListener("click", async () => {
+        const confirmar = confirm("Deseja concluir esta aula de conversação?");
+        if (!confirmar) return;
+
+        try{
+            if(!idTurma){
+                alert("Nenhuma turma foi selecionada.");
+                return;
+            }
+
+            const res = await fetch(`${API_URL}/presencas/concluir/conversacao/${idTurma}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" }
+            });
+
+            console.log("RESPOSTA: ", res);
+
+            const resposta = await res.json();
+
+            if (resposta.success) {
+                localStorage.setItem("id_aula_conversacao", resposta.id_aula);
+            } else {
+                alert("Erro ao concluir aula.");
+            }
+
+            const idAula = localStorage.getItem("id_aula_conversacao");
+
+            if(!idAula){
+                alert("ID da aula não encontrado");
+                return;
+            }
+
+            const botoes = document.querySelectorAll(".botoes-presenca button");
+            for(const b of botoes){
+                const idAluno = b.dataset.id;
+                const presente = b.classList.contains("selecionado") ? 1 : 0;
+
+                await fetch(`${API_URL}/presencas/registrar`, {
+                    method: "POST",
+                    headers: {"Content-Type" : "application/json"},
+                    body: JSON.stringify({idAluno, idAula,presente})
+                });
+            }
+
+            alert("Aula Concluida com sucesso!");
+            window.location.reload();
+
+        }catch(error){
+            console.error("Erro:", error);
+
+        }
+    });
+}
 
 function irPara(pagina){
     window.location.href = pagina;

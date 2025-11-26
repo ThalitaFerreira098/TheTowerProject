@@ -45,4 +45,23 @@ router.post("/registrar", async (req, res) =>{
     }
 });
 
+router.post("/concluir/conversacao/:idTurma", async (req, res) => {
+    const { idTurma} = req.params;
+
+    try{
+        const [rows] = await db.query("call sp_conclui_conversacao(?);", [idTurma]);
+        const resultado = rows[0][0]?.resultado;
+        const idAula = rows[0][0]?.id_aula || null;
+
+        if(resultado == 1){
+            res.json({ success: true, id_aula: idAula});
+        }else{
+            res.json({success: false, message: "Aula não encontrada."})
+        }
+    }catch(error){
+        console.error(error);
+        res.status(500).json({success: false, message: error.message});
+    }
+});
+
 module.exports = router;
