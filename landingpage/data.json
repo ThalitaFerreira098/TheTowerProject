@@ -278,37 +278,37 @@
         "name": "Vinicius Marques",
         "course": "Aluno(a) Tower",
         "text": "Gosto muito das aulas de Inglês. Elas são bem interativas e conseguimos aprender o que se passa. Temos um ótimo professor paciente para ensinar e explica muito bem o conteúdo.",
-        "image": "../landingpage/imagens/depo_vinicius.png"
+        "image": "./landingpage/imagens/depo_vinicius.png"
       },
       {
         "name": "Larissa Menezes",
         "course": "Aluno(a) Tower",
         "text": "Estou amando as aulas de inglês! São bem explicativas e dinâmicas. Um método muito interessante e estou tendo facilidade em aprender, falar e entender o idioma. SUPER RECOMENDO!!!! (Cada dia mais me apaixono pelo idioma!!!!!)",
-        "image": "../landingpage/imagens/depo_larissa.jpg"
+        "image": "./landingpage/imagens/depo_larissa.jpg"
       },
       {
         "name": "Gusttavo Snaydr",
         "course": "Aluno(a) Tower",
         "text": "Que Profissional, alta qualidade de ensino e metodologia incrível para aprender inglês rápido e eficiente. Indico com certeza e agradeço por ser tão maravilhoso com os alunos.",
-        "image": "../landingpage/imagens/depo_gusttavo.jpg"
+        "image": "./landingpage/imagens/depo_gusttavo.jpg"
       },
       {
         "name": "Daniel Junior",
         "course": "Aluno(a) Tower",
         "text": "As aulas são muito bem explicadas. Professor totalmente paciente, sábio na hora de ensinar, fazendo com que até as pessoas com dificuldades de aprendizado consigam compreender. Disponibilizando todo conteúdo passado das aulas neste site e também pelo whatsapp, oferecendo para mim e aos demais da turma aprender e estudar o idioma de qualquer lugar que nós estivermos.",
-        "image": "../landingpage/imagens/depo_daniel.jpg"
+        "image": "./landingpage/imagens/depo_daniel.jpg"
       },
       {
         "name": "Gabriel Carvalho",
         "course": "Aluno(a) Tower",
         "text": "Ótimas aulas, dinâmicas e interativas com um método excelente de ensino, rápido e fácil. Um professor muito bom também. Sabe explicar e ensinar muito bem.",
-        "image": "../landingpage/imagens/depo_gabriel.jpg"
+        "image": "./landingpage/imagens/depo_gabriel.jpg"
       },
       {
         "name": "Cristina Almeida",
         "course": "Aluno(a) Tower",
         "text": "Eu só tenho a Agradecer meu professor, um profissional de Línguas exemplar e competente, ele é realmente incrível e sua metodologia é maravilhosa, eu e meu filho fazemos com ele e estamos muito confortáveis em aprender inglês pela comunicação e conectividade das aulas!",
-        "image": "../landingpage/imagens/depo_cristina.jpg"
+        "image": "./landingpage/imagens/depo_cristina.jpg"
       }
     ]
 }, 
@@ -316,6 +316,6 @@
     "title": "The Tower Project",
     "subtitle": "Plataforma Web de Gestão de<br>Alunos e Finanças", 
     "buttonText": "Acessar Plataforma",
-    "linkHref": "../frontend/login.html" 
+    "linkHref": "./frontend/login.html" 
 }
 }
