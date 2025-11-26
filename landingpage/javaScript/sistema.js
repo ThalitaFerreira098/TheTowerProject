@@ -28,7 +28,10 @@ function renderSistema(data) {
 
 async function startSistemaApp() {
     try {
-        const resp = await fetch(`/landingpage/data.json`);
+        const resp = await fetch(`./landingpage/data.json`);
+
+        if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+        
         const siteData = await resp.json();
         
         const sistemaData = siteData.sistema; 
@@ -40,8 +43,11 @@ async function startSistemaApp() {
         }
 
     } catch (error) {
-        document.getElementById('sistema').innerHTML = "<h1>Erro ao carregar dados.</h1>";
+       
         console.error("Erro fatal ao carregar dados do sistema:", error);
+        
+        const target = document.getElementById('sistema');
+        if(target) target.style.display = 'none';
     }
 }
 
