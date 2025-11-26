@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 tituloMaterial.textContent = 'Aula de Conversação'; 
                 btnConcluir.disabled = false;
             } else {
-                frameMaterial.src = `/frontend/assets/materiais/${aula.nome_pasta}/${aula.nome_arquivo}`;   
+                frameMaterial.src = `/materiais/${aula.nome_pasta}/${aula.nome_arquivo}`;   
                 btnConcluir.disabled = false;
             }
 
