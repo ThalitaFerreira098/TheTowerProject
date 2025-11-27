@@ -28,7 +28,7 @@ function renderSistema(data) {
 
 async function startSistemaApp() {
     try {
-        const resp = await fetch(`./landingpage/data.json`);
+        const resp = await fetch(`data.json`);
 
         if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
         
