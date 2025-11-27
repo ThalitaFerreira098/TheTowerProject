@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Tower - Cadastrar Material </title>
+  <link rel="stylesheet" href="assets/css/cadastra_material.css" />
+</head>
+    <body>
+    <main class="container">
+        <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+                <h1 id="titulo-pagina">Turmas</h1>
+            </div>
+        </header>
+
+        <form id="formCadastra" class="card" enctype="multipart/form-data">
+        <div class="row">
+            <label for="tipoAula">Tipo de aula</label>
+            <select id="tipoAula" name="tipoAula" required>
+            <option value="">Selecione...</option>
+            <option value="FaryTale" data-pasta="fairy_tales">Fairy Tale</option>
+            <option value="Debate" data-pasta="debates">Debate</option>
+            <option value="Lesson" data-pasta="">Lesson</option>
+            </select>
+        </div>
+
+        <div class="row" id="boxBook" style="display:none;">
+            <label for="selectBook">Book (apenas para Lesson)</label>
+            <select id="selectBook" name="id_book">
+            <option value="">Carregando books...</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="pdfMaterial">PDF do material</label>
+            <input id="pdfMaterial" name="pdf" type="file" accept="application/pdf" required />
+        </div>
+
+        <div class="row">
+            <label for="tituloAula">Título da aula</label>
+            <input id="tituloAula" name="titulo" type="text" placeholder="Título ou número da lesson" required />
+        </div>
+
+        <div class="actions">
+            <button type="submit" class="btn primary">Cadastrar material</button>
+            <button type="reset" class="btn outline">Limpar campos</button>
+        </div>
+
+        <div id="msg" class="msg" aria-live="polite"></div>
+        </form>
+
+        <footer class="note">
+        <small>Arquivos serão salvos em <code>/materiais/&lt;pasta&gt;/</code> conforme tipo de aula.</small>
+        </footer>
+    </main>
+
+    <script src="assets/js/cadastra_material.js"></script>
+    </body>
+</html>
