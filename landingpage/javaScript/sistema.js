@@ -7,11 +7,11 @@ function renderSistema(data) {
             <h2 class="cta-title">${data.title}</h2>
             <p class="cta-summary">${data.subtitle}</p>
 
-            <img src="/landingpage/imagens/clipboard-3d.png" 
+            <img src="./imagens/clipboard-3d.png" 
                  alt="Prancheta e lupa de gestão de dados" 
                  class="system-asset asset-clipboard" aria-hidden="true">
             
-            <img src="/landingpage/imagens/chart-3d.png" 
+            <img src="./imagens/chart-3d.png" 
                  alt="Usuário interagindo com plataforma de relatórios" 
                  class="system-asset asset-phone-chart" aria-hidden="true">
 
