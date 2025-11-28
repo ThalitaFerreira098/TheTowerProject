@@ -1,13 +1,12 @@
-.tipos-grid {
+.grade-tipos {
     display: grid;
     grid-template-columns: 1fr 1.3fr; 
     gap: 30px;
     margin-top: 40px;
-    
     align-items: stretch; 
 }
 
-.tipo-card {
+.card-tipo {
     border-radius: 20px;
     padding: 40px;
     display: flex;
@@ -16,133 +15,124 @@
     transition: transform 0.3s ease;
     border: 1px solid transparent;
 }
-.tipo-card:hover { 
+
+.card-tipo:hover { 
     transform: translateY(-5px); 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+}
 
-/* CORES DO CARD */
-.tipo-card.blue { 
+
+.card-tipo.azul { 
     background-color: #F4F6FF; 
-    border-color: #E0E7FF; }
+    border-color: #E0E7FF; 
+}
 
-.tipo-card.blue .card-icon { 
+.card-tipo.azul .icone-card { 
     background: #4E4EFF; 
     color: white; 
     border-radius: 12px; 
     width: 50px; 
     height: 50px; 
-    display:flex; 
-    align-items:center; 
-    justify-content:center; }
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
 
-.tipo-card.red { 
+.card-tipo.vermelho { 
     background-color: #FFF5F5; 
-    border-color: #FFE0E0; }
+    border-color: #FFE0E0; 
+}
 
-.tipo-card.red .card-icon { 
+.card-tipo.vermelho .icone-card { 
     background: #FF4E4E; 
     color: white; 
     border-radius: 12px; 
     width: 50px; 
     height: 50px; 
-    display:flex; 
-    align-items:center; 
-    justify-content:center; }
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
 
-.tipo-card h3 { 
+
+.card-tipo h3 { 
     margin: 20px 0 10px 0; 
     color: #333; 
-    font-size: 22px; }
+    font-size: 22px; 
+}
 
-.tipo-card p { 
+.card-tipo p { 
     font-size: 14px; 
     color: #666; 
     line-height: 1.6; 
-    margin-bottom: 20px; }
+    margin-bottom: 20px; 
+}
 
-.card-content-split{
+
+.conteudo-dividido {
     display: flex;
     height: 100%;
     gap: 40px;
 }
 
-.split-left{
+.lado-esquerdo {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding-right: 30px;
-    /* linha divisória */
     border-right: 1px solid rgba(255, 88, 88, 0.1);
-
 }
 
-.split-right{
+.lado-direito {
     flex: 0.9;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Horário */
 
-.schedule-header-align{
+.titulo-horario {
     font-size: 16px;
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
 }
 
-.schedule-item-split {
+.item-horario {
     font-size: 15px;
     color: #555;
     margin-bottom: 6px;
 }
 
-.schedule-warning { 
+.aviso-duracao { 
     font-size: 14px; 
     color: #FF4E4E; 
     font-weight: 700; 
-    margin-top: 15px; }
-
-
-@media (max-width: 900px) {
-    .tipos-grid { grid-template-columns: 1fr; } 
-    
-    .card-content-split {
-        flex-direction: column; 
-        gap: 30px;
-    }
-    
-    .split-left {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 78, 78, 0.2);
-        padding-right: 0;
-        padding-bottom: 30px;
-    }
+    margin-top: 15px; 
 }
 
-/* VANTAGENS */
 
-.vantagens-section { 
+.secao-vantagens { 
     background: transparent;  
     padding: 0; 
     margin-bottom: 60px; 
     margin-top: 100px;
 }
 
-.vantagens-section h3 { 
+.secao-vantagens h3 { 
     font-size: 20px; 
     margin-bottom: 24px; 
     color: #333; 
     font-weight: 700;
 }
 
-.vantagens-grid { 
+.grade-vantagens { 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px 40px; }
+    gap: 20px 40px; 
+}
 
-.vantagem-item { 
+.item-vantagem { 
     display: flex; 
     align-items: center; 
     gap: 15px; 
@@ -152,12 +142,12 @@
     cursor: default;
 }
 
-.vantagem-item:hover{
+.item-vantagem:hover {
     background-color: #F4F6FF;
     transform: translateX(10px);
 }
 
-.vantagem-icon { 
+.icone-vantagem { 
     width: 36px; 
     height: 36px; 
     background: #4E4EFF; 
@@ -166,99 +156,83 @@
     align-items: center; 
     justify-content: center; 
     color: white; 
-    flex-shrink: 0; }
+    flex-shrink: 0; 
+}
 
-.vantagem-item:hover .vantagem-icon{
+.item-vantagem:hover .icone-vantagem {
     transform: scale(1.1) rotate(5deg);
 }
 
-.vantagem-item span { 
+.item-vantagem span { 
     font-size: 14px; 
     color: #555; 
     transition: color 0.3s;
 }
 
-.vantagem-item:hover span{
+.item-vantagem:hover span {
     color: #2D5BFF;
     font-weight: 500;
 }
 
-.cta-center{
+
+.cta-centralizado {
     text-align: center;
     margin-top: 60px;
 }
 
-
-.btn-primary { 
+.botao-primario { 
     display: inline-block;
     text-decoration: none;
     background: #2D5BFF !important;
-    background-color: #2D5BFF !important;
     color: white !important;
     padding: 18px 40px; 
     border-radius: 50px; 
-    border:none;
+    border: none;
     font-size: 16px;
-    font-weight:700; 
+    font-weight: 700; 
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    cursor:pointer; 
+    cursor: pointer; 
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(45, 91, 255, 0.3);
 }
 
-.btn-primary:hover{
+.botao-primario:hover {
     background-color: #1A45D6 !important;
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(45, 91, 255, 0.5);
 }
 
-@media (max-width: 600px) {
-    .tipo-card {
-        padding: 30px 20px;
-        border-radius: 16px; 
+@media (max-width: 900px) {
+    .grade-tipos { grid-template-columns: 1fr; } 
+    
+    .conteudo-dividido {
+        flex-direction: column; 
+        gap: 30px;
     }
     
-    .tipos-grid {
-        gap: 20px; 
+    .lado-esquerdo {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 78, 78, 0.2);
+        padding-right: 0;
+        padding-bottom: 30px;
     }
 
-    .tipo-card .card-icon {
-        width: 40px; 
-        height: 40px; 
-        font-size: 18px; 
-    }
-
-    .tipo-card h3 {
-        font-size: 20px; 
-        margin: 15px 0 10px 0;
-    }
-    
-    .card-content-split {
-        gap: 20px;
-    }
-    
-    .split-left {
-        padding-bottom: 20px; 
-    }
-
-    /*  VANTAGENS  */
-
-    .vantagens-section {
+    .secao-vantagens {
         margin-top: 60px;
         margin-bottom: 40px; 
     }
 
-    .vantagem-item {
+    .item-vantagem {
         padding: 8px; 
     }
     
-    .vantagem-icon {
+    .icone-vantagem {
         width: 32px; 
         height: 32px; 
     }
     
-    .vantagem-item span {
+    .item-vantagem span {
         font-size: 13px; 
     }
 }

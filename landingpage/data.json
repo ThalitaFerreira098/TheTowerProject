@@ -1,53 +1,52 @@
 {
   "site": {
-    "title": "The Tower Idiomas",
-    "description": "Aulas presenciais, online e híbridas"
+    "titulo": "The Tower Idiomas",
+    "descricao": "Aulas presenciais, online e híbridas"
   },
   "hero": {
-    "title": "Aprenda Inglês de verdade do zero à fluência",
-    "description": "Desenvolva conversação real, participe de eventos, aprenda com livros exclusivos e evolua do básico à fluência com um método criado para garantir resultados.",
+    "titulo": "Aprenda Inglês de verdade do zero à fluência",
+    "descricao": "Desenvolva conversação real, participe de eventos, aprenda com livros exclusivos e evolua do básico à fluência com um método criado para garantir resultados.",
     "cta": "Agende sua Aula Experimental Gratuita",
-    "whatsapp": "5519999999999",
+    "whatsapp": "5519992300116",
     "whatsappMessage": "Olá! Gostaria de agendar uma aula experimental gratuita."
   },
   "modalidades": {
-    "title": "Modalidades de Ensino",
-    "items": [
+    "titulo": "Modalidades de Ensino",
+    "itens": [
       {
-        "icon": "monitor",
-        "title": "Presencial",
-        "description": "Aulas presenciais em sala equipada, ideal para quem gosta de interação direta e prática real."
+        "icone": "monitor",
+        "titulo": "Presencial",
+        "descricao": "Aulas presenciais em sala equipada, ideal para quem gosta de interação direta e prática real."
       },
       {
-        "icon": "wifi",
-        "title": "Online",
-        "description": "Aulas online com a mesma qualidade do presencial. Conforto, praticidade e acompanhamento completo."
+        "icone": "wifi",
+        "titulo": "Online",
+        "descricao": "Aulas online com a mesma qualidade do presencial. Conforto, praticidade e acompanhamento completo."
       },
       {
-        "icon": "repeat",
-        "title": "Híbrido",
-        "description": "Flexibilidade total para alternar entre presencial e online sempre que precisar."
+        "icone": "repetir",
+        "titulo": "Híbrido",
+        "descricao": "Flexibilidade total para alternar entre presencial e online sempre que precisar."
       }
     ]
   },
   "tiposDeAulas": {
-    "title": "Formatos Disponíveis de Aula",
+    "titulo": "Formatos Disponíveis de Aula",
     "particular": {
-      "title": "Aula Particular",
-      "description": "Aulas individuais com foco total no seu ritmo e objetivo."
+      "titulo": "Aula Particular",
+      "descricao": "Aulas individuais com foco total no seu ritmo e objetivo."
     },
     "grupo": {
-      "title": "Aula em Grupo",
-      "description": "Turmas pequenas para garantir interação, conversação e acompanhamento próximo."
+      "titulo": "Aula em Grupo",
+      "descricao": "Turmas pequenas para garantir interação, conversação e acompanhamento próximo."
     },
     "horarios": {
-      "title": "Horários",
-      "subtitle": "Segunda a sexta-feira",
+      "subtitulo": "Segunda a sexta-feira",
+      "duracao": "80 minutos por semana",
       "turmas": [
         { "nome": "Turma 1", "horario": "19h às 20h20" },
         { "nome": "Turma 2", "horario": "20h30 às 21h50" }
-      ],
-      "duracao": "80 minutos por semana"
+      ]
     },
     "vantagens": [
       "Aulas online ou presenciais",
@@ -58,116 +57,116 @@
     ]
   },
   "metodologia": {
-  "metodoBanner": {
-    "tag": "✨ Aprenda de forma natural e progressiva",
-    "title": "Metodologia Baseada em Evolução Constante",
-    "subtitle": "A fusão perfeita entre prática, conversação e desenvolvimento progressivo — guiando você até a fluência",
-    "ctaPrimary": "Ver Metodologia >",
-    "ctaSecondary": "Módulos"
-  },
-  "metodoFeatures": {
-    "title": "Nossa Metodologia",
-    "subtitle": "Uma experiência completa baseada em prática, estrutura e imersão real.",
-    "items": [
+    "titulo": "Os 7 Livros da Jornada",
+    "subtitulo": "Do zero absoluto até a fluência completa. Estrutura progressiva que realmente funciona.",
+    "banner": {
+      "tag": "✨ Aprenda de forma natural e progressiva",
+      "titulo": "Metodologia Baseada em Evolução Constante",
+      "subtitulo": "A fusão perfeita entre prática, conversação e desenvolvimento progressivo — guiando você até a fluência",
+      "ctaPrimario": "Ver Metodologia >",
+      "ctaSecundario": "Módulos"
+    },
+    "diferenciais": {
+      "titulo": "Nossa Metodologia",
+      "subtitulo": "Uma experiência completa baseada em prática, estrutura e imersão real.",
+      "itens": [
+        {
+          "classeIcone": "icone-rosa",
+          "titulo": "Estrutura Progressiva",
+          "descricao": "Do iniciante ao avançado. 7 livros planejados para entregar evolução real, desde o nivelamento até debates complexos."
+        },
+        {
+          "classeIcone": "icone-azul",
+          "titulo": "Imersão Gradual",
+          "descricao": "Conversação desde o início, com aumento gradual de 50% até aulas praticamente 100% em inglês."
+        },
+        {
+          "classeIcone": "icone-laranja",
+          "titulo": "Recursos Complementares",
+          "descricao": "Histórias, músicas e estruturas gramaticais focadas em conversação real do dia a dia."
+        },
+        {
+          "classeIcone": "icone-roxo",
+          "titulo": "Debates e Fluência",
+          "descricao": "Discussões sobre temas complexos e atuais, desenvolvendo argumentação e vocabulário avançado."
+        }
+      ]
+    },
+    "livros": [
       {
-        "iconClass": "icon-pink",
-        "title": "Estrutura Progressiva",
-        "description": "Do iniciante ao avançado. 7 livros planejados para entregar evolução real, desde o nivelamento até debates complexos."
+        "numLivro": "0",
+        "titulo": "Nivelamento",
+        "duracao": "2,5 - 3 meses",
+        "nivel": "100% Português",
+        "descricao": "Garantir que todos tenham o mesmo nível inicial. Verbos mais usados, comandos simples e preparação para aulas em inglês.",
+        "cor": "#6A00FF",
+        "icone": "pilha"
       },
       {
-        "iconClass": "icon-blue",
-        "title": "Imersão Gradual",
-        "description": "Conversação desde o início, com aumento gradual de 50% até aulas praticamente 100% em inglês."
+        "numLivro": "1",
+        "titulo": "Primeira Imersão",
+        "duracao": "3 - 4 meses",
+        "nivel": "50% → 85% Inglês",
+        "descricao": "Introdução ao listening e conversação. Frases do dia a dia e comunicação básica natural.",
+        "cor": "#2D5BFF",
+        "icone": "chat"
       },
       {
-        "iconClass": "icon-orange",
-        "title": "Recursos Complementares",
-        "description": "Histórias, músicas e estruturas gramaticais focadas em conversação real do dia a dia."
+        "numLivro": "2",
+        "titulo": "Leitura e Pronúncia",
+        "duracao": "3 - 4 meses",
+        "nivel": "70% - 80% Inglês",
+        "descricao": "Histórias infantis e músicas. 60 min conversação + 20 min gramática. Pronúncia correta e sistemática.",
+        "cor": "#00C9A7",
+        "icone": "livro"
       },
       {
-        "iconClass": "icon-purple",
-        "title": "Debates e Fluência",
-        "description": "Discussões sobre temas complexos e atuais, desenvolvendo argumentação e vocabulário avançado."
+        "numLivro": "3",
+        "titulo": "Conversação Avançada",
+        "duracao": "4 - 5 meses",
+        "nivel": "100% Inglês",
+        "descricao": "Free conversation. Vocabulário complexo, 65-70 min conversação + 10 min gramática. Preparação para debates.",
+        "cor": "#00D26A",
+        "icone": "volume"
+      },
+      {
+        "numLivro": "4",
+        "titulo": "Início dos Debates",
+        "duracao": "4 - 5 meses",
+        "nivel": "100% Inglês",
+        "descricao": "Debates sobre temas complexos: aborto, maioridade penal, capitalismo vs socialismo, eutanásia.",
+        "cor": "#FF7A00",
+        "icone": "balao"
+      },
+      {
+        "numLivro": "5",
+        "titulo": "Debates Avançados",
+        "duracao": "4 - 5 meses",
+        "nivel": "100% Inglês",
+        "descricao": "Aprofundamento em debates. Sustentação de opiniões complexas e vocabulário avançado.",
+        "cor": "#FF2E63",
+        "icone": "pulso"
+      },
+      {
+        "numLivro": "6",
+        "titulo": "Fluência & Negócios",
+        "duracao": "4 - 5 meses",
+        "nivel": "100% Inglês",
+        "descricao": "Fluência consolidada. Projetos práticos: empresas, ONGs, campanhas e apresentações profissionais.",
+        "cor": "#F50057",
+        "icone": "maleta"
       }
-    ]
-  },
-  "title": "Os 7 Livros da Jornada",
-  "subtitle": "Do zero absoluto até a fluência completa. Estrutura progressiva que realmente funciona.",
-  "livros": [
-    {
-      "bookNum": "0",
-      "title": "Nivelamento",
-      "duration": "2,5 - 3 meses",
-      "badge": "100% Português",
-      "description": "Garantir que todos tenham o mesmo nível inicial. Verbos mais usados, comandos simples e preparação para aulas em inglês.",
-      "color": "#6A00FF",
-      "icon": "stack"
-    },
-    {
-      "bookNum": "1",
-      "title": "Primeira Imersão",
-      "duration": "3 - 4 meses",
-      "badge": "50% → 85% Inglês",
-      "description": "Introdução ao listening e conversação. Frases do dia a dia e comunicação básica natural.",
-      "color": "#2D5BFF",
-      "icon": "chat"
-    },
-    {
-      "bookNum": "2",
-      "title": "Leitura e Pronúncia",
-      "duration": "3 - 4 meses",
-      "badge": "70% - 80% Inglês",
-      "description": "Histórias infantis e músicas. 60 min conversação + 20 min gramática. Pronúncia correta e sistemática.",
-      "color": "#00C9A7",
-      "icon": "book"
-    },
-    {
-      "bookNum": "3",
-      "title": "Conversação Avançada",
-      "duration": "4 - 5 meses",
-      "badge": "100% Inglês",
-      "description": "Free conversation. Vocabulário complexo, 65-70 min conversação + 10 min gramática. Preparação para debates.",
-      "color": "#00D26A",
-      "icon": "volume"
-    },
-    {
-      "bookNum": "4",
-      "title": "Início dos Debates",
-      "duration": "4 - 5 meses",
-      "badge": "100% Inglês",
-      "description": "Debates sobre temas complexos: aborto, maioridade penal, capitalismo vs socialismo, eutanásia.",
-      "color": "#FF7A00",
-      "icon": "bubble"
-    },
-    {
-      "bookNum": "5",
-      "title": "Debates Avançados",
-      "duration": "4 - 5 meses",
-      "badge": "100% Inglês",
-      "description": "Aprofundamento em debates. Sustentação de opiniões complexas e vocabulário avançado.",
-      "color": "#FF2E63",
-      "icon": "pulse"
-    },
-    {
-      "bookNum": "6",
-      "title": "Fluência & Negócios",
-      "duration": "4 - 5 meses",
-      "badge": "100% Inglês",
-      "description": "Fluência consolidada. Projetos práticos: empresas, ONGs, campanhas e apresentações profissionais.",
-      "color": "#F50057",
-      "icon": "case"
-    }
-  ],
-"evolucao": {
+    ],
+    "evolucao": {
       "badge": "✨ Resultados Comprovados",
-      "title": "Sua Evolução Garantida",
-      "subtitle": "Veja o que você será capaz de fazer ao concluir nossa metodologia completa",
+      "titulo": "Sua Evolução Garantida",
+      "subtitulo": "Veja o que você será capaz de fazer ao concluir nossa metodologia completa",
       "cards": [
         {
-          "icon": "medal",
-          "colorClass": "icon-blue",
-          "title": "Ao Final do Livro 5",
-          "list": [
+          "icone": "medalha",
+          "classeCor": "icone-azul",
+          "titulo": "Ao Final do Livro 5",
+          "lista": [
             "Conhecimento avançado consolidado",
             "Vocabulário amplo e diversificado",
             "Conversação natural e fluida",
@@ -175,10 +174,10 @@
           ]
         },
         {
-          "icon": "target",
-          "colorClass": "icon-pink",
-          "title": "Ao Concluir o Livro 6",
-          "list": [
+          "icone": "alvo",
+          "classeCor": "icone-rosa",
+          "titulo": "Ao Concluir o Livro 6",
+          "lista": [
             "Fluência completa atingida",
             "Expressão natural em qualquer contexto",
             "Interação profissional avançada",
@@ -187,36 +186,36 @@
         }
       ],
       "cta": {
-        "title": "Pronto para Transformar seu Inglês?",
-        "description": "Junte-se a milhares de alunos que já conquistaram a fluência com nossa metodologia comprovada",
-        "btnPrimary": "Começar Agora >",
-        "btnSecondary": "Falar com Consultor"
+        "titulo": "Pronto para Transformar seu Inglês?",
+        "descricao": "Junte-se a milhares de alunos que já conquistaram a fluência com nossa metodologia comprovada",
+        "btnPrimario": "Começar Agora >",
+        "btnSecundario": "Falar com Consultor"
       }
-  }
-},
+    }
+  },
   "eventos": {
-    "title": "Eventos para Praticar Inglês na Vida Real",
-    "items": [
+    "titulo": "Eventos para Praticar Inglês na Vida Real",
+    "itens": [
       {
-        "title": "Conversação Mensal",
-        "description": "Todo último domingo do mês, das 13h às 17h30. Encontro para alunos a partir da metade do módulo 2: jogos interativos e atividades guiadas que transformam vocabulário em conversa real. Espaço seguro, divertido e 100% em inglês.",
+        "titulo": "Conversação Mensal",
+        "descricao": "Todo último domingo do mês, das 13h às 17h30. Encontro para alunos a partir da metade do módulo 2: jogos interativos e atividades guiadas que transformam vocabulário em conversa real. Espaço seguro, divertido e 100% em inglês.",
         "tag": "Último domingo",
-        "image": "./landingpage/imagens/ConversacaoMensal.jpg"
+        "imagem": "./landingpage/assets/img/ConversacaoMensal.jpg"
       },
       {
-        "title": "Passeios Interativos",
-        "description": "Hopi Hari, Taquaral, museus, eventos culturais e muito mais. Vivemos experiências reais onde o inglês é o único idioma permitido. Imersão total na prática.",
+        "titulo": "Passeios Interativos",
+        "descricao": "Hopi Hari, Taquaral, museus, eventos culturais e muito mais. Vivemos experiências reais onde o inglês é o único idioma permitido. Imersão total na prática.",
         "tag": "100% English",
-        "image": "./landingpage/imagens/PasseiosInterativos.jpg"
+        "imagem": "./landingpage/assets/img/PasseiosInterativos.jpg"
       }
     ]
   },
   "planos": {
-    "title": "Planos e Valores",
+    "tituloGeral": "Planos e Valores",
     "grupo": {
-      "title": "Aulas em Grupo",
-      "price": "149,90",
-      "features": [
+      "titulo": "Aulas em Grupo",
+      "preco": "149,90",
+      "vantagens": [
         "1 aula por semana",
         "80 minutos por aula",
         "Online ou presencial",
@@ -227,105 +226,104 @@
       ]
     },
     "particulares": {
-      "title": "Aulas Particulares",
+      "titulo": "Aulas Particulares",
       "observacao": "Observação: Mesmo valor para pacote de conversação",
-      "items": [
-        { "frequency": "1x por semana", "price": "399,90", "popular": false },
-        { "frequency": "2x por semana", "price": "779,90", "popular": true },
-        { "frequency": "3x por semana", "price": "1.059,90", "popular": false }
+      "itens": [
+        { "frequencia": "1x por semana", "preco": "399,90", "popular": false },
+        { "frequencia": "2x por semana", "preco": "779,90", "popular": true },
+        { "frequencia": "3x por semana", "preco": "1.059,90", "popular": false }
       ]
     }
   },
   "sobre": {
-    "title": "Sobre o Professor",
-    "sections": [
-        {
-            "content": [
-                "Meu nome é Jefferson, tenho 34 anos. Construí uma carreira de 11 anos na IBM Brasil utilizando na prática todas as línguas que ensino.",
-                "Formado em Administração e Geografia, sou apaixonado pelo aprendizado. Aos 17 anos, já fluente em inglês e espanhol, busquei novos desafios. Hoje, falo 6 idiomas entre níveis fluente e avançado.",
-                "Atualmente, lidero mais de 20 turmas e aplico minha vivência corporativa internacional em uma Metodologia Própria, focada em resultados reais."
-            ]
-        }
+    "titulo": "Sobre o Professor",
+    "nomeMentor": "Prof. Jefferson",
+    "foto": "./landingpage/assets/img/prof_livro.jpg",
+    "tituloIdiomas": "Idiomas Dominados:",
+    "paragrafos": [
+      "Meu nome é Jefferson, tenho 34 anos. Construí uma carreira de 11 anos na IBM Brasil utilizando na prática todas as línguas que ensino.",
+      "Formado em Administração e Geografia, sou apaixonado pelo aprendizado. Aos 17 anos, já fluente em inglês e espanhol, busquei novos desafios. Hoje, falo 6 idiomas entre níveis fluente e avançado.",
+      "Atualmente, lidero mais de 20 turmas e aplico minha vivência corporativa internacional em uma Metodologia Própria, focada em resultados reais."
     ],
-    "languages": [
-        { "code": "US", "name": "Inglês", "status": "Fluente" },
-        { "code": "ES", "name": "Espanhol", "status": "Fluente" },
-        { "code": "DE", "name": "Alemão", "status": "Avançado" },
-        { "code": "IT", "name": "Italiano", "status": "Avançado" },
-        { "code": "NL", "name": "Holandês", "status": "Intermed." },
-        { "code": "BR", "name": "Português", "status": "Nativo" }
+    "idiomas": [
+      "US",
+      "ES",
+      "DE",
+      "IT",
+      "NL",
+      "BR"
     ]
-},
+  },
   "footer": {
-    "description": "Aulas presenciais, online e híbridas.",
+    "descricao": "Aulas presenciais, online e híbridas.",
+    "copyright": "© 2025 The Tower Idiomas – Todos os direitos reservados.",
     "links": [
-      { "label": "Home", "href": "#home" },
-      { "label": "Modalidades", "href": "#modalidades" },
-      { "label": "Tipos de Aula", "href": "#tipos" },
-      { "label": "Metodologia", "href": "#metodologia" },
-      { "label": "Eventos", "href": "#eventos" },
-      { "label": "Planos", "href": "#planos" },
-      { "label": "Sobre", "href": "#sobre" },
-      { "label": "Sistema (Acesso Professor)", "href": "./landingpage/sistema.html" }
+      { "texto": "Home", "url": "#home" },
+      { "texto": "Modalidades", "url": "#modalidades" },
+      { "texto": "Tipos de Aula", "url": "#tipos" },
+      { "texto": "Metodologia", "url": "#metodologia" },
+      { "texto": "Eventos", "url": "#eventos" },
+      { "texto": "Planos", "url": "#planos" },
+      { "texto": "Sobre", "url": "#sobre" },
+      { "texto": "Sistema (Acesso Professor)", "url": "./landingpage/sistema.html" }
     ],
-    "contact": {
-      "phone": "(19) 99230-0116",
+    "redesSociais": [
+      { "nome": "Facebook", "url": "https://www.facebook.com/thetoweridiomas" },
+      { "nome": "Instagram", "url": "https://www.instagram.com/thetoweridiomas" }
+    ],
+    "contato": {
+      "telefone": "(19) 99230-0116",
       "email": "thetoweridiomas@gmail.com",
-      "address": "R. Carlos Roberto Pereira, 41 - Jardim Florence I",
-      "city": "Campinas - SP, 13059-020"
-    },
-    "socials": [
-      { "name": "Facebook", "url": "https://www.facebook.com/thetoweridiomas" },
-      { "name": "Instagram", "url": "https://www.instagram.com/thetoweridiomas" }
-    ],
-    "copyright": "© 2025 The Tower Idiomas – Todos os direitos reservados."
+      "endereco": "R. Carlos Roberto Pereira, 41 - Jardim Florence I",
+      "cidade": "Campinas - SP, 13059-020"
+    }
   },
   "depoimentos": {
-    "title": "Resultados Comprovados",
-    "subtitle": "Veja o que nossos alunos dizem sobre a metodologia e os resultados.",
-    "items": [
+    "titulo": "Resultados Comprovados",
+    "subtitulo": "Veja o que nossos alunos dizem sobre a metodologia e os resultados.",
+    "itens": [
       {
-        "name": "Vinicius Marques",
-        "course": "Aluno(a) Tower",
-        "text": "Gosto muito das aulas de Inglês. Elas são bem interativas e conseguimos aprender o que se passa. Temos um ótimo professor paciente para ensinar e explica muito bem o conteúdo.",
-        "image": "./landingpage/imagens/depo_vinicius.png"
+        "nome": "Vinicius Marques",
+        "curso": "Aluno(a) Tower",
+        "texto": "Gosto muito das aulas de Inglês. Elas são bem interativas e conseguimos aprender o que se passa. Temos um ótimo professor paciente para ensinar e explica muito bem o conteúdo.",
+        "foto": "./landingpage/assets/img/depo_vinicius.png"
       },
       {
-        "name": "Larissa Menezes",
-        "course": "Aluno(a) Tower",
-        "text": "Estou amando as aulas de inglês! São bem explicativas e dinâmicas. Um método muito interessante e estou tendo facilidade em aprender, falar e entender o idioma. SUPER RECOMENDO!!!! (Cada dia mais me apaixono pelo idioma!!!!!)",
-        "image": "./landingpage/imagens/depo_larissa.jpg"
+        "nome": "Larissa Menezes",
+        "curso": "Aluno(a) Tower",
+        "texto": "Estou amando as aulas de inglês! São bem explicativas e dinâmicas. Um método muito interessante e estou tendo facilidade em aprender, falar e entender o idioma. SUPER RECOMENDO!!!! (Cada dia mais me apaixono pelo idioma!!!!!)",
+        "foto": "./landingpage/assets/img/depo_larissa.jpg"
       },
       {
-        "name": "Gusttavo Snaydr",
-        "course": "Aluno(a) Tower",
-        "text": "Que Profissional, alta qualidade de ensino e metodologia incrível para aprender inglês rápido e eficiente. Indico com certeza e agradeço por ser tão maravilhoso com os alunos.",
-        "image": "./landingpage/imagens/depo_gusttavo.jpg"
+        "nome": "Gusttavo Snaydr",
+        "curso": "Aluno(a) Tower",
+        "texto": "Que Profissional, alta qualidade de ensino e metodologia incrível para aprender inglês rápido e eficiente. Indico com certeza e agradeço por ser tão maravilhoso com os alunos.",
+        "foto": "./landingpage/assets/img/depo_gusttavo.jpg"
       },
       {
-        "name": "Daniel Junior",
-        "course": "Aluno(a) Tower",
-        "text": "As aulas são muito bem explicadas. Professor totalmente paciente, sábio na hora de ensinar, fazendo com que até as pessoas com dificuldades de aprendizado consigam compreender. Disponibilizando todo conteúdo passado das aulas neste site e também pelo whatsapp, oferecendo para mim e aos demais da turma aprender e estudar o idioma de qualquer lugar que nós estivermos.",
-        "image": "./landingpage/imagens/depo_daniel.jpg"
+        "nome": "Daniel Junior",
+        "curso": "Aluno(a) Tower",
+        "texto": "As aulas são muito bem explicadas. Professor totalmente paciente, sábio na hora de ensinar, fazendo com que até as pessoas com dificuldades de aprendizado consigam compreender...",
+        "foto": "./landingpage/assets/img/depo_daniel.jpg"
       },
       {
-        "name": "Gabriel Carvalho",
-        "course": "Aluno(a) Tower",
-        "text": "Ótimas aulas, dinâmicas e interativas com um método excelente de ensino, rápido e fácil. Um professor muito bom também. Sabe explicar e ensinar muito bem.",
-        "image": "./landingpage/imagens/depo_gabriel.jpg"
+        "nome": "Gabriel Carvalho",
+        "curso": "Aluno(a) Tower",
+        "texto": "Ótimas aulas, dinâmicas e interativas com um método excelente de ensino, rápido e fácil. Um professor muito bom também. Sabe explicar e ensinar muito bem.",
+        "foto": "./landingpage/assets/img/depo_gabriel.jpg"
       },
       {
-        "name": "Cristina Almeida",
-        "course": "Aluno(a) Tower",
-        "text": "Eu só tenho a Agradecer meu professor, um profissional de Línguas exemplar e competente, ele é realmente incrível e sua metodologia é maravilhosa, eu e meu filho fazemos com ele e estamos muito confortáveis em aprender inglês pela comunicação e conectividade das aulas!",
-        "image": "./landingpage/imagens/depo_cristina.jpg"
+        "nome": "Cristina Almeida",
+        "curso": "Aluno(a) Tower",
+        "texto": "Eu só tenho a Agradecer meu professor, um profissional de Línguas exemplar e competente, ele é realmente incrível e sua metodologia é maravilhosa...",
+        "foto": "./landingpage/assets/img/depo_cristina.jpg"
       }
     ]
-}, 
+  },
   "sistema": {
-    "title": "The Tower Project",
-    "subtitle": "Plataforma Web de Gestão de<br>Alunos e Finanças", 
-    "buttonText": "Acessar Plataforma",
-    "linkHref": "../frontend/login.html" 
-}
+    "titulo": "The Tower Project",
+    "subtitulo": "Plataforma Web de Gestão de<br>Alunos e Finanças",
+    "textoBotao": "Acessar Plataforma",
+    "linkUrl": "../frontend/login.html"
+  }
 }

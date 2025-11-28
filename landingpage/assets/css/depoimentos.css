@@ -1,38 +1,38 @@
-
-.depoimentos-section {
+.secao-depoimentos {
     padding: 80px 0;
     background-color: #f8f8f8; 
 }
 
-.carousel-wrapper {
+
+#subtituloDepoimentos {
+    text-align: center;
+    color: #666;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+.wrapper-carrossel {
     position: relative; 
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0 50px; 
 }
 
-#depoimentos .section-subtitle{
-    margin-top: -30px;
-}
-
-.depoimentos-grid {
+.grade-depoimentos {
     display: flex; 
     gap: 30px;
     padding: 20px 0;
     overflow-x: auto; 
-    scroll-snap-type: mandatory; 
     scroll-snap-type: x mandatory; 
-}
-
-.depoimentos-grid::-webkit-scrollbar {
-    display: none;
-}
-
-.depoimentos-grid { 
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
 
-.depoimento-card {
+.grade-depoimentos::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card-depoimento {
     min-width: 300px; 
     max-width: 350px; 
     flex-shrink: 0; 
@@ -44,23 +44,24 @@
     scroll-snap-align: start; 
 }
 
-.depoimento-card:hover {
+.card-depoimento:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* Estrelas */
-.depoimento-rating {
+
+.avaliacao-depoimento {
     color: #FFC107; 
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-.star-icon {
+.icone-estrela {
     margin-right: 2px;
 }
 
-.depoimento-text {
+
+.texto-depoimento {
     font-size: 15px;
     color: #4a4a4a;
     line-height: 1.6;
@@ -68,12 +69,13 @@
     margin-bottom: 35px;
 }
 
-.depoimento-author-info {
+
+.info-autor-depoimento {
     display: flex;
     align-items: center;
 }
 
-.author-image-wrapper {
+.wrapper-foto-autor {
     width: 60px;
     height: 60px;
     background-color: #2D5BFF; 
@@ -83,7 +85,7 @@
     flex-shrink: 0;
 }
 
-.depoimento-avatar-img { 
+.img-avatar-depoimento { 
     width: 100%; 
     height: 100%;
     object-fit: cover;
@@ -91,21 +93,20 @@
     display: block;
 }
 
-.depoimento-author {
+.nome-autor {
     font-size: 16px;
     font-weight: 700;
     color: #222;
     margin: 0;
 }
 
-.depoimento-role {
+.curso-autor {
     font-size: 14px;
     color: #777;
     margin: 0;
 }
 
-
-.carousel-nav-btn {
+.btn-nav-carrossel {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -119,70 +120,59 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, opacity 0.3s;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.carousel-nav-btn:hover {
+.btn-nav-carrossel:hover {
     background: #1a42cc;
 }
 
-.carousel-nav-btn svg {
+.btn-nav-carrossel svg {
     width: 24px;
     height: 24px;
 }
 
-.btn-prev {
-    left: 0; 
-}
+.btn-anterior { left: 0; }
+.btn-proximo { right: 0; }
 
-.btn-next {
-    right: 0; 
-}
 
 @media (max-width: 800px) {
-    .depoimentos-grid {
+    .wrapper-carrossel {
         padding: 0 20px;
     }
 }
 
-
 @media (max-width: 768px) {
-    .carousel-wrapper {
-        padding: 0 15px; 
+    .wrapper-carrossel {
+        padding: 0 10px; 
         margin-top: 20px;
     }
 
-    .depoimentos-grid {
+    .grade-depoimentos {
         padding: 10px 0; 
         gap: 20px; 
     }
     
-    .depoimento-card {
+    .card-depoimento {
         min-width: 200px; 
         max-width: 250px;
-        padding: 12px; 
+        padding: 15px; 
     }
 
-    .carousel-nav-btn {
+    .btn-nav-carrossel {
         opacity: 0; 
         pointer-events: none; 
     }
 
-    .author-image-wrapper {
+    .wrapper-foto-autor {
         width: 40px;
         height: 40px;
         margin-right: 10px;
     }
     
-    .depoimento-author {
-        font-size: 14px;
-    }
-
-    .depoimento-role {
-        font-size: 13px; 
-    }
-
-    .depoimento-text {
-        font-size: 14px; 
-    }
+    .nome-autor { font-size: 14px; }
+    .curso-autor { font-size: 13px; }
+    .texto-depoimento { font-size: 14px; }
 }
-

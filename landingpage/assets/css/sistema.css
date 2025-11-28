@@ -1,11 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
-.sistema-section {
+.secao-sistema {
     position: relative;
     background: #0000a8; 
     border-radius: 20px;
@@ -17,10 +10,11 @@
     align-items: center;
     text-align: center;
     padding: 130px 80px;
-    
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
-.cta-title {
+.titulo-cta {
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -1px;
@@ -31,7 +25,7 @@
     z-index: 2;
 }
 
-.cta-title::after {
+.titulo-cta::after {
     content: "";
     position: absolute;
     top: 25px;
@@ -44,16 +38,14 @@
     z-index: -1;
 }
 
-.cta-summary {
+.resumo-cta {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     color: #f2f2f2;
-    margin-bottom: 15px;
 }
 
-
-.btn-sistema-admin {
+.btn-acesso-sistema {
     display: inline-block;
     padding: 16px 45px;
     background: linear-gradient(90deg, #ff8a00, #ff6a00);
@@ -67,108 +59,84 @@
     z-index: 100;
 }
 
-.btn-sistema-admin:hover {
+.btn-acesso-sistema:hover {
     transform: translateY(-4px) scale(1.05);
     background: linear-gradient(90deg, #ffa733, #ff7c20);
     box-shadow: 0 12px 26px rgba(255,140,0,0.55);
 }
 
-/* ===== IMAGENS  ===== */
-.system-asset {
+
+.asset-sistema {
     position: absolute;
     max-width: 290px;
     z-index: 1;
 }
 
-
-.asset-clipboard {
+.asset-prancheta {
     bottom: 50px;
     right: 60px;
 }
 
-
-.asset-phone-chart {
+.asset-grafico {
     top: 100px;
     left: 20px;
     max-width: 260px;
 }
 
-@media (max-width: 768px) {
 
-    .sistema-section {
+@media (max-width: 768px) {
+    .secao-sistema {
         padding: 70px 20px;
         text-align: center;
-        position: relative;
     }
 
-    /* TÍTULO */
-    .cta-title {
+    .titulo-cta {
         font-size: 2rem;
         max-width: 90%;
         margin: 0 auto 10px;
     }
-
    
-    .cta-summary {
+    .resumo-cta {
         font-size: 1.2rem;
         max-width: 90%;
         margin: 0 auto 20px;
-        line-height: 1.4;
     }
-
-    .cta-description {
-        font-size: 1rem;
-        max-width: 90%;
-        margin: 0 auto 30px;
-    }
-
    
-    .system-asset {
-        position: absolute !important;
+    .asset-sistema {
         width: 130px !important;   
         height: auto;
-        opacity: 0.95;
+        opacity: 0.8; 
     }
 
-    
-    .asset-phone-chart {
+    .asset-grafico {
         top: -10px !important;
         left: -10px !important;
     }
-
     
-    .asset-clipboard {
+    .asset-prancheta {
         bottom: -10px !important;
         right: -10px !important;
     }
 
-
-    .btn-sistema-admin {
+    .btn-acesso-sistema {
         position: relative;
         z-index: 10;
         font-size: 1.1rem;
         padding: 14px 30px;
         margin-top: 20px;
-        display: inline-block;
     }
 }
 
-
 @media (max-width: 480px) {
-
-    .system-asset {
-        width: 110px !important;
+    .asset-sistema {
+        width: 90px !important;
     }
 
-    .cta-title {
+    .titulo-cta {
         font-size: 1.7rem;
     }
 
-    .cta-summary {
-        font-size: 1.05rem;
-    }
-
-    .btn-sistema-admin {
+    .btn-acesso-sistema {
         width: 100%;
         padding: 14px 0;
     }
