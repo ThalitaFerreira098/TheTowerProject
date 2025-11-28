@@ -144,52 +144,6 @@ function renderizarLivros(livros, tituloTexto, subtituloTexto) {
     }
 }
 
-function renderizarEvolucao(dados) {
-    const alvo = document.getElementById('secao-evolucao');
-    if (!alvo || !dados) return;
-
-    const icones = {
-        medalha: '<svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>',
-        alvo: '<svg width="28" height="28" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
-    };
-
-    const cardsHTML = dados.cards.map(card => `
-        <div class="card-vidro">
-            <div class="icone-vidro ${card.classeCor}">
-                ${icones[card.icone]}
-            </div>
-            <h3>${card.titulo}</h3>
-            <ul class="lista-check">
-                ${card.lista.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-        </div>
-    `).join('');
-
-    alvo.innerHTML = `
-        <section class="secao-fundo-evolucao">
-            <div class="container">
-                <div class="cabecalho-evolucao">
-                    <span class="badge-resultados">${dados.badge}</span>
-                    <h2 class="titulo-evolucao">${dados.titulo}</h2>
-                    <p class="subtitulo-evolucao">${dados.subtitulo}</p>
-                </div>
-
-                <div class="grade-evolucao">
-                    ${cardsHTML}
-                </div>
-
-                <div class="box-cta-vidro">
-                    <h3>${dados.cta.titulo}</h3>
-                    <p>${dados.cta.descricao}</p>
-                    <div class="grupo-botoes-cta">
-                        <a href="#" class="btn-brilho-branco">${dados.cta.btnPrimario}</a>
-                        <a href="#" class="btn-outline-branco">${dados.cta.btnSecundario}</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    `;
-}
 
 export function iniciar(dados) {
     if (!dados) return console.error("Dados de 'metodologia' não encontrados.");
@@ -197,5 +151,4 @@ export function iniciar(dados) {
     renderizarBanner(dados.banner);
     renderizarDiferenciais(dados.diferenciais);
     renderizarLivros(dados.livros, dados.titulo, dados.subtitulo);
-    renderizarEvolucao(dados.evolucao);
 }

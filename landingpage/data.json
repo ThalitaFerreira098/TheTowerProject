@@ -156,42 +156,7 @@
         "cor": "#F50057",
         "icone": "maleta"
       }
-    ],
-    "evolucao": {
-      "badge": "✨ Resultados Comprovados",
-      "titulo": "Sua Evolução Garantida",
-      "subtitulo": "Veja o que você será capaz de fazer ao concluir nossa metodologia completa",
-      "cards": [
-        {
-          "icone": "medalha",
-          "classeCor": "icone-azul",
-          "titulo": "Ao Final do Livro 5",
-          "lista": [
-            "Conhecimento avançado consolidado",
-            "Vocabulário amplo e diversificado",
-            "Conversação natural e fluida",
-            "Capacidade de debater temas complexos"
-          ]
-        },
-        {
-          "icone": "alvo",
-          "classeCor": "icone-rosa",
-          "titulo": "Ao Concluir o Livro 6",
-          "lista": [
-            "Fluência completa atingida",
-            "Expressão natural em qualquer contexto",
-            "Interação profissional avançada",
-            "Apresentações e projetos em inglês"
-          ]
-        }
-      ],
-      "cta": {
-        "titulo": "Pronto para Transformar seu Inglês?",
-        "descricao": "Junte-se a milhares de alunos que já conquistaram a fluência com nossa metodologia comprovada",
-        "btnPrimario": "Começar Agora >",
-        "btnSecundario": "Falar com Consultor"
-      }
-    }
+    ]
   },
   "eventos": {
     "titulo": "Eventos para Praticar Inglês na Vida Real",
