@@ -1,37 +1,184 @@
-.sobre-card {
-    background: white;
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-    text-align: center;
-    max-width: 900px;
+
+.sobre-content {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    gap: 40px; 
+    max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid #eee;
+    padding: 0 20px; 
 }
 
-.sobre-card .card-icon {
-    width: 80px; height: 80px;
-    background: rgba(45,91,255,0.1);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 30px;
+
+.sobre-image-wrapper {
+    flex: 1 1 350px;
+    max-width: 450px; 
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+    
+    
+    
 }
 
-.sobre-placeholder { font-style: italic; margin-bottom: 40px; font-size: 18px; color: #555; }
+.sobre-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-.sobre-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+
+.sobre-text-content {
+    flex: 2 1 500px;
     text-align: left;
 }
 
-.sobre-item {
-    background: #F9F9F9;
-    padding: 25px;
-    border-radius: 15px;
-    border-left: 4px solid var(--blue);
+
+.sobre-text-content p {
+    font-size: 16px; 
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.sobre-item h4 { margin-bottom: 10px; color: var(--blue); font-size: 16px; }
-.sobre-item p { font-size: 14px; color: #666; line-height: 1.5; margin: 0; }
+
+.idiomas-dominados {
+    flex-basis: 100%;
+    width: 100%;
+    
+    margin-top: 10px; 
+    text-align: center;
+}
+
+
+.idiomas-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 10px; 
+    width: 100%;
+    max-width: 1100px; 
+    margin: 10px auto 0;
+}
+
+
+.idioma-badge {
+    display: flex;
+    align-items: center;
+    
+    justify-content: center; 
+    
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 12px 10px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    
+
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    top: 0;
+    opacity: 0; 
+    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+
+.idioma-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.idioma-badge img {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.idioma-sigla {
+    font-size: 16px;
+    font-weight: 800; 
+    color: #333;
+}
+
+
+.status {
+    font-size: 12px; 
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.3px; 
+}
+
+.status.fluente {
+    background: #d8f3db;
+    color: #28a745;
+}
+
+.status.avancado {
+    background: #fff8cc;
+    color: #b39400;
+}
+
+.status.intermediario {
+    background: #e0eaff;
+    color: #0057d8;
+}
+
+.status.nativo {
+    background: #ffd6dd;
+    color: #c21c33;
+}
+
+.bandeira-img {
+    width: 24px; 
+    height: auto;
+    border-radius: 4px;
+    margin-right: 10px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+
+.idioma-nome {
+    font-size: 15px;
+    font-weight: 600; 
+    color: #444;      
+    letter-spacing: 0.5px;
+}
+
+
+.idioma-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #e0e0e0;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.idioma-badge {
+    opacity: 0; 
+    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+
+.idioma-badge:nth-child(1) { animation-delay: 0.1s; }
+.idioma-badge:nth-child(2) { animation-delay: 0.2s; }
+.idioma-badge:nth-child(3) { animation-delay: 0.3s; }
+.idioma-badge:nth-child(4) { animation-delay: 0.4s; }
+.idioma-badge:nth-child(5) { animation-delay: 0.5s; }
+.idioma-badge:nth-child(6) { animation-delay: 0.6s; }

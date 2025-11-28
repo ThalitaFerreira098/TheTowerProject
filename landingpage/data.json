@@ -238,14 +238,24 @@
   },
   "sobre": {
     "title": "Sobre o Professor",
-    "placeholder": "Informações do professor serão adicionadas aqui...",
     "sections": [
-      { "title": "Formação", "content": "A ser preenchido" },
-      { "title": "Especializações", "content": "A ser preenchido" },
-      { "title": "Experiências", "content": "A ser preenchido" },
-      { "title": "Método Criado", "content": "A ser preenchido" }
+        {
+            "content": [
+                "Meu nome é Jefferson, tenho 34 anos. Construí uma carreira de 11 anos na IBM Brasil utilizando na prática todas as línguas que ensino.",
+                "Formado em Administração e Geografia, sou apaixonado pelo aprendizado. Aos 17 anos, já fluente em inglês e espanhol, busquei novos desafios. Hoje, falo 6 idiomas entre níveis fluente e avançado.",
+                "Atualmente, lidero mais de 20 turmas e aplico minha vivência corporativa internacional em uma Metodologia Própria, focada em resultados reais."
+            ]
+        }
+    ],
+    "languages": [
+        { "code": "US", "name": "Inglês", "status": "Fluente" },
+        { "code": "ES", "name": "Espanhol", "status": "Fluente" },
+        { "code": "DE", "name": "Alemão", "status": "Avançado" },
+        { "code": "IT", "name": "Italiano", "status": "Avançado" },
+        { "code": "NL", "name": "Holandês", "status": "Intermed." },
+        { "code": "BR", "name": "Português", "status": "Nativo" }
     ]
-  },
+},
   "footer": {
     "description": "Aulas presenciais, online e híbridas.",
     "links": [
