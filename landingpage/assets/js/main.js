@@ -1,7 +1,3 @@
-/* =====================================================
-   MAIN.JS - CONFIGURAÇÃO GERAL
-   ===================================================== */
-
 const MAPA_COMPONENTES = {
     hero: { chaveJson: 'hero', idHtml: 'home' }, 
     modalidades: { chaveJson: 'modalidades', idHtml: 'modalidades' },
@@ -12,19 +8,15 @@ const MAPA_COMPONENTES = {
     sobre: { chaveJson: 'sobre', idHtml: 'sobre' },
     footer: { chaveJson: 'footer', idHtml: 'contato' },
     depoimentos: { chaveJson: 'depoimentos', idHtml: 'depoimentos' },
-    sistema: { chaveJson: 'sistema', idHtml: 'sistema' }
 };
 
 let dadosDoSite = {};
 
-// AJUSTE CRÍTICO: 
-// Se o index.html está FORA da pasta landingpage, use './landingpage'
-// Se o index.html está DENTRO da pasta landingpage, use '.'
 const CAMINHO_BASE = './landingpage'; 
 
 async function carregarComponente(nomeArquivo, idElemento, dados) {
     try {
-        // 1. Carrega o HTML
+        
         const resposta = await fetch(`${CAMINHO_BASE}/${nomeArquivo}.html`);
         
         if (!resposta.ok) throw new Error(`Erro ao carregar HTML ${nomeArquivo} (404)`);
@@ -34,32 +26,30 @@ async function carregarComponente(nomeArquivo, idElemento, dados) {
         if (container) {
             container.innerHTML = htmlTexto;
 
-            // 2. Carrega o CSS Dinamicamente (AQUI ESTÁ O SEGREDO)
-            // Verifica se já existe para não carregar duas vezes
+        
             if (!document.querySelector(`link[href*="${nomeArquivo}.css"]`)) {
                 
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';
                 
-                // Monta o caminho: ./landingpage/assets/css/hero.css
+                
                 const caminhoCSS = `${CAMINHO_BASE}/assets/css/${nomeArquivo}.css`;
                 link.href = caminhoCSS; 
                 
-                // Mensagem para Debug (Olhe no Console F12 se não funcionar)
                 console.log(`Tentando carregar CSS: ${caminhoCSS}`);
 
                 document.head.appendChild(link);
             }
             
-            // 3. Carrega o JS Específico
+           
             try {
-                // Caminho: ./assets/js/hero.js (vizinho deste arquivo)
+                
                 const modulo = await import(`./${nomeArquivo}.js`);
                 if (modulo.iniciar) { 
                     modulo.iniciar(dados); 
                 }
             } catch (erroJs) {
-                // Ignora se não tiver JS
+                
             }
         }
     } catch (erro) {
@@ -69,11 +59,11 @@ async function carregarComponente(nomeArquivo, idElemento, dados) {
 
 async function iniciarSite() {
     try {
-        // Busca o JSON
+       
         const resp = await fetch(`${CAMINHO_BASE}/data.json`);
         dadosDoSite = await resp.json();
 
-        // Loop pelos componentes
+       
         for (const [nomeComponente, mapa] of Object.entries(MAPA_COMPONENTES)) {
             const dadosParaEnviar = dadosDoSite[mapa.chaveJson];
             if (dadosParaEnviar) {
@@ -134,3 +124,4 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', iniciarSite);
+

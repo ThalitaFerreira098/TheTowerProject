@@ -1,21 +1,23 @@
 .apresentacao-container {
-    min-height: 100vh;
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     position: relative;
     background: linear-gradient(105deg, #001233 0%, #0038A8 40%, #5E17EB 75%, #D90429 100%);
     padding-top: 80px;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .apresentacao-grade { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    gap: 40px; 
+    gap: 20px; 
     align-items: center; 
     position: relative; 
     z-index: 10;
+    height: 100%; 
 }
+
 
 .apresentacao-conteudo h1 { 
     font-size: clamp(36px, 5vw, 56px); 
@@ -24,124 +26,135 @@
     margin-bottom: 10px; 
     text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-
 .apresentacao-conteudo p { 
     font-size: 18px; 
     color: rgba(255,255,255,0.95); 
-    margin-bottom: 20px; 
+    margin-bottom: 30px; 
     font-weight: 500; 
-    max-width: 500px;
+    max-width: 500px; 
+    line-height: 1.4;
 }
-
-
 .botao-destaque-azul {
     background-color: #3B92FF; 
-    color: white;
-    border: none;
-    padding: 18px 36px;
+    color: white; 
+    border: none; 
+    padding: 18px 36px; 
     border-radius: 50px; 
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
+    font-size: 16px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4); 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    display: inline-block; 
     text-decoration: none;
-    margin-top: 20px;
-    margin-bottom: 150px; 
-    position: relative;
-    z-index: 30;
 }
-
 .botao-destaque-azul:hover {
-    background-color: #1A75D3;
-    transform: translateY(-3px);
+    background-color: #1A75D3; 
+    transform: translateY(-3px); 
     box-shadow: 0 10px 20px rgba(0, 102, 255, 0.6);
 }
 
-
-.apresentacao-imagem {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+.apresentacao-imagem-composta {
     position: relative;
-    width: 100%; 
-    height: 100%; 
-    min-height: 400px; 
-    background: url('../img/professor_test.png') no-repeat center bottom; 
-    background-size: contain;
-    z-index: 5; 
+    width: 100%;
+    height: 80vh; 
+    min-height: 500px;
+}
+
+
+.apresentacao-imagem-composta img {
+    position: absolute; 
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.apresentacao-brilho { z-index: 1; }
+.elemento-fundo { z-index: 2; }
+.elemento-principal { z-index: 10; } 
+.elemento-frente { z-index: 20; } 
+
+.professor {
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+    max-height: 100%; 
+    object-fit: contain;
+    filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.5));
+}
+
+
+.estatua {
+    top: 0%;
+    left: 17%; 
+    width: 30%; 
+    opacity: 0.6; 
+    filter: grayscale(30%); 
+    transform: rotate(-20deg);
+}
+
+
+.bandeira-top {
+    top: 14%;
+    right: 10%;
+    width: 30%;
+    transform: rotate(12deg); 
+    opacity: 0.8;
+}
+
+
+.aviao {
+    bottom: 25%;
+    left: 25%;
+    width: 25%;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.10));
+}
+
+
+.bandeira-blur {
+    bottom: -5%;
+    right: -5%;
+    width: 50%;
+    filter: blur(8px); 
+    opacity: 0.7;
+    transform: rotate(-20deg);
 }
 
 
 .apresentacao-brilho {
-    position: absolute;
-    width: 600px; 
-    height: 600px; 
-    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%); 
-    filter: blur(80px);
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1; 
-}
-
-.onda-fundo { 
     position: absolute; 
-    bottom: -1px; 
-    left: 0; 
-    width: 100%; 
-    line-height: 0; 
-    z-index: 20; 
+    width: 600px; 
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+    filter: blur(80px); 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }
 
-
-.animar-aparecer-cima {
-    animation: subirAparecendo 1s ease-out forwards;
-}
-
-@keyframes subirAparecendo {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+.onda-fundo { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 30; }
 
 @media (max-width: 1024px) { 
-    .apresentacao-imagem,
-    .apresentacao-brilho { 
-        display: none !important; 
-    } 
-
-    .apresentacao-container {
-        min-height: 65vh; 
-        padding-bottom: 40px; 
-        align-items: center;
-        display: block; 
+    .apresentacao-imagem-composta { 
+        height: 50vh; 
+        min-height: 350px;
+        margin-top: -50px; 
+        z-index: 1;
     }
-    
-    .apresentacao-grade { 
-        grid-template-columns: 1fr; 
-        text-align: center; 
-        gap: 0;
-    } 
 
+    .estatua, .bandeira-blur, .aviao { display: none; }
+    
+    .professor {
+        max-height: 100%;
+        left: 60%; 
+    }
+    .bandeira-top {
+        width: 40%; top: 0; right: 0; opacity: 0.5;
+    }
     .apresentacao-conteudo {
-        padding-bottom: 30px;
-        padding-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .botao-destaque-azul {
-        margin-bottom: 60px; 
-        font-size: 14px;
-        padding: 14px 25px;
-    }
-
-    .apresentacao-conteudo h1 {
-        font-size: clamp(32px, 10vw, 48px);
+        z-index: 20; 
     }
 }

@@ -54,6 +54,14 @@ body {
     font-size: 20px; 
 }
 
+.logo span {
+    background: linear-gradient(90deg, #2D5BFF 0%, #FF4081 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
 .my-logo {
     height: 40px; 
     width: auto;  
@@ -174,8 +182,8 @@ body {
     font-weight: 800; 
     color: #1a1a1a;
     position: relative; 
-    padding-bottom: 25px; 
-    margin-bottom: 30px; 
+    padding-bottom: 20px; 
+    margin-bottom: 20px; 
     text-align: center; 
 }
 
@@ -190,4 +198,17 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.section-subtitle {
+    text-align: center; 
+    font-size: 16px;
+    color: #666;
+    margin-top: 1px;
+    margin-top: -25px;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; 
 }
