@@ -3,8 +3,30 @@ function gerarEstrelas(quantidade) {
     return estrelaCheia.repeat(quantidade); 
 }
 
+function habilitarLoopInfinito(grid, numItensOriginais) {
+    const larguraCard = 330; 
+    
+    const pontoDeReset = larguraCard * numItensOriginais; 
+    
+    const limiteEsquerdo = larguraCard * 0.5;
+
+    grid.addEventListener('scroll', () => {
+        if (grid.scrollLeft >= pontoDeReset) {
+            grid.scrollLeft -= pontoDeReset; 
+        }
+        else if (grid.scrollLeft <= limiteEsquerdo) {
+            grid.scrollLeft += pontoDeReset;
+        }
+    });
+
+    grid.scrollLeft = 0; 
+}
+
 export function iniciar(dados) {
     if (!dados) return console.error("Dados de 'depoimentos' não encontrados.");
+
+    const target = document.getElementById('depoimentos');
+    if (!target) return;
 
     const titulo = document.getElementById('tituloDepoimentos');
     const subtitulo = document.getElementById('subtituloDepoimentos');
@@ -14,9 +36,10 @@ export function iniciar(dados) {
 
  
     const grade = document.getElementById('gradeDepoimentos');
-    if (grade && dados.itens) {
+    const numItensOriginais = dados.itens.length;
+    const itensLoop = [...dados.itens, ...dados.itens.slice(0, 3)];
 
-        const itensLoop = [...dados.itens, ...dados.itens.slice(0, 3)];
+    if (grade && dados.itens) {
 
         grade.innerHTML = itensLoop.map(depoimento => `
             <div class="card-depoimento">
@@ -41,9 +64,11 @@ export function iniciar(dados) {
     setTimeout(() => {
         const btnAnt = document.getElementById('btnAntDepoimento');
         const btnProx = document.getElementById('btnProxDepoimento');
-        const scrollAmount = 380; 
+        const scrollAmount = 330; 
 
-        if (grade && btnAnt && btnProx) {
+        habilitarLoopInfinito(grid, numItensOriginais);
+
+        if (btnAnt && btnProx) {
             btnAnt.onclick = () => {
                 grade.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             };

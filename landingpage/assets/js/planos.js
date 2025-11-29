@@ -4,7 +4,7 @@ export function iniciar(dados) {
     const tituloSecao = document.getElementById('tituloPlanos');
     if (tituloSecao && dados.tituloGeral) tituloSecao.textContent = dados.tituloGeral;
 
-    const numeroWhatsapp = "5519999999999"; 
+    const numeroWhatsapp = "5519992300116"; 
 
 
     const containerGrupo = document.getElementById('containerPlanoGrupo');
