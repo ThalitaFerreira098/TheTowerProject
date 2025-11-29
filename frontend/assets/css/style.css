@@ -22,8 +22,7 @@ body.login-body{
     100% {background-position: 0% 50%; }
 }
 
-/* card do login*/
-.login-container{
+ .login-container{
     display: flex;
     justify-content:center;
     align-items: center;
