@@ -46,7 +46,7 @@
 .secao-idiomas {
     flex-basis: 100%;
     width: 100%;
-    margin-top: 30px; 
+    margin-top: 10px; 
     text-align: center;
 }
 
@@ -54,6 +54,7 @@
     font-size: 18px;
     color: #444;
     margin-bottom: 15px;
+    top: -20;
 }
 
 .grade-idiomas {
@@ -71,9 +72,11 @@
     align-items: center;
     justify-content: center; 
     background: #fff;
-    border: 1px solid #f0f0f0;
+    border: 3px solid transparent;
+    position: relative;
+    box-sizing: border-box;
     border-radius: 12px;
-    padding: 10px 16px; 
+    padding: 7px 13px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     transition: all 0.3s ease;
     cursor: default;
@@ -83,8 +86,7 @@
 
 .badge-idioma:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-color: #e0e0e0;
+    border-color: transparent;
 }
 
 .img-bandeira {
@@ -100,6 +102,42 @@
     font-weight: 600; 
     color: #444;       
     letter-spacing: 0.5px;
+}
+
+.badge-idioma.idioma-br:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15), 
+        0 0 0 2px #009739;           
+}
+
+.badge-idioma.idioma-us:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #0249bb;           
+}
+
+.badge-idioma.idioma-es:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #FF8A00;           
+}
+
+.badge-idioma.idioma-de:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #e0b60d;          
+}
+
+.badge-idioma.idioma-it:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #CD212A;           
+}
+
+.badge-idioma.idioma-nl:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #6A00FF;         
 }
 
 

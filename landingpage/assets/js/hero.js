@@ -1,5 +1,8 @@
 
 export function iniciar(dados) {
+    document.getElementById('tituloHeroDesktop').innerHTML = dados.titulo_desktop; 
+    document.getElementById('tituloHeroMobile').innerHTML = dados.titulo_mobile;
+
     const titulo = document.getElementById('tituloHero');
     const descricao = document.getElementById('descricaoHero');
     

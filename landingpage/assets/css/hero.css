@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    top: -40px;
     background: linear-gradient(105deg, #001233 0%, #0038A8 40%, #5E17EB 75%, #D90429 100%);
     padding-top: 80px;
     overflow: hidden; 
@@ -18,14 +19,19 @@
     height: 100%; 
 }
 
+#tituloHeroMobile {
+    display: none;
+}
 
-.apresentacao-conteudo h1 { 
+#tituloHeroDesktop {
     font-size: clamp(36px, 5vw, 56px); 
     color: white; 
     font-weight: 800; 
     margin-bottom: 10px; 
     text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+
+
 .apresentacao-conteudo p { 
     font-size: 18px; 
     color: rgba(255,255,255,0.95); 
@@ -137,24 +143,89 @@
 
 .onda-fundo { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 30; }
 
-@media (max-width: 1024px) { 
-    .apresentacao-imagem-composta { 
-        height: 50vh; 
-        min-height: 350px;
-        margin-top: -50px; 
-        z-index: 1;
+
+@media (max-width: 768px) {
+
+    .apresentacao-conteudo { 
+        order: 1;
+        width: 100%;
+        padding-bottom: 30px; 
+        position: relative; 
+        z-index: 50; 
     }
 
-    .estatua, .bandeira-blur, .aviao { display: none; }
+    #tituloHeroDesktop {
+        display: none;
+    }
+
+    #tituloHeroMobile {
+        display: block;
+        font-size: clamp(36px, 5vw, 56px); 
+        color: white; 
+        font-weight: 800; 
+        margin-bottom: 10px; 
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .apresentacao-conteudo p {
+        font-size: 14px; 
+        text-align: left;
+        width: 75%;
+    }
     
+    .apresentacao-grade {
+        grid-template-columns: 1fr; 
+        gap: 0;
+        width: 100%;
+        height: auto; 
+    }
+
+    .apresentacao-imagem-composta {
+        order: 2; 
+        position: absolute; 
+        bottom: 0;
+        right: 0;
+        height: 60vh; 
+        width: 100%;
+        z-index: 10; 
+        opacity: 0.8; 
+    }
+
     .professor {
-        max-height: 100%;
-        left: 60%; 
+        height: 70%; 
+        left: 70%; 
+        bottom: 15%; 
+        transform: translateX(-50%); 
     }
-    .bandeira-top {
-        width: 40%; top: 0; right: 0; opacity: 0.5;
+
+    .estatua { 
+        height: 30%; 
+        left: 28%;     
+        top: -6%;    
+        opacity: 0.3; 
+        z-index: 10; 
+        transform: rotate(-20deg); 
     }
-    .apresentacao-conteudo {
-        z-index: 20; 
+    
+    .bandeira-top { 
+        height: 30%; 
+        right: -15%; 
+        top: 6%;
+        opacity: 0.5;
+        z-index: 10; 
     }
+    
+    .botao-destaque-azul { 
+        padding: 15px 25px; 
+        font-size: 12px; 
+        width: 102%; 
+        max-width: 400px;
+        margin: 0 auto 30px auto; 
+        text-align: center;
+    }
+
+    .onda-fundo {
+        display: none !important; 
+    }
+
 }

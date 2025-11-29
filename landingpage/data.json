@@ -4,7 +4,8 @@
     "descricao": "Aulas presenciais, online e híbridas"
   },
   "hero": {
-    "titulo": "Aprenda Inglês de verdade do zero à fluência",
+    "titulo_desktop": "Aprenda Inglês de verdade do zero à fluência",
+    "titulo_mobile": "Aprenda<br>Inglês de<br>verdade<br>do zero<br>à fluência",
     "descricao": "Desenvolva conversação real, participe de eventos, aprenda com livros exclusivos e evolua do básico à fluência com um método criado para garantir resultados.",
     "cta": "Agende sua Aula Experimental Gratuita",
     "whatsapp": "5519992300116",

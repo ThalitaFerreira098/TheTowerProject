@@ -18,7 +18,7 @@ function renderizarIdiomas(idiomas) {
         const delay = (index + 1) * 0.1; 
         
         return `
-            <div class="badge-idioma" style="animation-delay: ${delay}s">
+            <div class="badge-idioma idioma-${codigo.toLowerCase()} style="animation-delay: ${delay}s">
                 <img class="img-bandeira" src="./landingpage/assets/img/${codigo}.png" alt="${codigo}" onerror="this.style.display='none'">
                 <span class="nome-idioma">${nomeIdioma}</span>
             </div>

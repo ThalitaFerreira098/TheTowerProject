@@ -212,3 +212,7 @@ body {
     margin-right: auto;
     max-width: 800px; 
 }
+
+.botao-menu-mobile { 
+    display: none;
+}
