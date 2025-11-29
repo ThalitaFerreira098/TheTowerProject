@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Finanças - The Tower</title>
+
+  <!-- CSS externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/financas.css">
+
+  <!-- Chart.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+                <h1 id="titulo-pagina">Finanças</h1>
+            </div>
+        </header>
+  <!-- O restante do seu HTML permanece igual -->
+  <div class="container">
+    <header>
+      <div>
+        <h1>Finanças</h1>
+        <div class="muted">Visão geral financeira — gráficos interativos e ações rápidas</div>
+      </div>
+      <div class="toolbar">
+        <button id="openPagamento" class="btn">Registrar pagamento</button>
+      </div>
+    </header>
+
+    <!-- KPI cards -->
+    <div class="small-grid" style="margin-bottom:16px">
+      <div class="card">
+        <div class="muted">Receita realizada (mês)</div>
+        <div id="kpiReceita" style="font-size:20px;font-weight:700">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <div class="muted">Receita projetada</div>
+        <div id="kpiProjetada" style="font-size:20px;font-weight:700">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <div class="muted">Alunos não bolsistas pendentes</div>
+        <div id="kpiPendentes" style="font-size:20px;font-weight:700">0</div>
+      </div>
+    </div>
+
+    <!-- charts -->
+    <div class="grid" style="margin-bottom:18px">
+      <div class="card">
+        <h3>Projeção de Receita - Mês atual</h3>
+        <canvas id="chartProjecao" height="200"></canvas>
+      </div>
+      <div class="card">
+        <h3>Tendência e Sazonalidade</h3>
+        <canvas id="chartTendencia" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:18px">
+      <div class="card">
+        <h3>LTV (valor por aluno)</h3>
+        <canvas id="chartLtv" height="220"></canvas>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:12px">
+          <h3>Previsão próximos 3 meses</h3>
+          <canvas id="chartPrev3" height="150"></canvas>
+        </div>
+        <div class="card">
+          <h3>Impacto bolsistas</h3>
+          <table class="table" id="tblImpacto">
+            <tr><th>Análise</th><th>Valor</th></tr>
+            <tr><td>Total alunos</td><td id="impact_total">-</td></tr>
+            <tr><td>Total bolsistas</td><td id="impact_bolsistas">-</td></tr>
+            <tr><td>Receita mensal atual</td><td id="impact_receita">-</td></tr>
+            <tr><td>Impacto mensal</td><td id="impact_impacto">-</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Alunos inadimplentes (maiores atrasos)</h3>
+      <div id="listaInadimplentes">Carregando...</div>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="modal" id="modalPagamento">
+    <div class="dialog card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h3 style="margin:0">Registrar Pagamento</h3>
+        <button id="closePagamento" class="btn secondary">Fechar</button>
+      </div>
+
+      <div class="row" style="margin-bottom:10px">
+        <label style="min-width:120px">email do aluno:</label>
+        <input id="emailAluno" placeholder="email@exemplo.com" />
+      </div>
+
+      <div class="row" style="margin-bottom:10px">
+        <label style="min-width:120px">Mensalidade:</label>
+        <select id="selectMensalidade"></select>
+      </div>
+
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:10px">
+        <button id="btnConfirmarPagamento" class="btn">Confirmar pagamento</button>
+        <button id="btnCancelarPagamento" class="btn secondary">Cancelar</button>
+      </div>
+
+      <div style="margin-top:12px" id="mensagemPagamento"></div>
+    </div>
+  </div>
+
+  <script src="./assets/js/fianancas.js"></script>
+</body>
+</html>

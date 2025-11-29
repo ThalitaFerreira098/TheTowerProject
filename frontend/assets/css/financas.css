@@ -1,0 +1,241 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Variáveis CSS */
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent1: linear-gradient(90deg, #7c3aed, #ec4899);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.barra-topo {
+    position: relative;
+    background: linear-gradient(90deg, #a020f0, #ff4b2b);
+    
+    width: 55%;
+    height: 40px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-topo h1 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.btn-voltar {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #ff4b2b;
+}
+
+
+/* Estilos gerais */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #0f172a;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 30px auto;
+    margin-top: 60px;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Botões */
+.btn {
+  background: #10b981;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #ef4444;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(12, 18, 35, 0.06);
+}
+
+.card h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.small-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 7, 18, 0.45);
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .15s;
+}
+
+.card canvas {
+  min-height: 200px;
+}
+
+.grid-3 .card canvas {
+  min-height: 220px;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal .dialog {
+  width: 760px;
+  max-width: 95%;
+  background: linear-gradient(180deg, #f3f4f6, #fbfbfb);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.4);
+}
+
+/* Formulários */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+label {
+  font-weight: 600;
+  color: #111827;
+  margin-right: 8px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ee;
+  background: #fff;
+  flex: 1;
+}
+
+/* Utilitários */
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Tabelas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  border-bottom: 1px solid #eef2f7;
+  text-align: left;
+}
+
+.bad {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.good {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* Responsividade */
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
