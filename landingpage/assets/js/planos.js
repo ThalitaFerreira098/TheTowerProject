@@ -72,7 +72,6 @@ export function iniciar(dados) {
                             </div>
                         `).join('')}
                     </div>
-                    <p class="subtitulo-plano">${dados.particulares.observacao}</p> 
                 </div>
 
                 <a href="${linkParticular}" class="botao-plano botao-destaque" target="_blank" rel="noopener noreferrer">Contratar Agora</a>

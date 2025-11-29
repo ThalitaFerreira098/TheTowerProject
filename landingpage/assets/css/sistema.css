@@ -1,7 +1,10 @@
+.page-sistema {
+    background-color: #0000a8;
+}
 .secao-sistema {
     position: relative;
     background: #0000a8; 
-    border-radius: 20px;
+    border-radius: 0px;
     overflow: hidden;
     color: #fff;
     display: flex;
@@ -10,8 +13,8 @@
     align-items: center;
     text-align: center;
     padding: 130px 80px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 
 .titulo-cta {
@@ -70,17 +73,26 @@
     position: absolute;
     max-width: 290px;
     z-index: 1;
+    animation: flutuar 3s ease-in-out infinite;
 }
 
 .asset-prancheta {
     bottom: 50px;
     right: 60px;
+    animation-delay: 1.5s;
 }
 
 .asset-grafico {
     top: 100px;
     left: 20px;
     max-width: 260px;
+    animation-delay: 0s;
+}
+
+@keyframes flutuar {
+    0% { transform: translateY(0px); } 
+    50% { transform: translateY(-10px); } 
+    100% { transform: translateY(0px); } 
 }
 
 
