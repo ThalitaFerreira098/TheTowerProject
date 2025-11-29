@@ -193,6 +193,7 @@
     },
     "particulares": {
       "titulo": "Aulas Particulares",
+      "observacao": "Observação: Mesmo valor para pacote de conversação",
       "itens": [
         { "frequencia": "1x por semana", "preco": "399,90", "popular": false },
         { "frequencia": "2x por semana", "preco": "779,90", "popular": true },
