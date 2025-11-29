@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aulas Demonstrativas</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/aulas_demonstrativas.css">
+</head>
+<body>
+    <header class="cabecalho">
+      <div class="barra-topo">
+          <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+          <h1 id="titulo-pagina">Aulas Demonstrativas</h1>
+      </div>
+    </header>
+
+    <main>
+        <div class="area-botao">
+            <button id="btnNovaAula" class="btn-primary">+ Marcar Aula Demonstrativa</button>
+        </div>
+        
+        <section id="listaAulas" class="lista-aulas"></section>
+    </main>
+
+ 
+    <div class="modal" id="modalAula">
+        <div class="modal-content">
+            <h2>Marcar Aula Demonstrativa</h2>
+
+            <label>* Nome do Aluno</label>
+            <input type="text" id="nome_aluno" required>
+
+            <label>* Email do Aluno</label>
+            <input type="email" id="email_aluno" required>
+
+            <label>* Data da Aula</label>
+            <input type="date" id="data_aula" required>
+
+            <label>* Horário</label>
+            <input type="time" id="horario" required>
+
+            <div class="modal-actions">
+                <button id="btnFechar" class="btn-secondary">Cancelar</button>
+                <button id="btnSalvar" class="btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/aulas_demonstrativas.js"></script>
+</body>
+</html>

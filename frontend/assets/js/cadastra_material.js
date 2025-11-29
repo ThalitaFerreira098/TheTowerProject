@@ -13,7 +13,7 @@ function showMsg(text, type='success'){
   msgEl.textContent = text;
   msgEl.className = 'msg ' + (type==='success' ? 'success' : 'error');
   msgEl.style.display = 'block';
-  setTimeout(()=>{ msgEl.style.display = 'none'; }, 6000);
+  setTimeout(()=>{ msgEl.style.display = 'none'; }, 100000);
 }
 
 async function carregarBooks(){
@@ -97,10 +97,8 @@ form.addEventListener('submit', async (ev) => {
       return;
     }
 
-    // pasta final correta → books/book3/lessons
     nomePasta = `${nomePastaBook}`;
-
-    formData.append('id_book', idBook);
+     formData.append('id_book', idBook);
     formData.append('numero_lesson', numeroLesson);
     formData.append('titulo', "");
 

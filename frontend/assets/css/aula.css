@@ -1,11 +1,11 @@
+
 .cabecalho {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #1100bb;
-    display: flex;
+    height: 30px;
+     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
@@ -14,10 +14,11 @@
 .barra-topo {
     position: relative;
     background: linear-gradient(90deg, #a020f0, #ff4b2b);
-    width: 200px;
+    
+    width: 55%;
     height: 40px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,93 +26,251 @@
 
 .barra-topo h1 {
     color: #fff;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     margin: 0;
+    letter-spacing: 0.5px;
 }
 
 .btn-voltar {
     position: absolute;
-    left: -50px;
+    left: 80px;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background:transparent;
     border: none;
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-voltar:hover {
-    color: #ff4b2b;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f3f6fb;
-    margin : 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    min-height: 100vh;
 }
 
-.aula-container{
+.aula-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin-top: 60px;
+    gap: 25px;
+    padding: 30px;
+    margin-top: 80px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aula-lista, .aula-material, .aula-presenca{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0,0 ,0.1);
-    padding: 20px;
+.aulas-lista, .aula-material, .aula-presensa {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.aula-lista, .aula-presenca{
-    width: 25%;
-
+.aulas-lista:hover, .aula-presensa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.aula-material{
-    width: 45%;
+.aulas-lista, .aula-presensa {
+    width: 28%;
+    min-height: 500px;
+}
+
+.aula-material {
+    width: 44%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.aula-lista ul, .aula-presenca ul{
+.aulas-lista h3, .aula-material h3, .aula-presensa h3 {
+    color: #2d3748;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.aulas-lista h3::after, .aula-material h3::after, .aula-presensa h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.aulas-lista ul, .aula-presensa ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.aula-lista li{
-    background-color: #e7f0fd;
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: poiter;
+.aulas-lista li {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    margin-bottom: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
 }
 
-.aula-lista li.concluida{
-    background-color: #d1e7dd;
-    color:#2b5d42;
+.aulas-lista li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.btn-concluir{
-    background-color: #007bff;
+.aulas-lista li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.aulas-lista li:hover::before {
+    opacity: 1;
+}
+
+.aulas-lista li.concluida {
+    background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+    color: #22543d;
+    border-color: #9ae6b4;
+}
+
+.aulas-lista li.concluida::before {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    opacity: 1;
+}
+
+#frameMaterial {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 12px;
+    background: #f8fafc;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.aula-presensa li {
+    background: #f8fafc;
+    margin-bottom: 10px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.aula-presensa li:hover {
+    background: #edf2f7;
+    transform: translateX(3px);
+}
+
+.aula-presensa li::before {
+    content: '•';
+    color: #667eea;
+    font-size: 20px;
+}
+
+.btn-concluir {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
     color: white;
-    padding: 10px;
-    border-radius: 6px;
-    margin-top: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    margin-top: 20px;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-.btn-concluir:disabled{
-    background-color: #b0c4de;
+.btn-concluir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-concluir:active {
+    transform: translateY(0);
+}
+
+.btn-concluir:disabled {
+    background: linear-gradient(135deg, #cbd5e0 0%, #a0aec0 100%);
     cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 #listaAulas li.concluida {
-    background: #dcdcdc;
-    color: #666;
+    background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+    color: #718096;
     cursor: not-allowed;
+    border-color: #cbd5e0;
+}
+
+ @media (max-width: 1024px) {
+    .aula-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .aulas-lista, .aula-material, .aula-presensa {
+        width: 100%;
+    }
+    
+    .aulas-lista, .aula-presensa {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-topo {
+        width: 90%;
+        height: 50px;
+    }
+    
+    .btn-voltar {
+        left: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .aula-container {
+        padding: 20px;
+        margin-top: 70px;
+    }
 }
