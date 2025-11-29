@@ -1,6 +1,6 @@
 body {
-    background-color: #1400a0;
-    color: white;
+    background-color: #f5f6fa;
+    color: black;
     font-family: Arial, sans-serif;
 }
 
@@ -11,8 +11,21 @@ body {
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #1100bb;
+    background-color: #f5f6fa;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
@@ -21,10 +34,11 @@ body {
 .barra-topo {
     position: relative;
     background: linear-gradient(90deg, #a020f0, #ff4b2b);
-    width: 200px;
+    
+    width: 55%;
     height: 40px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +53,7 @@ body {
 
 .btn-voltar {
     position: absolute;
-    left: -50px;
+    left: 80px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -49,6 +63,7 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+
 
 .btn-voltar:hover {
     color: #ff4b2b;
