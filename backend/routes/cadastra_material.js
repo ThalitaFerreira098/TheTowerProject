@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
         let dest;
         if (req.body.tipo_aula === "Lesson") {
-            dest = path.join(__dirname, '..', '..', 'materiais', 'books', nomePasta);
+            dest = path.join(__dirname, '..', 'materiais', nomePasta);
         } else {
             dest = path.join(__dirname, '..', '..', 'materiais', nomePasta);
         }
@@ -27,15 +27,14 @@ const storage = multer.diskStorage({
     }
 });
 
-// AQUI ESTÁ A CORREÇÃO (antes estava .single('pdf'))
-const upload = multer({
+ const upload = multer({
     storage,
     limits: { fileSize: 10 * 1024 * 1024 },
     fileFilter: (req, file, cb) => {
         if (file.mimetype !== 'application/pdf') return cb(new Error('Apenas PDF permitido'));
         cb(null, true);
     }
-}).any();  // <<< CORREÇÃO AQUI!!! <<<
+}).any();   
 
 
 router.post('/', (req, res) => {
@@ -46,8 +45,7 @@ router.post('/', (req, res) => {
             return res.status(400).json({ resultado: 0, mensagem: err.message || 'Erro no upload' });
         }
 
-        // extrair o arquivo PDF corretamente
-        const file = req.files.find(f => f.fieldname === 'pdf');
+         const file = req.files.find(f => f.fieldname === 'pdf');
         const nome_arquivo = file ? file.originalname : null;
 
         const tipo_aula = req.body.tipo_aula;
@@ -103,7 +101,6 @@ router.post('/', (req, res) => {
 });
 
 
-// GET /books
 router.get("/books", async (req, res) => {
     try {
         const [rows] = await db.query("SELECT * FROM tb_books ORDER BY numero_book ASC");
