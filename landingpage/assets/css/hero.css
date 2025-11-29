@@ -1,0 +1,231 @@
+.apresentacao-container {
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -40px;
+    background: linear-gradient(105deg, #001233 0%, #0038A8 40%, #5E17EB 75%, #D90429 100%);
+    padding-top: 80px;
+    overflow: hidden; 
+}
+
+.apresentacao-grade { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    align-items: center; 
+    position: relative; 
+    z-index: 10;
+    height: 100%; 
+}
+
+#tituloHeroMobile {
+    display: none;
+}
+
+#tituloHeroDesktop {
+    font-size: clamp(36px, 5vw, 56px); 
+    color: white; 
+    font-weight: 800; 
+    margin-bottom: 10px; 
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+.apresentacao-conteudo p { 
+    font-size: 18px; 
+    color: rgba(255,255,255,0.95); 
+    margin-bottom: 30px; 
+    font-weight: 500; 
+    max-width: 500px; 
+    line-height: 1.4;
+}
+.botao-destaque-azul {
+    background-color: #3B92FF; 
+    color: white; 
+    border: none; 
+    padding: 18px 36px; 
+    border-radius: 50px; 
+    font-size: 16px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4); 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    display: inline-block; 
+    text-decoration: none;
+}
+.botao-destaque-azul:hover {
+    background-color: #1A75D3; 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.6);
+}
+
+.apresentacao-imagem-composta {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    min-height: 500px;
+}
+
+
+.apresentacao-imagem-composta img {
+    position: absolute; 
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.apresentacao-brilho { z-index: 1; }
+.elemento-fundo { z-index: 2; }
+.elemento-principal { z-index: 10; } 
+.elemento-frente { z-index: 20; } 
+
+.professor {
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+    max-height: 100%; 
+    object-fit: contain;
+    filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.5));
+}
+
+
+.estatua {
+    top: 0%;
+    left: 17%; 
+    width: 30%; 
+    opacity: 0.6; 
+    filter: grayscale(30%); 
+    transform: rotate(-20deg);
+}
+
+
+.bandeira-top {
+    top: 14%;
+    right: 10%;
+    width: 30%;
+    transform: rotate(12deg); 
+    opacity: 0.8;
+}
+
+
+.aviao {
+    bottom: 25%;
+    left: 25%;
+    width: 25%;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.10));
+}
+
+
+.bandeira-blur {
+    bottom: -5%;
+    right: -5%;
+    width: 50%;
+    filter: blur(8px); 
+    opacity: 0.7;
+    transform: rotate(-20deg);
+}
+
+
+.apresentacao-brilho {
+    position: absolute; 
+    width: 600px; 
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+    filter: blur(80px); 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.onda-fundo { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 30; }
+
+
+@media (max-width: 768px) {
+
+    .apresentacao-conteudo { 
+        order: 1;
+        width: 100%;
+        padding-bottom: 30px; 
+        position: relative; 
+        z-index: 50; 
+    }
+
+    #tituloHeroDesktop {
+        display: none;
+    }
+
+    #tituloHeroMobile {
+        display: block;
+        font-size: clamp(36px, 5vw, 56px); 
+        color: white; 
+        font-weight: 800; 
+        margin-bottom: 10px; 
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .apresentacao-conteudo p {
+        font-size: 14px; 
+        text-align: left;
+        width: 75%;
+    }
+    
+    .apresentacao-grade {
+        grid-template-columns: 1fr; 
+        gap: 0;
+        width: 100%;
+        height: auto; 
+    }
+
+    .apresentacao-imagem-composta {
+        order: 2; 
+        position: absolute; 
+        bottom: 0;
+        right: 0;
+        height: 60vh; 
+        width: 100%;
+        z-index: 10; 
+        opacity: 0.8; 
+    }
+
+    .professor {
+        height: 70%; 
+        left: 70%; 
+        bottom: 15%; 
+        transform: translateX(-50%); 
+    }
+
+    .estatua { 
+        height: 30%; 
+        left: 28%;     
+        top: -6%;    
+        opacity: 0.3; 
+        z-index: 10; 
+        transform: rotate(-20deg); 
+    }
+    
+    .bandeira-top { 
+        height: 30%; 
+        right: -15%; 
+        top: 6%;
+        opacity: 0.5;
+        z-index: 10; 
+    }
+    
+    .botao-destaque-azul { 
+        padding: 15px 25px; 
+        font-size: 12px; 
+        width: 102%; 
+        max-width: 400px;
+        margin: 0 auto 30px auto; 
+        text-align: center;
+    }
+
+    .onda-fundo {
+        display: none !important; 
+    }
+
+}

@@ -1,0 +1,169 @@
+.conteudo-sobre {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.wrapper-imagem-sobre {
+    flex: 1 1 350px;
+    max-width: 450px; 
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+}
+
+.wrapper-imagem-sobre img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.wrapper-texto-sobre {
+    flex: 2 1 500px;
+    text-align: left;
+}
+
+.nome-mentor {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.grade-texto-sobre p {
+    font-size: 16px; 
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.secao-idiomas {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 10px; 
+    text-align: center;
+}
+
+.secao-idiomas h5 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+    top: -20;
+}
+
+.grade-idiomas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; 
+    width: 100%;
+    max-width: 1100px; 
+    margin: 0 auto;
+}
+
+.badge-idioma {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: #fff;
+    border: 3px solid transparent;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 7px 13px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    cursor: default;
+    opacity: 0; 
+    animation: subirSuave 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.badge-idioma:hover {
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+.img-bandeira {
+    width: 28px; 
+    height: auto;
+    border-radius: 4px;
+    margin-right: 10px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.nome-idioma {
+    font-size: 15px;
+    font-weight: 600; 
+    color: #444;       
+    letter-spacing: 0.5px;
+}
+
+.badge-idioma.idioma-br:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15), 
+        0 0 0 2px #009739;           
+}
+
+.badge-idioma.idioma-us:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #0249bb;           
+}
+
+.badge-idioma.idioma-es:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #FF8A00;           
+}
+
+.badge-idioma.idioma-de:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #e0b60d;          
+}
+
+.badge-idioma.idioma-it:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #CD212A;           
+}
+
+.badge-idioma.idioma-nl:hover {
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.15),
+        0 0 0 2px #6A00FF;         
+}
+
+
+@keyframes subirSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo-sobre {
+        flex-direction: column;
+    }
+    
+    .wrapper-imagem-sobre {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .grade-idiomas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}

@@ -1,0 +1,341 @@
+
+
+/* 1. BANNER SUPERIOR  */
+.banner-metodologia-wrapper {
+  background: linear-gradient(105deg, #1a237e 0%, #7b1fa2 50%, #ff1744 100%);
+  color: white;
+  padding: 120px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.conteudo-banner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 20;
+}
+
+.tag-banner {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.titulo-banner {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo-banner {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grupo-botoes-banner {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-banner {
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primario-branco {
+  background: white !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-gradiente {
+  background-image: linear-gradient(105deg, #1a237e 0%, #7b1fa2 50%, #ff1744 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.btn-secundario-transparente {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.btn-primario-branco:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  background-color: #f8f8f8 !important;
+}
+
+.btn-secundario-transparente:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.onda-banner-baixo {
+  position: absolute;
+  bottom: -1px; 
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 10;
+}
+
+.onda-banner-baixo svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+    min-height: 100px;
+}
+
+/* 2. DIFERENCIAIS (FEATURES)*/
+.secao-diferenciais {
+  padding-top: 40px;
+  background-color: #fff;
+}
+
+.grade-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card-diferencial {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-diferencial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho-diferencial {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+.card-diferencial h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card-diferencial p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.icone-diferencial {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.icone-rosa { background: #FF4081; }
+.icone-azul { background: #448AFF; }
+.icone-laranja { background: #FF9800; }
+.icone-roxo { background: #9C27B0; }
+
+
+/* 3. LIVROS (GRID) */
+.secao-livros {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background: #fff;
+}
+
+.grade-livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card-livro {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-livro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.cabecalho-livro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.caixa-icone-livro {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.caixa-numero-livro {
+  text-align: right;
+  line-height: 1;
+}
+
+.etiqueta-livro {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.num-livro {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.card-livro h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.card-livro p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.tags-livro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag-duracao {
+  background: #f4f4f4;
+  color: #666;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag-badge {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.bg-progresso-livro {
+  width: 100%;
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.preenchimento-progresso {
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 768px) {
+    .banner-metodologia-wrapper { 
+      padding: 80px 0 60px; 
+    }
+
+    .titulo-banner { 
+      font-size: clamp(30px, 8vw, 42px); 
+    }
+
+    .onda-banner-baixo { 
+      display: none !important; 
+    }
+    
+    .grade-diferenciais { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .card-diferencial {
+        display: flex;
+        flex-direction: row; 
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .cabecalho-diferencial {
+        width: 40%; 
+        flex-shrink: 0; 
+        text-align: left; 
+    }
+    
+    .card-diferencial p { 
+      text-align: left; 
+    }
+}

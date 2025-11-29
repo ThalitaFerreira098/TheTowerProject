@@ -1,33 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/landingpage/styles/hero.css">
-</head>
-<body>
-    <div class="hero-wrapper">
+<div class="apresentacao-container">
     <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content animate-fade-in-up">
-                <h1 id="heroTitle"></h1>
-                <p id="heroDescription"></p>
-                <a href="#planos" class="btn-hero-blue" id="ctaButton" role="button"></a>
+        <div class="apresentacao-grade">
+            <div class="apresentacao-conteudo animar-aparecer-cima">
+                <h1 id="titulo-principal"></h1>
+                <span id="tituloHeroDesktop"></span>
+                <span id="tituloHeroMobile"></span>
+                <p id="descricaoHero"></p>
+                <a href="#planos" class="botao-destaque-azul" id="botaoAcao" role="button">Começar Agora</a>
             </div>
             
-            <div class="hero-image animate-fade-in" aria-hidden="true">
-                <div class="hero-glow"></div>
+            <div class="apresentacao-imagem-composta animar-aparecer" aria-hidden="true">
+                
+                <div class="apresentacao-brilho"></div>
+
+                <img src="./landingpage/assets/img/estatua_liberdade.png" class="elemento-fundo estatua" alt="">
+                <img src="./landingpage/assets/img/bandeira_eua.png" class="elemento-fundo bandeira-top" alt="">
+                
+                <img src="./landingpage/assets/img/professor_test.png" class="elemento-principal professor" alt="Professor Jefferson">
+
             </div>
         </div>
     </div>
     
-    <div class="wave-bottom" aria-hidden="true" >
+    <div class="efeito-papel-branco"></div>
+
+    <div class="onda-fundo" aria-hidden="true">
         <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
             <path d="M0,10 C320,30 640,80 1440,40 V100 H0 Z" fill="#FFFFFF"/>
         </svg>
     </div>
 </div>
-<script src="/landingpage/javaScript/script.js"></script>
-</body>
-</html>
