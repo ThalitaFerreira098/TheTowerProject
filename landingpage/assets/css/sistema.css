@@ -1,7 +1,10 @@
+.page-sistema {
+    background-color: #0000a8;
+}
 .secao-sistema {
     position: relative;
     background: #0000a8; 
-    border-radius: 20px;
+    border-radius: 0px;
     overflow: hidden;
     color: #fff;
     display: flex;
@@ -10,8 +13,8 @@
     align-items: center;
     text-align: center;
     padding: 130px 80px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 
 .titulo-cta {
@@ -70,74 +73,79 @@
     position: absolute;
     max-width: 290px;
     z-index: 1;
+    animation: flutuar 3s ease-in-out infinite;
 }
 
 .asset-prancheta {
     bottom: 50px;
     right: 60px;
+    animation-delay: 1.5s;
 }
 
 .asset-grafico {
     top: 100px;
     left: 20px;
     max-width: 260px;
+    animation-delay: 0s;
+}
+
+@keyframes flutuar {
+    0% { transform: translateY(0px); } 
+    50% { transform: translateY(-10px); } 
+    100% { transform: translateY(0px); } 
 }
 
 
 @media (max-width: 768px) {
+    
     .secao-sistema {
-        padding: 70px 20px;
-        text-align: center;
+        padding: 10px 10px;
+        flex-direction: column; 
+        gap: 20px; 
     }
 
-    .titulo-cta {
-        font-size: 2rem;
-        max-width: 90%;
-        margin: 0 auto 10px;
-    }
-   
-    .resumo-cta {
-        font-size: 1.2rem;
-        max-width: 90%;
-        margin: 0 auto 20px;
-    }
-   
     .asset-sistema {
-        width: 130px !important;   
-        height: auto;
-        opacity: 0.8; 
+        position: relative !important; 
+        max-width: 150px; 
+        margin: 15px auto; 
+        top: auto !important; 
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        opacity: 1; 
+        animation: flutuar 3s ease-in-out infinite;
+    }
+    
+    .asset-grafico {
+        order: 1;
+        margin-top: -10px;
+        margin-bottom: 0px; 
+        margin-left: 0;
+        margin-right: auto;
+        animation-delay: 0s;
+    }
+    
+    .titulo-cta {
+        order: 2;
+        font-size: 35px;
     }
 
-    .asset-grafico {
-        top: -10px !important;
-        left: -10px !important;
+    .resumo-cta { 
+        order: 3;
+        font-size: 22px; 
+    }
+
+    .btn-acesso-sistema { 
+        order: 4; 
+        
     }
     
     .asset-prancheta {
-        bottom: -10px !important;
-        right: -10px !important;
-    }
-
-    .btn-acesso-sistema {
-        position: relative;
-        z-index: 10;
-        font-size: 1.1rem;
-        padding: 14px 30px;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .asset-sistema {
-        width: 90px !important;
-    }
-
-    .titulo-cta {
-        font-size: 1.7rem;
-    }
-
-    .btn-acesso-sistema {
-        width: 100%;
-        padding: 14px 0;
+        order: 5;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 0;
+        animation-delay: 1.5s;
     }
 }

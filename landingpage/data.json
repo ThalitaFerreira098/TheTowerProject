@@ -231,7 +231,7 @@
       { "texto": "Eventos", "url": "#eventos" },
       { "texto": "Planos", "url": "#planos" },
       { "texto": "Sobre", "url": "#sobre" },
-      { "texto": "Sistema (Acesso Professor)", "url": "/landingpage/sistema.html" }
+      { "texto": "Sistema (Acesso Professor)", "url": "./landingpage/sistema.html" }
     ],
     "redesSociais": [
       { "nome": "Facebook", "url": "https://www.facebook.com/thetoweridiomas" },
