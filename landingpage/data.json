@@ -178,6 +178,9 @@
   },
   "planos": {
     "tituloGeral": "Planos e Valores",
+    "whatsapp": "5519992300116", 
+    "msgGrupo": "Olá! Tenho interesse no Plano Aulas em Grupo e gostaria de mais informações.",
+    "msgParticular": "Olá! Tenho interesse nas Aulas Particulares e gostaria de mais informações.",
     "grupo": {
       "titulo": "Aulas em Grupo",
       "preco": "149,90",
@@ -193,7 +196,6 @@
     },
     "particulares": {
       "titulo": "Aulas Particulares",
-      "observacao": "Observação: Mesmo valor para pacote de conversação",
       "itens": [
         { "frequencia": "1x por semana", "preco": "399,90", "popular": false },
         { "frequencia": "2x por semana", "preco": "779,90", "popular": true },
@@ -252,7 +254,7 @@
         "nome": "Vinicius Marques",
         "curso": "Aluno(a) Tower",
         "texto": "Gosto muito das aulas de Inglês. Elas são bem interativas e conseguimos aprender o que se passa. Temos um ótimo professor paciente para ensinar e explica muito bem o conteúdo.",
-        "foto": "./landingpage/assets/img/depo_vinicius.png"
+        "foto": "./landingpage/assets/img/depo_vinicius.jpg"
       },
       {
         "nome": "Larissa Menezes",

@@ -35,8 +35,6 @@ async function carregarComponente(nomeArquivo, idElemento, dados) {
                 
                 const caminhoCSS = `${CAMINHO_BASE}/assets/css/${nomeArquivo}.css`;
                 link.href = caminhoCSS; 
-                
-                console.log(`Tentando carregar CSS: ${caminhoCSS}`);
 
                 document.head.appendChild(link);
             }

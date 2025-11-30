@@ -114,7 +114,8 @@
 
 
 .lista-opcoes-limpa {
-    margin-top: 20px;
+    margin-top: 70px;
+    
 }
 
 .linha-opcao {
@@ -247,6 +248,11 @@
     
     .preco-limpo {
         font-size: 24px; 
+    }
+
+    .lista-opcoes-limpa {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .botao-plano {

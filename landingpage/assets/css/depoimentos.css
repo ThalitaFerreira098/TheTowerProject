@@ -137,13 +137,6 @@
 .btn-anterior { left: 0; }
 .btn-proximo { right: 0; }
 
-
-@media (max-width: 800px) {
-    .wrapper-carrossel {
-        padding: 0 20px;
-    }
-}
-
 @media (max-width: 768px) {
     .wrapper-carrossel {
         padding: 0 10px; 
@@ -151,6 +144,8 @@
     }
 
     .grade-depoimentos {
+        scroll-snap-type: none !important;
+        flex-wrap: nowrap !important;
         padding: 10px 0; 
         gap: 20px; 
     }
