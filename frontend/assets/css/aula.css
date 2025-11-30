@@ -51,6 +51,19 @@
     justify-content: center;
 }
 
+.btn-voltar {
+    position: absolute;
+    left: 85px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 .btn-voltar:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-50%) scale(1.1);

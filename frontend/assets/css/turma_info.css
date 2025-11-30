@@ -53,7 +53,7 @@ body {
 
 .btn-voltar {
     position: absolute;
-    left: 80px;
+    left: 85px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -64,11 +64,10 @@ body {
     transition: 0.3s;
 }
 
-
 .btn-voltar:hover {
-    color: #ff4b2b;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
 }
-
 .container-info{
     text-align: center;
     margin: 20px auto 20px auto;

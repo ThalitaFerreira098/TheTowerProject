@@ -46,7 +46,7 @@
 
 .btn-voltar {
     position: absolute;
-    left: 80px;
+    left: 85px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -58,11 +58,11 @@
 }
 
 .btn-voltar:hover {
-    color: #ff4b2b;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
 }
 
 
-/* Estilos gerais */
 body {
   margin: 0;
   background: var(--bg);
