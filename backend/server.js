@@ -9,6 +9,9 @@ const alunosRoutes = require("./routes/alunos");
 const cadastraMaterialRoutes = require("./routes/cadastra_material.js");
 const financasRouter = require('./routes/financas');
 const aulasDemonstrativasRouter = require('./routes/aulas_demonstrativas');
+const bibliotecaRouter = require('./routes/biblioteca');
+const estoqueRouter = require('./routes/estoque');
+
 
 const app = express();
 const PORT = 3000;
@@ -25,6 +28,10 @@ app.use("/api/alunos", alunosRoutes);
 app.use("/api/cadastra-material", cadastraMaterialRoutes);
 app.use('/api/financas', financasRouter);
 app.use('/api/aula-demonstrativas', aulasDemonstrativasRouter);
+app.use('/api/biblioteca', bibliotecaRouter);
+app.use('/api/estoque', estoqueRouter);
+
+
 
 
 
