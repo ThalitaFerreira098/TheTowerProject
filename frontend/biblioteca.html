@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower - Biblioteca</title>
+    <link rel="stylesheet" href="./assets/css/biblioteca.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="barra-topo">
+            <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+            <h1 id="titulo-pagina">Biblioteca</h1>
+        </div>
+    </header>
+    
+    <main class="container-biblioteca">
+        <!-- Botões de Ação -->
+        <section class="acoes-biblioteca">
+            <button id="btnInserirLivro" class="btn-acao">Inserir Livro</button>
+            <button id="btnEmprestarLivro" class="btn-acao">Emprestar Livro</button>
+        </section>
+
+        <!-- Empréstimos em Andamento -->
+        <section class="secao-emprestimos">
+            <h2>Empréstimos em Andamento</h2>
+            <div id="listaEmprestimos" class="lista-emprestimos">
+                <!-- Empréstimos carregados via JS -->
+            </div>
+        </section>
+
+        <!-- Livros Disponíveis -->
+        <section class="secao-livros">
+            <h2>Livros Disponíveis</h2>
+            <div id="listaLivros" class="grid-livros">
+                <!-- Livros carregados via JS -->
+            </div>
+        </section>
+
+        <!-- Histórico de Devoluções -->
+        <section class="secao-historico">
+            <h2>Histórico de Devoluções</h2>
+            <div id="listaHistorico" class="lista-historico">
+                <!-- Histórico carregado via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Inserir/Editar Livro -->
+    <div id="modalLivro" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="tituloModalLivro">Inserir Novo Livro</h2>
+            
+            <form id="formLivro" class="form-livro">
+                <input type="hidden" id="idLivro">
+                
+                <div class="campo-form">
+                    <label for="nomeLivro">Nome do Livro:</label>
+                    <input type="text" id="nomeLivro" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="generoLivro">Gênero:</label>
+                    <input type="text" id="generoLivro" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="autorLivro">Autor:</label>
+                    <input type="text" id="autorLivro" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="nichoLivro">Nicho:</label>
+                    <input type="text" id="nichoLivro" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="numeroLivro">Número do Livro:</label>
+                    <input type="number" id="numeroLivro" required>
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="button" id="btnCancelarLivro" class="btnCancelar">Cancelar</button>
+                    <button type="submit" id="btnSalvarLivro" class="btnSalvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Emprestar Livro - Pesquisa -->
+    <div id="modalPesquisaLivro" class="modal hidden">
+        <div class="modal-content">
+            <h2>Pesquisar Livro para Empréstimo</h2>
+            
+            <div class="campo-form">
+                <input type="text" id="inputPesquisa" placeholder="Digite nome ou número do livro...">
+                <button id="btnPesquisar" class="btnPesquisar">Pesquisar</button>
+            </div>
+            
+            <div id="resultadosPesquisa" class="resultados-pesquisa">
+                <!-- Resultados da pesquisa -->
+            </div>
+
+            <div class="modal-buttons">
+                <button id="btnCancelarPesquisa" class="btnCancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Confirmar Empréstimo -->
+    <div id="modalConfirmarEmprestimo" class="modal hidden">
+        <div class="modal-content">
+            <h2>Confirmar Empréstimo</h2>
+            
+            <div id="detalhesLivro" class="detalhes-livro">
+                <!-- Detalhes do livro selecionado -->
+            </div>
+            
+            <div class="campo-form">
+                <label for="emailAluno">Email do Aluno:</label>
+                <input type="email" id="emailAluno" placeholder="Digite o email do aluno" required>
+            </div>
+
+            <div class="modal-buttons">
+                <button id="btnCancelarEmprestimo" class="btnCancelar">Cancelar</button>
+                <button id="btnConfirmarEmprestimo" class="btnSalvar">Confirmar Empréstimo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/biblioteca.js"></script>
+</body>
+</h

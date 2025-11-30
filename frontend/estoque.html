@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower - Estoque</title>
+    <link rel="stylesheet" href="./assets/css/estoque.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="barra-topo">
+            <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+            <h1 id="titulo-pagina">Controle de Estoque</h1>
+        </div>
+    </header>
+    
+    <main class="container-estoque">
+        <section class="secao-estoque">
+            <div class="cabecalho-tabela">
+                <h2>Materiais Didáticos</h2>
+                <p>Controle de quantidade de books disponíveis</p>
+            </div>
+            
+            <div class="tabela-container">
+                <table id="tabelaEstoque" class="tabela-estoque">
+                    <thead>
+                        <tr>
+                            <th>Book</th>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela">
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="info-estoque">
+                <div class="info-card">
+                    <span class="info-titulo">Total de Books</span>
+                    <span id="totalBooks" class="info-valor">0</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-titulo">Books Disponíveis</span>
+                    <span id="booksDisponiveis" class="info-valor">0</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <script src="./assets/js/estoque.js"></script>
+</body>
+</html>
