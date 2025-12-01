@@ -19,7 +19,7 @@ function renderizarIdiomas(idiomas) {
         
         return `
             <div class="badge-idioma idioma-${codigo.toLowerCase()} style="animation-delay: ${delay}s">
-                <img class="img-bandeira" src="./landingpage/assets/img/${codigo}.png" alt="${codigo}" onerror="this.style.display='none'">
+                <img class="img-bandeira" src="./landingpage/assets/img/${codigo}.png" alt="${codigo}" onerror="this.style.display='none'" loading="lazy">
                 <span class="nome-idioma">${nomeIdioma}</span>
             </div>
         `;

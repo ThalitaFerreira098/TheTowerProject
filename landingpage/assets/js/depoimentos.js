@@ -42,7 +42,7 @@ export function iniciar(dados) {
                 
                 <div class="info-autor-depoimento">
                     <div class="wrapper-foto-autor">
-                        <img src="${depoimento.foto}" alt="Foto de ${depoimento.nome}" class="img-avatar-depoimento">
+                        <img src="${depoimento.foto}" alt="Foto de ${depoimento.nome}" class="img-avatar-depoimento" loading="lazy">
                     </div>
                     <div>
                         <h4 class="nome-autor">${depoimento.nome}</h4>
