@@ -1,1 +1,93 @@
- 
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monitoramento - The Tower</title>
+
+  <!-- CSS externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/dashboard.css">
+
+  <!-- Chart.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+            <div class="barra-topo">
+                <button class="btn-voltar" onclick="irPara('home.html')">⟵</button>
+                <h1 id="titulo-pagina">Monitoramento</h1>
+            </div>
+        </header>
+  <!-- O restante do seu HTML permanece igual -->
+  <div class="container">
+    <header>
+      <div>
+        <h1>Monitoramento</h1>
+        <div class="muted">Visão geral de turmas e alunos — análises de frequência e retenção</div>
+      </div>
+      <div class="toolbar">
+        <button id="btnAtualizar" class="btn">Atualizar dashboard</button>
+      </div>
+    </header>
+
+    <!-- KPI cards -->
+    <div class="small-grid" style="margin-bottom:16px">
+      <div class="card">
+        <div class="muted">Total de Turmas</div>
+        <div id="kpiTotalTurmas" style="font-size:20px;font-weight:700">0</div>
+      </div>
+      <div class="card">
+        <div class="muted">Frequência Média</div>
+        <div id="kpiFreqMedia" style="font-size:20px;font-weight:700">0%</div>
+      </div>
+      <div class="card">
+        <div class="muted">Alunos em Risco</div>
+        <div id="kpiAlunosRisco" style="font-size:20px;font-weight:700">0</div>
+      </div>
+    </div>
+
+    <!-- charts -->
+    <div class="grid" style="margin-bottom:18px">
+      <div class="card">
+        <h3>Ranking de Turmas por Frequência</h3>
+        <canvas id="chartRanking" height="200"></canvas>
+      </div>
+      <div class="card">
+        <h3>Taxa de Retenção por Período</h3>
+        <canvas id="chartRetencao" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:18px">
+      <div class="card">
+        <h3>Turmas que Precisam de Atenção</h3>
+        <canvas id="chartAtencao" height="220"></canvas>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:12px">
+          <h3>Linha do Tempo de Saídas</h3>
+          <canvas id="chartSaidas" height="150"></canvas>
+        </div>
+        <div class="card">
+          <h3>Selecionar Turma para Detalhes</h3>
+          <div style="margin-bottom:10px">
+            <select id="selectTurma" class="select-turma">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+          <canvas id="chartProgresso" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Alunos com Risco de Evasão (prioridade)</h3>
+      <div id="listaRisco">Carregando...</div>
+    </div>
+  </div>
+
+  <script src="./assets/js/dashboard.js"></script>
+</body>
+</html>
