@@ -17,7 +17,8 @@ export function iniciar(dados) {
         
         botao.addEventListener('click', (e) => {
             e.preventDefault(); 
-            window.open(`https://wa.me/${dados.whatsapp}`, '_blank');
+            const mensagem = encodeURIComponent(dados.whatsappMessage);
+            window.open(`https://wa.me/${dados.whatsapp}?text=${mensagem}`, '_blank');
         });
     }
 }

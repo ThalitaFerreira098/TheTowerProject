@@ -27,7 +27,7 @@ export function iniciar(dados) {
             return `
             <div class="card-evento">
                 <div class="img-evento">
-                    <img src="${item.imagem}" alt="Imagem ${item.titulo}">
+                    <img src="${item.imagem}" alt="Imagem ${item.titulo}" loading="lazy">
                     <div class="tag-evento" style="background: ${tema.fundo}">${item.tag}</div>
                 </div>
                 

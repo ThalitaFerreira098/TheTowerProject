@@ -5,28 +5,21 @@ function gerarEstrelas(quantidade) {
 
 function habilitarLoopInfinito(grid, numItensOriginais) {
     const larguraCard = 330; 
-    
     const pontoDeReset = larguraCard * numItensOriginais; 
-    
     const limiteEsquerdo = larguraCard * 0.5;
 
     grid.addEventListener('scroll', () => {
         if (grid.scrollLeft >= pontoDeReset) {
             grid.scrollLeft -= pontoDeReset; 
-        }
-        else if (grid.scrollLeft <= limiteEsquerdo) {
+        } else if (grid.scrollLeft <= limiteEsquerdo) {
             grid.scrollLeft += pontoDeReset;
         }
     });
-
-    grid.scrollLeft = 0; 
 }
+
 
 export function iniciar(dados) {
     if (!dados) return console.error("Dados de 'depoimentos' não encontrados.");
-
-    const target = document.getElementById('depoimentos');
-    if (!target) return;
 
     const titulo = document.getElementById('tituloDepoimentos');
     const subtitulo = document.getElementById('subtituloDepoimentos');
@@ -34,10 +27,9 @@ export function iniciar(dados) {
     if (titulo) titulo.textContent = dados.titulo;
     if (subtitulo) subtitulo.textContent = dados.subtitulo;
 
- 
     const grade = document.getElementById('gradeDepoimentos');
-    const numItensOriginais = dados.itens.length;
-    const itensLoop = [...dados.itens, ...dados.itens.slice(0, 3)];
+    const numItensOriginais = dados.itens.length; 
+    const itensLoop = [...dados.itens, ...dados.itens.slice(0, 3)]; 
 
     if (grade && dados.itens) {
 
@@ -50,7 +42,7 @@ export function iniciar(dados) {
                 
                 <div class="info-autor-depoimento">
                     <div class="wrapper-foto-autor">
-                        <img src="${depoimento.foto}" alt="Foto de ${depoimento.nome}" class="img-avatar-depoimento">
+                        <img src="${depoimento.foto}" alt="Foto de ${depoimento.nome}" class="img-avatar-depoimento" loading="lazy">
                     </div>
                     <div>
                         <h4 class="nome-autor">${depoimento.nome}</h4>
@@ -59,22 +51,22 @@ export function iniciar(dados) {
                 </div>
             </div>
         `).join('');
+
+        setTimeout(() => {
+            const btnAnt = document.getElementById('btnAntDepoimento');
+            const btnProx = document.getElementById('btnProxDepoimento');
+            const scrollAmount = 330; 
+
+            habilitarLoopInfinito(grade, numItensOriginais);
+
+            if (btnAnt && btnProx) {
+                btnAnt.onclick = () => {
+                    grade.scrollBy({ left: -scrollAmount, behavior: 'auto' });
+                };
+                btnProx.onclick = () => {
+                    grade.scrollBy({ left: scrollAmount, behavior: 'auto' });
+                };
+            }
+        }, 100);
     }
-
-    setTimeout(() => {
-        const btnAnt = document.getElementById('btnAntDepoimento');
-        const btnProx = document.getElementById('btnProxDepoimento');
-        const scrollAmount = 330; 
-
-        habilitarLoopInfinito(grid, numItensOriginais);
-
-        if (btnAnt && btnProx) {
-            btnAnt.onclick = () => {
-                grade.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            };
-            btnProx.onclick = () => {
-                grade.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            };
-        }
-    }, 100);
 }
