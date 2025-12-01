@@ -206,7 +206,7 @@
   "sobre": {
     "titulo": "Sobre o Professor",
     "nomeMentor": "Prof. Jefferson",
-    "foto": "./landingpage/assets/img/prof_livro.wepb",
+    "foto": "./landingpage/assets/img/prof_livro.webp",
     "tituloIdiomas": "Idiomas Dominados:",
     "paragrafos": [
       "Meu nome é Jefferson, tenho 34 anos. Construí uma carreira de 11 anos na IBM Brasil utilizando na prática todas as línguas que ensino.",
