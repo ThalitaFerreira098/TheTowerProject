@@ -32,7 +32,7 @@
     ]
   },
   "tiposDeAulas": {
-    "titulo": "Formatos Disponíveis de Aula",
+    "titulo": "Tipos de Aula",
     "particular": {
       "titulo": "Aula Particular",
       "descricao": "Aulas individuais com foco total no seu ritmo e objetivo."
