@@ -127,6 +127,63 @@ TheTowerProject/
 
 ---
 
+## 🚀 Como Executar o TheTowerProject
+
+### 📦 1. Pré-requisitos
+Antes de começar, certifique-se de ter instalado:
+
+- 🐬 **MySQL Workbench**  
+- 🟢 **Node.js + npm**  
+
+### 🗄️ 2. Configuração do Banco de Dados
+
+1. Abra o **MySQL Workbench**.  
+2. Acesse a pasta `backend/database_scripts/`.  
+3. Execute os arquivos **na seguinte ordem**:
+
+   1. `thetower_db.sql`  
+   2. `procedures_Principais.sql`  
+   3. `triggers.sql`  
+   4. `views.sql`  
+   5. `populaBanco.sql`  
+
+> ⚠️ Essa sequência garante que todas as tabelas, procedures e dados iniciais sejam criados corretamente.
+
+### 🛠️ 3. Configuração do Backend
+
+1. Abra a pasta `backend/`.  
+2. Edite o arquivo `db_config.js` e altere o campo **password** para a senha do seu MySQL Workbench.  
+3. No VS Code, abra o terminal e execute:
+
+```
+cd backend
+```
+
+4. Instale as dependências:
+   
+```
+npm install
+```
+
+5. Inicie o servidor backend
+
+```
+node server.js
+```
+
+> O backend estará rodando (geralmente em http://localhost:3000).
+### 🌐 4. Executar o Frontend
+
+-Abra o arquivo login.html na pasta principal.
+-Execute usando o Live Server do VS Code.
+
+### 🔐 5. Login padrão (Administrador)
+
+- 👤 Usuário: user2
+-🔑 Senha: 123
+
+---
+
 ## 📈 Próximos Passos
 
 - [OK] Criar o banco de dados inicial no MySQL  
