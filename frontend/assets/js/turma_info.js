@@ -3,13 +3,15 @@ const API_URL = "http://localhost:3000/api";
 document.addEventListener("DOMContentLoaded", async () => {
     const params = new URLSearchParams(window.location.search);
     const idTurma = params.get("id");
-
+     
     if(!idTurma) return alert("Turma não encontrada!");
 
     try{
 
         const infoRes = await fetch(`${API_URL}/turmas/info/${idTurma}`);
         const infoData = await infoRes.json();
+         console.log("daodsnda yurma: ",infoData.data[0]);
+         window.dadosTurma = infoData.data[0];
 
         if(infoData.success && infoData.data.length > 0){
             const t = infoData.data[0];
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById("qtdAlunos").textContent = t.qtd_alunos;
             document.getElementById("aulasProg").textContent = t.qtd_aulas_programadas;
             document.getElementById("aulasConcluidas").textContent = t.qtd_aulas_realizadas;
+            document.getElementById("bookAtual").textContent = t.numero_book;
 
             const progresso = Math.round(t.progresso_turma || 0);
             document.getElementById("progress").style.width = `${progresso}%`;
@@ -176,6 +179,67 @@ async function abrirModalConversacao(idTurma) {
         }
     });
 }
+
+const modalEditar = document.getElementById("modalEditarTurma");
+const btnAbrirEditar = document.getElementById("btnAbrirEditar");
+const btnCancelarEditar = document.getElementById("btnCancelarEditar");
+ 
+btnAbrirEditar.addEventListener("click", () => {
+    preencherModal();
+    modalEditar.classList.remove("hidden");
+});
+
+btnCancelarEditar.addEventListener("click", () => {
+    modalEditar.classList.add("hidden");
+});
+ 
+function preencherModal() {
+    document.getElementById("edit_nome").value = window.dadosTurma.nome_turma;
+    document.getElementById("edit_dia").value = window.dadosTurma.dia_aula;
+    document.getElementById("edit_inicio").value = window.dadosTurma.horario_aula;
+    document.getElementById("edit_fim").value = window.dadosTurma.hora_fim;
+    document.getElementById("edit_ativa").value = window.dadosTurma.ativa ? 1 : 0;
+}
+ 
+document.getElementById("formEditarTurma").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const mudancas = {
+        id_turma: window.dadosTurma.id_turma,
+        novo_nome_turma: document.getElementById("edit_nome").value,
+        novo_dia_aula: document.getElementById("edit_dia").value,
+        novo_horario_aula: document.getElementById("edit_inicio").value,
+        novo_hora_fim: document.getElementById("edit_fim").value,
+        ativa: document.getElementById("edit_ativa").value
+    };
+
+    try {
+        const resposta = await fetch(`${API_URL}/turmas/editar`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(mudancas)
+        });
+
+        const resultado = await resposta.json();
+
+        if (resultado.resultado === 1) {
+            alert("Turma atualizada com sucesso!");
+            location.reload();
+        } 
+        else if (resultado.resultado === 2) {
+            alert("Conflito de horário com outra turma ativa.");
+        }
+        else if (resultado.resultado === 3) {
+            alert("A turma possui alunos ativos. Transfira antes de desativar.");
+        }
+        else {
+            alert("Erro inesperado ao atualizar turma.");
+        }
+
+    } catch (erro) {
+        console.error("Erro ao atualizar turma:", erro);
+    }
+});
 
 function irPara(pagina){
     window.location.href = pagina;

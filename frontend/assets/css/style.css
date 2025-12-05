@@ -1,9 +1,11 @@
-/* parte geral da tela*/
+  
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+     font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
 }
 
 body.login-body{
@@ -28,16 +30,15 @@ body.login-body{
     align-items: center;
     width: 100%;
 }
-
-.login-card{
-  background-color: #ffffff;
-  padding: 3rem 2.5rem;
-  border-radius:16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  max-width: 380px;
-  width: 90%;
-  text-align:center;
-  animation: fadeIn 0.8s ease;
+.login-card {
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;  
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn{
@@ -45,6 +46,13 @@ body.login-body{
     to{ opacity: 1; transForm: translateY(0); }
 }
 
+.login-card img {
+    width: 120px; 
+    height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    max-width: 100%;
+}
 .login-title{
     font-size: 2.2rem;
     color: #b30000;
@@ -52,17 +60,17 @@ body.login-body{
     letter-spacing: 1px;
 }
 
-.login-subtitle{
+.login-subtitle {
     color: #002b80;
     font-size: 1rem;
-    margin-bottom:2rem;
+    margin-bottom: 1.5rem; 
 }
 
-/*parte do formulario do login*/
+ 
 .login-form{
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.0rem;
 }
 
 .form-group{
@@ -98,7 +106,8 @@ body.login-body{
     font-size: 1.1rem;
     font-weight:600;
     border: none;
-    padding: 0.9rem;
+    margin-top: 10px;
+    padding: 1.0rem;
     border-radius:8px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.3;

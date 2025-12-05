@@ -6,7 +6,7 @@ const db = require("../db_config.js");
 
 const router = express.Router();
 
-// storage dinâmico
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         const nomePasta = req.body.nome_pasta;

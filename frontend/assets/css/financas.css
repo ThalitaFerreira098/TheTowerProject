@@ -1,7 +1,6 @@
-/* Importação da fonte */
+ 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-/* Variáveis CSS */
+ 
 :root {
   --bg: #f5f7fb;
   --card: #ffffff;
@@ -76,7 +75,7 @@ body {
   padding: 20px;
 }
 
-/* Header */
+
 header {
   display: flex;
   align-items: center;
@@ -95,7 +94,6 @@ h1 {
   align-items: center;
 }
 
-/* Botões */
 .btn {
   background: #10b981;
   color: #fff;
@@ -109,7 +107,6 @@ h1 {
   background: #ef4444;
 }
 
-/* Cards */
 .card {
   background: var(--card);
   border-radius: 10px;
@@ -122,7 +119,7 @@ h1 {
   font-size: 16px;
 }
 
-/* Grids */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -12,6 +12,7 @@ const aulasDemonstrativasRouter = require('./routes/aulas_demonstrativas');
 const bibliotecaRouter = require('./routes/biblioteca');
 const estoqueRouter = require('./routes/estoque');
 const dashboardRouter = require('./routes/dashboard');
+const homeRouter = require('./routes/home');
 
 const app = express();
 const PORT = 3000;
@@ -31,6 +32,7 @@ app.use('/api/aula-demonstrativas', aulasDemonstrativasRouter);
 app.use('/api/biblioteca', bibliotecaRouter);
 app.use('/api/estoque', estoqueRouter);
 app.use('/api/dashboard', dashboardRouter);
+app.use('/api/home', homeRouter);
 
 
 

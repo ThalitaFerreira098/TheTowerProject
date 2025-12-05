@@ -40,10 +40,11 @@ async function carregarEmprestimosAtivos() {
             container.appendChild(item);
         });
 
-        // Adicionar event listeners para os botões de devolução
+       
         document.querySelectorAll('.btn-devolucao').forEach(btn => {
             btn.addEventListener('click', async (e) => {
                 const idEmprestimo = e.target.dataset.id;
+                console.log("id do emprestimo: ", idEmprestimo);
                 await registrarDevolucao(idEmprestimo);
             });
         });
@@ -101,7 +102,7 @@ async function carregarHistoricoDevolucoes() {
 }
 
 function configurarEventListeners() {
-    // Modal Inserir Livro
+    
     document.getElementById('btnInserirLivro').addEventListener('click', () => {
         abrirModalInserirLivro();
     });
@@ -115,7 +116,7 @@ function configurarEventListeners() {
         await salvarLivro();
     });
 
-    // Modal Emprestar Livro
+     
     document.getElementById('btnEmprestarLivro').addEventListener('click', () => {
         abrirModalPesquisaLivro();
     });
@@ -126,7 +127,7 @@ function configurarEventListeners() {
 
     document.getElementById('btnPesquisar').addEventListener('click', pesquisarLivros);
 
-    // Modal Confirmar Empréstimo
+     
     document.getElementById('btnCancelarEmprestimo').addEventListener('click', () => {
         document.getElementById('modalConfirmarEmprestimo').classList.add('hidden');
     });
@@ -298,7 +299,7 @@ async function registrarDevolucao(idEmprestimo) {
     if (!confirm('Confirmar devolução deste livro?')) {
         return;
     }
-
+ 
     try {
         const response = await fetch(`${API_URL}/biblioteca/registrar-devolucao`, {
             method: 'POST',

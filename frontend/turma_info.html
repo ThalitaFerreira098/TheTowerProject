@@ -16,6 +16,7 @@
         
         <main class="container-info"> 
             <h1 id="nomeTurma"></h1>
+            <button id="btnAbrirEditar" class="btn-editar-turma">Editar Turma</button>
 
             <section class="info-geral">
                 <div class="info-card">Quantidade de Alunos <br><span id="qtdAlunos">--</span></div>
@@ -23,6 +24,8 @@
                 <div class="info-card">Horario <br><span id="horario">--</span></div>
                 <div class="info-card">Aulas programadas<br><span id="aulasProg">--</span></div>
                 <div class="info-card">Aulas concluidas<br><span id="aulasConcluidas">--</span></div>
+                <div class="info-card">BOOK<br><span id="bookAtual">--</span></div>
+
             </section>
 
             <section class="alunos-progresso">
@@ -69,7 +72,47 @@
             </div>
         </div>
 
+                
+        <div id="modalEditarTurma" class="modal hidden">
+            <div class="modal-content">
+                <h2>Editar Turma</h2>
 
+                <form id="formEditarTurma">
+                    <label>Nome da Turma</label>
+                    <input type="text" id="edit_nome" required>
+
+                    <label>Dia da Aula</label>
+                    <select id="edit_dia" required>
+                        <option value="Segunda-Feira">Segunda-Feira</option>
+                        <option value="Terça-feira">Terça-feira</option>
+                        <option value="Quarta-Feira">Quarta-Feira</option>
+                        <option value="Quinta-Feira">Quinta-Feira</option>
+                        <option value="Sexta-Feira">Sexta-Feira</option>
+                        <option value="Sabado">Sábado</option>
+                    </select>
+
+                    <label>Horário de Início</label>
+                    <input type="time" id="edit_inicio" required>
+
+                    <label>Horário de Fim</label>
+                    <input type="time" id="edit_fim" required>
+
+                    <label>Ativa?</label>
+                    <select id="edit_ativa" required>
+                        <option value="1">Ativa</option>
+                        <option value="0">Inativa</option>
+                    </select>
+
+                    <div class="modal-buttons">
+                        <button type="button" id="btnCancelarEditar" class="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btnSalvar">Salvar Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+         
+        
 
         <script src="assets/js/turma_info.js"></script>
     </body>

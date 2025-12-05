@@ -1,5 +1,7 @@
-
+ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 .cabecalho {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,7 +87,7 @@ body {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-}
+ }
 
 .aulas-lista, .aula-material, .aula-presensa {
     background: white;
@@ -103,7 +105,7 @@ body {
 .aulas-lista, .aula-presensa {
     width: 28%;
     min-height: 500px;
-}
+ }
 
 .aula-material {
     width: 44%;
@@ -147,7 +149,7 @@ body {
     transition: all 0.3s ease;
     border: 1px solid #e2e8f0;
     position: relative;
-    overflow: hidden;
+ 
 }
 
 .aulas-lista li::before {
@@ -254,6 +256,48 @@ body {
     cursor: not-allowed;
     border-color: #cbd5e0;
 }
+ 
+
+.btn-presenca {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: #e2e8f0;
+    color: #2d3748;
+}
+
+.btn-presenca:hover {
+    transform: scale(1.05);
+    background: #cbd5e0;
+}
+
+.btn-presenca.marcado {
+    background: #48bb78 !important;
+    color: white !important;
+    border-color: #38a169 !important;
+    box-shadow: 0 0 10px rgba(56, 161, 105, 0.4);
+}
+ 
+.btn-presenca.falta {
+    background: #fed7d7;
+    color: #742a2a;
+}
+
+.btn-presenca.falta:hover {
+    background: #feb2b2;
+}
+
+.btn-presenca.falta.marcado {
+    background: #f56565 !important;
+    color: white !important;
+    border-color: #c53030 !important;
+    box-shadow: 0 0 10px rgba(197, 48, 48, 0.4);
+}
+
 
  @media (max-width: 1024px) {
     .aula-container {

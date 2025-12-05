@@ -1,7 +1,6 @@
-/* Importação da fonte */
+ 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-/* Variáveis CSS */
+ 
 :root {
   --bg: #f5f7fb;
   --card: #ffffff;
@@ -73,7 +72,6 @@ body {
   padding: 20px;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -92,7 +90,6 @@ h1 {
   align-items: center;
 }
 
-/* Botões */
 .btn {
   background: #10b981;
   color: #fff;
@@ -106,7 +103,7 @@ h1 {
   background: #ef4444;
 }
 
-/* Cards */
+
 .card {
   background: var(--card);
   border-radius: 10px;
@@ -119,7 +116,7 @@ h1 {
   font-size: 16px;
 }
 
-/* Grids */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -138,7 +135,7 @@ h1 {
   gap: 12px;
 }
 
-/* Select */
+
 .select-turma {
   width: 100%;
   padding: 10px;
@@ -147,7 +144,6 @@ h1 {
   background: #fff;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   left: 0;
@@ -186,7 +182,7 @@ h1 {
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.4);
 }
 
-/* Formulários */
+
 .row {
   display: flex;
   gap: 12px;
@@ -207,13 +203,13 @@ input, select {
   flex: 1;
 }
 
-/* Utilitários */
+
 .muted {
   color: var(--muted);
   font-size: 13px;
 }
 
-/* Tabelas */
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -240,7 +236,6 @@ input, select {
   font-weight: 700;
 }
 
-/* Responsividade */
 @media (max-width: 880px) {
   .grid {
     grid-template-columns: 1fr;

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f5f6fa;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 .cabecalho {
@@ -102,8 +104,8 @@ body{
 
 .box-frequencia,
 .box-historico {
-    background: linear-gradient(90deg, #9463b3, #e66149);
-    padding: 20px;
+    background: linear-gradient(90deg,  #f3b4b4,#ffb0b0 );
+     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
 }
@@ -124,7 +126,7 @@ body{
     cursor: pointer;
 }
 
-/* parte da edicao */
+ 
 .modal {
     position: fixed;
     top: 0;
@@ -143,34 +145,44 @@ body{
 }
 
 .modal-content {
-    background: #fff;
-    width: 90%;
-    max-width: 450px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+     
     max-height: 85vH;
     overflow-y: auto;
+     background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    margin: 60px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 4px solid #a020f0;
  }
 
 .modal-content h2 {
-    margin-top: 0;
+   margin-top: 0;
+    color: #1b263b;
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .modal-content label {
+   display: block;
+    margin-bottom: 5px;
     font-weight: 600;
-    margin-top: 10px;
-    display: block;
+    color: #555;
+    font-size: 14px;
 }
 
 .modal-content input,
 .modal-content select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 4px;
+     width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .modal-buttons {
@@ -189,10 +201,19 @@ body{
 }
 
 #btnCancelarModal {
-    background: #ccc;
+    color: white;
+    background: #dfdbdb;
 }
 
 #btnSalvarModal {
-    background: #28a745;
-    color: #fff;
+   background: linear-gradient(90deg, #a020f0, #ff4b2b);
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: 0.3s;
 }

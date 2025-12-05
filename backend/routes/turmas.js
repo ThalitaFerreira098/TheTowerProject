@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const db = require("../db_config.js");
 
-// parte que carrega as informações da turma no turma_info.html
 router.get("/info/:id", async (req, res) => {
     const { id } = req.params;
     
@@ -76,27 +75,30 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.put("/:id", async (req, res) => {
-    const {id} = req.params;
-    const { nome_turma, dia_semana, hora_inicio, hora_fim } = req.body;
+router.put("/editar", async (req, res) => {
+    const {
+        id_turma,
+        novo_nome_turma,
+        novo_dia_aula,
+        novo_horario_aula,
+        novo_hora_fim,
+        ativa
+    } = req.body;
 
-    if (!nome_turma || !dia_semana ||!hora_inicio ||!hora_fim){
-        return res.status(400).json({
-            erro: "os campos devem estar preenchidos obrigatoriamente!"
-        });
-    }
-
-    try{
-        await db.query("CALL sp_atualiza_turma(?, ?, ?, ?);", 
-            [nome_turma, dia_semana, hora_inicio, hora_fim]
+    try {
+        const [rows] = await db.query(
+            "CALL sp_editar_turma(?, ?, ?, ?, ?, ?)",
+            [id_turma, novo_nome_turma, novo_dia_aula, novo_horario_aula, novo_hora_fim, ativa]
         );
 
-        res.json({mensagem: "Turma atualizada com sucesso!"});
-    }catch(erro) {
-        console.error("Erro ao atualizar a turma:", erro);
-        res.status(500).json({ erro: "Erro ao atualizar turma.."});
-    }
+        const resultado = rows[0][0]?.resultado || 0;
 
+        res.json({ resultado });
+    } catch (erro) {
+        console.error("Erro ao editar turma:", erro);
+        res.status(500).json({ resultado: 0 });
+    }
 });
+
 
 module.exports = router;
