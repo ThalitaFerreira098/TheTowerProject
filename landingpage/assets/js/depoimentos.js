@@ -3,20 +3,25 @@ function gerarEstrelas(quantidade) {
     return estrelaCheia.repeat(quantidade); 
 }
 
-function habilitarLoopInfinito(grid, numItensOriginais) {
-    const larguraCard = 330; 
-    const pontoDeReset = larguraCard * numItensOriginais; 
-    const limiteEsquerdo = larguraCard * 0.5;
+function habilitarLoopInfinito(grid) {
+    const card = grid.querySelector('.card-depoimento');
+    if (!card) return;
 
     grid.addEventListener('scroll', () => {
-        if (grid.scrollLeft >= pontoDeReset) {
-            grid.scrollLeft -= pontoDeReset; 
-        } else if (grid.scrollLeft <= limiteEsquerdo) {
-            grid.scrollLeft += pontoDeReset;
+        if (grid.scrollWidth <= grid.clientWidth) return;
+
+        const scrollTotal = grid.scrollWidth;
+        const umTeco = scrollTotal / 3;
+        const buffer = 10;
+
+        if (grid.scrollLeft >= (umTeco * 2) - buffer) {
+            grid.scrollLeft -= umTeco;
+        } 
+        else if (grid.scrollLeft <= buffer) {
+            grid.scrollLeft += umTeco;
         }
     });
 }
-
 
 export function iniciar(dados) {
     if (!dados) return console.error("Dados de 'depoimentos' não encontrados.");
@@ -28,10 +33,9 @@ export function iniciar(dados) {
     if (subtitulo) subtitulo.textContent = dados.subtitulo;
 
     const grade = document.getElementById('gradeDepoimentos');
-    const numItensOriginais = dados.itens.length; 
-    const itensLoop = [...dados.itens, ...dados.itens.slice(0, 3)]; 
-
+    
     if (grade && dados.itens) {
+        const itensLoop = [...dados.itens, ...dados.itens, ...dados.itens]; 
 
         grade.innerHTML = itensLoop.map(depoimento => `
             <div class="card-depoimento">
@@ -55,16 +59,23 @@ export function iniciar(dados) {
         setTimeout(() => {
             const btnAnt = document.getElementById('btnAntDepoimento');
             const btnProx = document.getElementById('btnProxDepoimento');
-            const scrollAmount = 330; 
+            const scrollTotal = grade.scrollWidth;
+            const umTeco = scrollTotal / 3;
+            grade.scrollLeft = umTeco; 
 
-            habilitarLoopInfinito(grade, numItensOriginais);
+            habilitarLoopInfinito(grade);
 
             if (btnAnt && btnProx) {
                 btnAnt.onclick = () => {
-                    grade.scrollBy({ left: -scrollAmount, behavior: 'auto' });
+                    const card = grade.querySelector('.card-depoimento');
+                    const largura = card ? card.offsetWidth + 30 : 330;
+                    grade.scrollBy({ left: -largura, behavior: 'smooth' });
                 };
+                
                 btnProx.onclick = () => {
-                    grade.scrollBy({ left: scrollAmount, behavior: 'auto' });
+                    const card = grade.querySelector('.card-depoimento');
+                    const largura = card ? card.offsetWidth + 30 : 330;
+                    grade.scrollBy({ left: largura, behavior: 'smooth' });
                 };
             }
         }, 100);
