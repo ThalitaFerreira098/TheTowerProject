@@ -293,9 +293,13 @@ Responsável pelo desenvolvimento do sistema principal.
 ### 🌐 Landing Page
 
 **Jheniffer Aparecida**  
+
 **Júlia Henrique Martins Steiner**  
+
 **Thalita Ferreira**
+
 **Maria Luiza Melo Coelho**
+
 Responsável pela criação da landing page e experiência do usuário.
 
 ---
