@@ -13,7 +13,7 @@ function atualizarSaudacao(){
         saudacao = "Bom dia Jefferson, bem-vindo de volta!";
     } 
     else if(hora >= 12 && hora < 18){
-        saudacao = "Boa tarde Jefferson, bem-vindo de volta!";
+        saudacao = "Boa tarde Jefferson , bem-vindo de volta!";
     }
     else{
         saudacao = "Boa noite Jefferson, bem-vindo de volta!";
