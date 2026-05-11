@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower Idiomas</title>
+    
+    <link rel="stylesheet" href="./landingpage/assets/css/style.css">
+    
+    <link rel="icon" href="./landingpage/assets/img/Logo.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav id="navegacao" aria-label="Menu Principal do Site">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="landingpage/assets/img/Logo.png" alt="Logo The Tower" class="my-logo">
+                <span class="logo-text">The Tower Idiomas</span>
+            </div>
+            
+            <ul class="lista-menu" id="listaMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#modalidades">Modalidades</a></li>
+                <li><a href="#tipos">Tipos de Aulas</a></li>
+                <li><a href="#metodologia">Metodologia</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <button class="botao-menu-mobile" id="botaoMenuMobile" aria-expanded="false" aria-controls="listaMenu" aria-label="Abrir Menu de Navegação">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home"></section>
+    <section id="modalidades" class="section bg-white"></section>
+    <section id="tipos" class="section bg-white"></section>
+    <section id="metodologia" class="section" aria-labelledby="metodoTitle"></section>
+    <section id="eventos" class="section bg-white"></section>
+    <section id="planos" class="section planos-bg"></section>
+    <section id="sobre" class="section bg-white"></section>
+    <section id="depoimentos"></section>
+    
+    <footer id="contato"></footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script type="module" src="landingpage/assets/js/main.js"></script>
+
+</body>
+</html>
+

@@ -1,8 +1,8 @@
 const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
-    host: 'localhost',
-    user: "root",
+    host: '127.0.0.1',
+    user: "admin",
     password: 'minhasenhasql',
     database: 'thetower_db',
     waitForConnections: true,
