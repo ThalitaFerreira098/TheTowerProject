@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(result.success){
                 localStorage.setItem("user", JSON.stringify(result.user));
-                window.location.href = 'home.html';
+                window.location.href = 'frontend/home.html';
             }else{
                 error.textContent = result.message || "Usuário ou senha incorretos.";
             }
