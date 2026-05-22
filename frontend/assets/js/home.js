@@ -28,7 +28,7 @@ async function carregarAgendaHoje(){
         const data = await resposta.json();
 
         if(!data.success || data.data.length === 0){
-            lista.innerHTML = `<div class='agenda-vazia'>Nenhuma aula hoje 🎉</div>`;
+           lista.innerHTML = `<div class='agenda-vazia' style='color:black'>Nenhuma aula hoje 🎉</div>`;
             return;
         }
 
