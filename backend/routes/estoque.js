@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const router = express.Router();
 const db = require("../db_config.js");
 
@@ -27,14 +27,14 @@ router.get("/listar", async (req, res) => {
     }
 });
 
-router.post("/inserir-book", async (req, res) => {
+router.post("/inserirBook", async (req, res) => {
     const numeroBook = obterNumeroBook(req, res);
     if (numeroBook === null) return;
 
     try {
         const [resultados] = await db.query("CALL sp_insere_book(?)", [numeroBook]);
         const resultado = resultados?.[0]?.[0]?.resultado;
-
+        console.log("Resultado da insercao do book:", resultado);
         if (resultado === 1) {
             return res.json({
                 success: true,
@@ -128,3 +128,4 @@ router.post("/decrementar", async (req, res) => {
 });
 
 module.exports = router;
+
