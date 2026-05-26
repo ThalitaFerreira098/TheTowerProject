@@ -110,7 +110,7 @@ async function inserirBook(event) {
     }
 
     try {
-        const response = await fetch(`${API_URL}/estoque/inserir-book`, {
+        const response = await fetch(`${API_URL}/estoque/inserirBook`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
